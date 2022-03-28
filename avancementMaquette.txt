@@ -1,0 +1,3 @@
+figma  : 
+premiere partie de la page d'accueil (header + photo de réclame)
+deuxieme partie de l'accueil
