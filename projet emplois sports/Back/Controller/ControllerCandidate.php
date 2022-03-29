@@ -6,32 +6,32 @@ Class ControllerCandidate{
         
 
       $allCandidate = Candidate::getAllCandidate();
-     require_once "../../View/readAllCandidate.php";
+     require_once "../../Front/readAllCandidate.php";
     }
 
     public static function getCandidateById($idCandidate){
         
 
-        $Candidate = Candidate::getCandidateByid($idCandidate);
-        require_once "../../View/readCandidateById.php";
+        $candidate = Candidate::getCandidateById($idCandidate);
+        require_once "../../Front/readCandidateById.php";
     }
 
     public static function createCandidate($post){
         
 
-        $Candidate = new Candidate($post['places'], $post['date_Candidate'], 
-        $post['hours']);
-        $Candidate->createCandidate();
+        $candidate = new Candidate($post['firstName'], $post['lastName'], 
+        $post['eMail'], $post['phone'], $post['motivation']);
+        $candidate->createCandidate();
         self::getAllCandidate();
 
     }
 
     public static function updateCandidate($post){
         
-         $Candidate = new Candidate($post['places'], $post['date_Candidate'], 
-         $post['hours']);
-        $Candidate->setId_Candidate($post["id"]);
-        $Candidate->updateCandidate();
+         $candidate = new Candidate($post['firstName'], $post['lastName'], 
+         $post['eMail'], $post['phone'], $post['motivation']);
+        $candidate->setIdCandidate($post["idCandidate"]);
+        $candidate->updateCandidate();
       
         self::getAllCandidate();
     }
@@ -39,14 +39,14 @@ Class ControllerCandidate{
     public static function deleteCandidateById($idCandidate){
        
 
-        $Candidate = Candidate::deleteCandidateById($idCandidate);
+        $candidate = Candidate::deleteCandidateById($idCandidate);
     
         self::getAllCandidate();
     }
 
     public static function updateCandidate($idCandidate){
-        $Candidate = Candidate::getCandidateByid($idCandidate);
-        require_once "../../View/formUpdateCandidate.php";
+        $candidate = Candidate::getCandidateByid($idCandidate);
+        require_once "../../Front/formUpdateCandidate.php";
     }
     
 }
