@@ -4,7 +4,7 @@ require_once "DAO.php";
 
 class Job{
     private $id_Job;
-    private $name;
+    private $name_job;
     private $employer;
     private $localisation;
     private $start_date;
@@ -15,8 +15,8 @@ class Job{
     private $salary_year;
     private $description;
 
-    public function __construct($name,$employer,$localisation,$start_date,$type,$hours_week,$salary_month,$salary_year,$description,$end_date = NULL){
-        $this->name = $name;
+    public function __construct($name_job,$employer,$localisation,$start_date,$type,$hours_week,$salary_month,$salary_year,$description,$end_date = NULL){
+        $this->name_job = $name_job;
         $this->employer = $employer;
         $this->localisation = $localisation;
         $this->start_date = $start_date;
@@ -50,25 +50,25 @@ class Job{
     }
 
         /**
-     * Get the value of name
+     * Get the value of name_job
      */ 
-    public function getName()
+    public function getName_job()
     {
-        return $this->name;
+        return $this->name_job;
     }
 
     /**
-     * Set the value of name
+     * Set the value of name_job
      *
      * @return  self
      */ 
-    public function setName($name)
+    public function setName_job($name_job)
     {
-        $this->name = $name;
+        $this->name_job = $name_job;
 
         return $this;
     }
-
+    
     /**
      * Get the value of employer
      */ 
@@ -269,11 +269,11 @@ class Job{
     
         return $stmt->fetch();
     }
-    public static function createJob($id_job,$name,$employer,$localisation,$star_date,$end_date,$type,$hours_week,$salary_month,$salary_year,$description){
+    public static function createJob($id_job,$name_job,$employer,$localisation,$star_date,$end_date,$type,$hours_week,$salary_month,$salary_year,$description){
         $dao = new DAO();
         $dbh = $dao->getDbh();
-        $stmt= $dbh->prepare("INSERT INTO Job (Name, Employer, Localisation, Start_date, End_date, Type, Hours_Week, Salary_Month, Salary_Year, Description) VALUES (:name, :employer, :localisation, :start_date, :end_date, :type, :id_job)");
-        $stmt->bindParam(':name', $name);
+        $stmt= $dbh->prepare("INSERT INTO Job (Name_Job, Employer, Localisation, Start_date, End_date, Type, Hours_Week, Salary_Month, Salary_Year, Description) VALUES (:name_job, :employer, :localisation, :start_date, :end_date, :type, :id_job)");
+        $stmt->bindParam(':name_job', $name_job);
         $stmt->bindParam(':employer', $employer);
         $stmt->bindParam(':localisation', $localisation);
         $stmt->bindParam(':start_date', $start_date);
@@ -287,12 +287,12 @@ class Job{
 
         $stmt->execute();
     }
-    public static function updateJob($id_job,$name,$employer,$localisation,$star_date,$end_date,$type,$hours_week,$salary_month,$salary_year,$description){
+    public static function updateJob($id_job,$name_job,$employer,$localisation,$star_date,$end_date,$type,$hours_week,$salary_month,$salary_year,$description){
         $dao = new DAO();
         $dbh = $dao->getDbh();
 
-        $stmt = $dbh->prepare("UPDATE Job SET Name = :name, Employer = :employer, Localisation = :localisation, Start_Date = :start_date, End_Date = :end_date, Type = :type, Hours_Week = :hours_week, Salary_Month = :salary_month, Salary_Year = :salary_year, Description = :description WHERE Id_Job = :idJob");
-        $stmt->bindParam(':name', $name);
+        $stmt = $dbh->prepare("UPDATE Job SET Name_Job = :name_job, Employer = :employer, Localisation = :localisation, Start_Date = :start_date, End_Date = :end_date, Type = :type, Hours_Week = :hours_week, Salary_Month = :salary_month, Salary_Year = :salary_year, Description = :description WHERE Id_Job = :idJob");
+        $stmt->bindParam(':name_job', $name_job);
         $stmt->bindParam(':employer', $employer);
         $stmt->bindParam(':localisation', $localisation);
         $stmt->bindParam(':start_date', $start_date);
