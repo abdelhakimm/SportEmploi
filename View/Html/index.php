@@ -13,7 +13,7 @@
     <!-- Haut de page-->
     <header class="">
         <div class="logo">
-            <img src="../Pictures/logo.png" alt="" srcset="">
+            <img src="../Pictures/logo.png" alt="" srcset="" id="logo">
         </div>
         <nav>
             <ul>
