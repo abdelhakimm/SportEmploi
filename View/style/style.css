@@ -15,6 +15,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+a{
+    text-decoration: none;
+}
 body{
     color: #545454;
     font-family: 'Open sans extra bold';
@@ -62,4 +65,43 @@ header h1{
     display: flex;
     flex-direction: column;
     gap: 50px;
+}
+footer{
+    background-color: #EFEFEF;
+}
+.navFooter{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 2em;
+}
+.navFooter ul{
+    display: flex;
+    list-style-type: none;
+}
+.navFooter ul li{
+    background-color: #c4c4c4;
+    margin: 0 20px;
+    max-width: 200px;
+}
+.reseauxSociaux, .copyright{
+    margin: 50px;
+    font-size: 1rem;
+}
+/*---------------------------------------------------------------------------------*/
+.presentationEntreprise{
+    display: flex;
+    justify-content: center;
+    margin: 100px 0;
+}
+#photoFondateur{
+    width: 30%;
+}
+#aProposTexte{
+    width: 50%;
+}
+h2{
+    font-size: 3rem;
+}
+.fondateur{
+    font-family: 'Open sans semi bold';
 }
