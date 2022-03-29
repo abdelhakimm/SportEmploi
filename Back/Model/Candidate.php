@@ -188,27 +188,29 @@ class Candidate{
         $stmt->bindParam(':phone', $phone);
         $stmt->bindParam(':mail', $mail);
         $stmt->bindParam(':motivation', $motivation);
-        $stmt->bindParam(':id_job', $id_jojb);
+        $stmt->bindParam(':id_job', $id_job);
         $stmt->execute();
     }
     public static function updateCandidate($id_lastname,$Firstname,$lastname,$phone,$mail,$motivation){
         $dao = new DAO();
         $dbh = $dao->getDbh();
 
-        $stmt = $dbh->prepare("UPDATE lastname SET Firstname = :Firstname, lastname = :lastname, phone = :phone, City = :city WHERE Id_lastname = :idlastname");
-        $stmt->bindParam(':idlastname', $id_lastname);
+        $stmt = $dbh->prepare("UPDATE Candidate SET Firstname = :Firstname, lastname = :lastname, phone = :phone, Mail = :mail WHERE Id_Candidate = :idcandidate");
+        $stmt->bindParam(':idcandidate', $id_candidate);
         $stmt->bindParam(':Firstname', $Firstname);
         $stmt->bindParam(':lastname', $lastname);
         $stmt->bindParam(':phone', $phone);
-        $stmt->bindParam(':city', $city);
+        $stmt->bindParam(':mail', $mail);
+        $stmt->bindParam(':motivation', $mmotivation);
+        $stmt->bindParam(':id_job', $id_job);
 
         $stmt->execute();
     }
-    public static function deletelastnameById($id_lastname){
+    public static function deleteCandidateById($id_lastname){
         $dao = new DAO();
         $dbh = $dao->getDbh();
 
-        $stmt = $dbh->prepare("DELETE FROM lastname WHERE Id_lastname = :idlastname");
+        $stmt = $dbh->prepare("DELETE FROM Candidate WHERE Id_candidate = :idcandidate");
         $stmt->bindParam(':idlastname', $id_lastname);
 
         $stmt->execute();
