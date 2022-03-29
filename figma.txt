@@ -7,3 +7,4 @@ Deuxieme page internet sur figma fini;
 pas beaucoup de changement; 
 ajout de la div "creation de poste";
 Page parcourir les offre terminée finition de la page publier une offre;
+entrain de faire els formulaire;
