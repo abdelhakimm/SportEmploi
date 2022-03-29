@@ -1,0 +1,41 @@
+h1{
+    text-align: center;
+    font-size: 30px;
+}
+
+p{
+    font-size: 25px;
+}
+
+label{
+    font-size: 22px;
+}
+
+#societyName, #jobName{
+    width: 655px;
+    height: 40px;
+    border-radius: 3px;
+    background-color: #A6A6A6;
+    opacity: 30%;
+}
+
+#contractType, #hours, #salary, #debutContract, #endContract, #city{
+    width: 300px;
+    height: 40px;
+    border-radius: 3px;
+    background-color: #A6A6A6;
+    opacity: 30%;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+#itemUn, #itemDeux, #itemTrois{
+    margin: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
