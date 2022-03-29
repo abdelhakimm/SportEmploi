@@ -105,3 +105,32 @@ h2{
 .fondateur{
     font-family: 'Open sans semi bold';
 }
+.valeurs{
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    gap: 50px;
+    margin: 50px;
+}
+.semibold{
+    font-family: 'Open sans semi bold';
+}
+.autourDesValeurs{
+    margin: 100px;
+}
+.alignCenter{
+    text-align: center;
+}
+/*-----------------------------------------------------------------------------*/
+#criteres{
+    height: 300px;
+    background-color: #EFEFEF;
+    width: 80%;
+    margin: 50px auto;
+}
+#liste{
+    height: 300px;
+    background-color: #EFEFEF;
+    width: 80%;
+    margin: 50px auto;
+}
