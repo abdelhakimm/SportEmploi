@@ -1,6 +1,10 @@
 https://www.figma.com/file/Giu4bD1XOdgOaGE0GVy2yt/Untitled?node-id=0%3A1
-2-on modif la page a propos sur figma
+2- on modif la page a propos sur figma
 
 3- création de la prochaine page Candidatez(Done)
 
 4- on passe a la page parcourir les offres
+
+5- parcourir les offres sur figma done
+
+6- new page sur figma publier une offres
