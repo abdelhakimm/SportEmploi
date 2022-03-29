@@ -1,9 +1,7 @@
 <?php
-require "../Controller/ControllerOffer.php";
+require "../Controller/Controller.php";
 
-if (isset($_GET["action"])) {
 
-    if ($_GET["action"] == "all") {
-        Controller::getAllOffer();
-    }
-}
+Controller::getAllOffer();
+    
+?>

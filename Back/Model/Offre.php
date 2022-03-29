@@ -35,14 +35,15 @@ class Offre
 
     public static function getAllOffer()
     {
-
-        $request = "SELECT * FROM Offer ";
+        
+        $request = "SELECT * FROM offre ";
 
         $dao = new DAO();
         $dbh = $dao->getDbh();
 
         $stmt = $dbh->query($request);
         $rows = $stmt->fetchAll();
+        
         return $rows;
     }
     

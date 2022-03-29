@@ -11,7 +11,8 @@ class Controller
     public static function getAllOffer()
     {
         $allOffer = Offre::getAllOffer();
-        require view . "readAllOffer.php";
+        
+        require view . "parcourirOffres.php";
     }
 
     
