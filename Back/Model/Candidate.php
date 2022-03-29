@@ -179,16 +179,17 @@ class Candidate{
     
         return $stmt->fetch();
     }
-    public static function createCandidate($id_lastname,$Firstname,$lastname,$phone,$mail,$motivation){
+    public function createCandidate(){
         $dao = new DAO();
         $dbh = $dao->getDbh();
         $stmt= $dbh->prepare("INSERT INTO Candidate (Firstname, Lastname, Phone, Mail, Motivation, Id_Job) VALUES (:Firstname, :lastname, :phone, :mail, :motivation, :id_job)");
-        $stmt->bindParam(':Firstname', $Firstname);
-        $stmt->bindParam(':lastname', $lastname);
-        $stmt->bindParam(':phone', $phone);
-        $stmt->bindParam(':mail', $mail);
-        $stmt->bindParam(':motivation', $motivation);
-        $stmt->bindParam(':id_job', $id_job);
+        $stmt->bindParam(':Firstname', $this->Firstname);
+        $stmt->bindParam(':lastname', $this->lastname);
+        $stmt->bindParam(':phone', $this->phone);
+        $stmt->bindParam(':mail', $this->mail);
+        $stmt->bindParam(':motivation', $this->motivation);
+        $stmt->bindParam(':id_job', $this->id_job);
+
         $stmt->execute();
     }
     public static function updateCandidate($id_lastname,$Firstname,$lastname,$phone,$mail,$motivation){
