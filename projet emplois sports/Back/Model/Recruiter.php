@@ -11,8 +11,9 @@ class Recruiter{
     private $hours;
     private $salary;
     private $description;
+    private $city;
 
-    public function __construct($societyName,$jobName,$debutDate,$endDate,$contractType,$hours,$salary,$description){
+    public function __construct($societyName,$jobName,$debutDate,$endDate,$contractType,$hours,$salary,$description,$city){
         $this->societyName = $societyName
         $this->jobName = $jobName;
         $this->debutDate = $debutDate;
@@ -21,6 +22,7 @@ class Recruiter{
         $this->hours = $hours;
         $this->salary = $salary;
         $this->description = $description  
+        $this->city = $city  
     }
 
 
@@ -204,12 +206,32 @@ class Recruiter{
         return $this;
     }
 
+        /**
+     * Get the value of city
+     */ 
+    public function getCity()
+    {
+        return $this->city;
+    }
+
+    /**
+     * Set the value of city
+     *
+     * @return  self
+     */ 
+    public function setCity($city)
+    {
+        $this->city = $city;
+
+        return $this;
+    }
+
     public function createRecruiter(){
         $dao = new DAO();
         $dbh =$dao->getDbh();
 
-        $stmt = $dbh->prepare("INSERT INTO recruiter(societyName,jobName,debutDate,endDate,contractType,hours,salary,description) 
-        VALUES(:societyName,:jobName,:debutDate,:endDate,:contractType,:hours,:salary,:description);");
+        $stmt = $dbh->prepare("INSERT INTO recruiter(societyName,jobName,debutDate,endDate,contractType,hours,salary,description,city) 
+        VALUES(:societyName,:jobName,:debutDate,:endDate,:contractType,:hours,:salary,:description,:city);");
 
        
 
@@ -221,59 +243,62 @@ class Recruiter{
         $stmt->bindParam(':hours',$this->hours);
         $stmt->bindParam(':salary',$this->salary);
         $stmt->bindParam(':description',$this->description);
+        $stmt->bindParam(':city',$this->city);
         
-      return $stmt->execute();
+        return $stmt->execute();
 
     }
 
-    public static function getRecuiterById($idRecruiter){
+    public static function getRecuiterByContractType($contractType){
 
-            $dao = new DAO();
-            $dbh = $dao->getDbh();
-            $stmt = $dbh->prepare("SELECT * FROM debutDate WHERE Id_debutDate = :id_debutDate;");
-             $stmt->bindParam("id_debutDate",$idRecruiter);
-             $stmt->execute();
+        $dao = new DAO();
+        $dbh = $dao->getDbh();
+        $stmt = $dbh->prepare("SELECT * FROM recruiter WHERE contractType = :contractType;");
+        $stmt->bindParam("contractType",$contractType);
+        $stmt->execute();
      
-             return $stmt->fetch();
+        return $stmt->fetch();
     }
      
     public static function getAllRecruiter(){
-             $dao = new DAO();
-             $dbh = $dao->getDbh();
+        $dao = new DAO();
+        $dbh = $dao->getDbh();
      
-             $stmt = $dbh->prepare("SELECT * FROM recruiter ");
-             $stmt->execute();
-             return $stmt->fetchAll();
+        $stmt = $dbh->prepare("SELECT * FROM recruiter");
+        $stmt->execute();
+        return $stmt->fetchAll();
     }
 
     public function updatedebutDate(){
         $dao = new DAO();
         $dbh =$dao->getDbh();
 
-        $stmt = $dbh->prepare("UPDATE debutDate SET jobName=:numb, debutDate=:add, endDate=:endDate, endDate=:endDate WHERE Id_debutDate=:id_debutDate");
+        $stmt = $dbh->prepare("UPDATE recruiter SET societyName=:societyName jobName=:jobName, debutDate=:debutDate, endDate=:endDate,
+        contractType=:contractType, hours=:hours, salary=:salary, description=:description, city=:city WHERE idRecruiter=:idRecruiter");
 
        
 
-        $stmt->bindParam(':numb',$this->jobName);
-        $stmt->bindParam(':add', $this->debutDate);
+        $stmt->bindParam(':societyName',$this->societyName);
+        $stmt->bindParam(':jobName', $this->jobName);
+        $stmt->bindParam(':debutDate',$this->debutDate);
         $stmt->bindParam(':endDate',$this->endDate);
-        $stmt->bindParam(':id_debutDate',$this->id_debutDate);
-        $stmt->bindParam(':endDate',$this->endDate);
+        $stmt->bindParam(':contractType',$this->contractType);
+        $stmt->bindParam(':hours',$this->hours);
+        $stmt->bindParam(':salary',$this->salary);
+        $stmt->bindParam(':description',$this->description);
+        $stmt->bindParam(':city',$this->city);
         
       return $stmt->execute();
     }
     
-    public static function deletedebutDateById($idRecruiter){
+    public static function deleteRecruiterById($idRecruiter){
         $dao = new DAO();
         $dbh = $dao->getDbh();
-        $stmt = $dbh->prepare("DELETE FROM debutDate WHERE Id_debutDate = :id_debutDate;");
-         $stmt->bindParam("id_debutDate",$idRecruiter);
-         $stmt->execute();
- 
-        
+        $stmt = $dbh->prepare("DELETE FROM recruiter WHERE idRecruiter = :idRecruiter;");
+        $stmt->bindParam("idRecruiter",$idRecruiter);
+        $stmt->execute();
          
     }
-
 
 }
 

@@ -4,7 +4,7 @@ class DAO{
 
     public $host = "localhost";
     public $port = "3306";
-    public $dbname = "Devliveroo";
+    public $dbname = "sJob";
     public $charset = "UTF8";
     public $user = "root";
     public $password = "";
