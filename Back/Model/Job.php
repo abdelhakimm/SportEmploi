@@ -264,6 +264,31 @@ class Job{
 
         $stmt->execute();
     }
-    
+    public static function updateJob($id_job,$name,$employer,$star_date,$end_date,$type,$hours_week,$salary_month,$salary_year,$description){
+        $dao = new DAO();
+        $dbh = $dao->getDbh();
+
+        $stmt = $dbh->prepare("UPDATE Job SET Name = :name, Employer = :employer, Start_Date = :start_date, End_Date = :end_date, Type = :type, Hours_Week = :hours_week, Salary_Month = :salary_month, Salary_Year = :salary_year, Description = :description WHERE Id_Job = :idJob");
+        $stmt->bindParam(':name', $name);
+        $stmt->bindParam(':employer', $employer);
+        $stmt->bindParam(':start_date', $start_date);
+        $stmt->bindParam(':end_date', $end_date);
+        $stmt->bindParam(':type', $type);
+        $stmt->bindParam(':hours_week', $hours_week);
+        $stmt->bindParam(':salary_month', $salary_month);
+        $stmt->bindParam(':salary_year', $salary_year);
+        $stmt->bindParam(':description', $description);
+
+        $stmt->execute();
+    }
+    public static function deleteJobById($id_employer){
+        $dao = new DAO();
+        $dbh = $dao->getDbh();
+
+        $stmt = $dbh->prepare("DELETE FROM Job WHERE Id_Job = :idJob");
+        $stmt->bindParam(':idemployer', $id_employer);
+
+        $stmt->execute();
+    }
 
 }
