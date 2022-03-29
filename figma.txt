@@ -4,3 +4,4 @@ Incrustation des textes de l'acceuil demandé dans le cahier des charges et test
 modification des couleur et de l'acceuil;
 Acceuil fini, j'entame la page à propos;
 Deuxieme page internet sur figma fini;
+pas beaucoup de changement; 
