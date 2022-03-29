@@ -7,3 +7,5 @@ page d'accueil complète
 page A Propos réalisée également
 
 commencement de la page liste des offres
+
+pages parcourir les offres, publier offre ainsi que details offre maquetees
