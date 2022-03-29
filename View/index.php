@@ -12,49 +12,54 @@
 
 <body>
   <header>
-    <div class="logo">
-      <img id="logo" src="./images/logo.png" alt="logo" />
+    <div class="logoMenu">
+      <div class="logo">
+        <img id="logo" src="./images/logo.png" alt="logo" />
+      </div>
+      <div class="nav">
+        <ul>
+          <a href="">
+            <li>ACCUEIL</li>
+          </a>
+          <a href="">
+            <li>A PROPOS</li>
+          </a>
+          <a href="../Back/Router/router.php">
+            <li>PARCOURIR LES OFFRES</li>
+          </a>
+          <a href="">
+            <li>PUBLIER UNE OFFRE</li>
+          </a>
+        </ul>
+      </div>
     </div>
-    <div class="navTop">
-      <ul>
-        <a href="">
-          <li>ACCUEIL</li>
-        </a>
-        <a href="">
-          <li>A PROPOS</li>
-        </a>
-        <a href="../Back/Router/router.php">
-          <li>PARCOURIR LES OFFRES</li>
-        </a>
-        <a href="">
-          <li>PUBLIER UNE OFFRE</li>
-        </a>
-      </ul>
+    <div class="grosTitre">
+      <h1>L'expert emploi 100 % Sport</h1>
     </div>
-    <h1>L'expert emploi 100 % Sport</h1>
   </header>
 
   <main>
+    <div class="degrade"></div>
     <section id="pictos">
-      <div>
+      <div class="pictosTexte">
         <img src="./images/crosshair-100x100.png" alt="" />
-        <p>CABINET DE RECRUTEMENT</p>
+        <p class="semibold alignCenter">CABINET DE RECRUTEMENT</p>
       </div>
-      <div>
+      <div class="pictosTexte">
         <img src="./images/project-management-100x100.png" alt="" />
-        <p>ACCOMPAGNEMENT ET CONSEIL</p>
+        <p class="semibold alignCenter">ACCOMPAGNEMENT ET CONSEIL</p>
       </div>
-      <div>
+      <div class="pictosTexte">
         <img src="./images/computer-100x100.png" alt="" />
-        <p>JOBBOARD</p>
+        <p class="semibold alignCenter">JOBBOARD</p>
       </div>
-      <div>
+      <div class="pictosTexte">
         <img src="./images/network-100x100.png" alt="" />
-        <p>MEDIA</p>
+        <p class="semibold alignCenter">MEDIA</p>
       </div>
     </section>
     <section id="paragraphes">
-      <article>
+      <article class="notreMethode">
         <h3>NOUS CONSEILLONS</h3>
         <p>
           dans la définition du profil idéal, la mise en place d’une stratégie
@@ -62,7 +67,7 @@
           encore sur les pratiques économiques du marché
         </p>
       </article>
-      <article>
+      <article class="notreMethode">
         <h3>NOUS ACCOMPAGNONS</h3>
         <p>
           dans la recherche des meilleurs candidats par notre connaissance des
@@ -70,7 +75,7 @@
           et formations de renoms…
         </p>
       </article>
-      <article>
+      <article class="notreMethode">
         <h3>NOUS VALORISONS</h3>
         <p>
           Sjob.com regroupant sous la forme d’un job-board les offres d’emploi
@@ -79,31 +84,33 @@
         </p>
       </article>
     </section>
+    <div class="degrade2"></div>
   </main>
 
   <footer>
-    <div class="logo">
-      <img id="logo" src="./images/logo.png" alt="logo" />
+    <div class="logoMenu">
+      <div class="logo">
+        <img id="logo" src="./images/logo.png" alt="logo" />
+      </div>
+      <div class="nav">
+        <ul>
+          <a href="">
+            <li>ACCUEIL</li>
+          </a>
+          <a href="">
+            <li>A PROPOS</li>
+          </a>
+          <a href="">
+            <li>PARCOURIR LES OFFRES</li>
+          </a>
+          <a href="">
+            <li>PUBLIER UNE OFFRE</li>
+          </a>
+        </ul>
+        <p class="reseauxSociaux">Nous suivre sur les réseaux sociaux</p>
+        <p class="copyright">Copyright Sylvain Foucault 2022</p>
+      </div>
     </div>
-    <div class="navFooter">
-      <ul>
-        <a href="">
-          <li>ACCUEIL</li>
-        </a>
-        <a href="">
-          <li>A PROPOS</li>
-        </a>
-        <a href="">
-          <li>PARCOURIR LES OFFRES</li>
-        </a>
-        <a href="">
-          <li>PUBLIER UNE OFFRE</li>
-        </a>
-      </ul>
-      <p class="reseauxSociaux">Nous suivre sur les réseaux sociaux</p>
-      <p class="copyright">Copyright Sylvain Foucault 2022</p>
-    </div>
-
   </footer>
 
   <script src="script.js"></script>

@@ -1,41 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>A Propos</title>
-    <link rel="stylesheet" href="./style/style.css" />
-    <link rel="stylesheet" href="fontawesome/css/all.css" />
-  </head>
 
-  <body>
-    <header>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Propos</title>
+  <link rel="stylesheet" href="./style/style.css" />
+  <link rel="stylesheet" href="fontawesome/css/all.css" />
+</head>
+
+<body>
+  <header>
+    <div class="logoMenu">
       <div class="logo">
         <img id="logo" src="./images/logo.png" alt="logo" />
       </div>
-      <div class="navTop">
+      <div class="nav">
         <ul>
-          <a href=""><li>ACCUEIL</li></a>
-          <a href=""><li>A PROPOS</li></a>
-          <a href=""><li>PARCOURIR LES OFFRES</li></a>
-          <a href=""><li>PUBLIER UNE OFFRE</li></a>
+          <a href="">
+            <li>ACCUEIL</li>
+          </a>
+          <a href="">
+            <li>A PROPOS</li>
+          </a>
+          <a href="../Back/Router/router.php">
+            <li>PARCOURIR LES OFFRES</li>
+          </a>
+          <a href="">
+            <li>PUBLIER UNE OFFRE</li>
+          </a>
         </ul>
       </div>
+    </div>
+    <div class="grosTitre">
       <h1>L'expert emploi 100 % Sport</h1>
-    </header>
+    </div>
+  </header>
 
-    <main>
-      <div class="presentationEntreprise">
-        <section id="photoFondateur">
-          <img src="./images/Alainghibaudo.png" alt="le fondateur" />
-          <div class="fondateur">
-            <p>ALAIN GHIBAUDO</p>
-            <p>Fondateur – CEO</p>
-          </div>
-        </section>
-        <section id="aProposTexte">
-          <h2>A PROPOS</h2>
+  <main>
+    <div class="presentationEntreprise">
+      <section id="photoFondateur">
+        <img src="./images/Alainghibaudo.png" alt="le fondateur" />
+        <div class="fondateur">
+          <p>ALAIN GHIBAUDO</p>
+          <p>Fondateur – CEO</p>
+        </div>
+      </section>
+      <section id="aProposTexte">
+        <h2>A PROPOS</h2>
+        <div class="aProposTextePresentation">
           <p>
             Bienvenue sur S’Job, dans « votre » univers : le Sport et
             l’Entertainment !
@@ -63,12 +77,14 @@
             l’Entertainment. Merci de votre fidélité, merci aux nouveaux venus
             dans notre communauté d’experts. Suivez-nous, ce n’est pas fini…
           </p>
-          <img src="./images/signature.png" />
-        </section>
-      </div>
-      <div class="pourquoiNousChoisir">
-        <h2 class="alignCenter">POURQUOI NOUS CHOISIR ?</h2>
-        <div class="autourDesValeurs">
+        </div>
+        <img src="./images/signature.png" />
+      </section>
+    </div>
+    <div class="degrade"></div>
+    <div class="pourquoiNousChoisir">
+      <h2 class="alignCenter">POURQUOI NOUS CHOISIR ?</h2>
+      <div class="autourDesValeurs">
         <article class="valeurs">
           <img src="./images/valeursSC1-110x88.png" alt="" />
           <div>
@@ -109,26 +125,37 @@
             </p>
           </div>
         </article>
-        </div>
       </div>
-    </main>
+    </div>
+  </main>
 
-    <footer>
+  <footer>
+    <div class="logoMenu">
       <div class="logo">
         <img id="logo" src="./images/logo.png" alt="logo" />
       </div>
-      <div class="navFooter">
+      <div class="nav">
         <ul>
-          <a href=""><li>ACCUEIL</li></a>
-          <a href=""><li>A PROPOS</li></a>
-          <a href=""><li>PARCOURIR LES OFFRES</li></a>
-          <a href=""><li>PUBLIER UNE OFFRE</li></a>
+          <a href="">
+            <li>ACCUEIL</li>
+          </a>
+          <a href="">
+            <li>A PROPOS</li>
+          </a>
+          <a href="">
+            <li>PARCOURIR LES OFFRES</li>
+          </a>
+          <a href="">
+            <li>PUBLIER UNE OFFRE</li>
+          </a>
         </ul>
         <p class="reseauxSociaux">Nous suivre sur les réseaux sociaux</p>
         <p class="copyright">Copyright Sylvain Foucault 2022</p>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
+
 </html>
