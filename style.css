@@ -26,9 +26,43 @@ header>ul>li>img{
 
 header>ul>li>a{
     color: #FF5C16;
+    text-decoration: none;
+    font-size: 23px;
 }
 
 footer{
     height: 400px;
     background-color: #302A2A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer>ul{
+    margin-bottom: 100px;
+}
+
+footer>ul>li{
+    list-style: none;
+    line-height: 40px;
+    width: 200px;
+    text-align: center;
+    
+}
+footer>ul>li>a{
+    color: white;
+    line-height: none;
+    text-decoration: none;
+    font-size: 23px;
+
+}
+
+
+#menu{
+    font-weight: bolder;
+    line-height: 50px;
+}
+footer>div>img{
+    width: 250px;
+    height: 250px;
 }

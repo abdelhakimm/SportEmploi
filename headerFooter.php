@@ -24,18 +24,23 @@
 
     <footer>
         <ul>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
+            <li id="menu"><a href="">Menu :</a></li>
+            <li><a href="">Accueil</a></li>
+            <li><a href="">À propos</a></li>
+            <li><a href="">Parcourir les offres</a></li>
+            <li><a href="">Publier une offre</a></li>
         </ul>
         <ul>
-            <li></li>
+            <li><img src="../" alt=""></li>
             <li></li>
             <li></li>
             <li></li>
         </ul>
+        <div>
+            <img src="./pictures/logo.png" alt="">
+            
+        </div>
+
     </footer>
 </body>
 </html>
