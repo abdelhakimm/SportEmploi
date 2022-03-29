@@ -8,26 +8,44 @@ body{
     overflow-x: hidden;
 }
 
+#logo{
+    width: 100px;
+    height: 90px;
+}
+
 header{
     width: 100%;
+    height: 90px;
+    margin-top: 40px;
     display: flex;
     justify-content: space-around;
 }
 
 nav{
-    
+    font-weight: bold;
 }
 
 ul,li{
     display: flex;
-    margin: 0 40px;
+    margin: 0 30px;
+    font-size: 25px;
     flex-direction: row;
     list-style-type: none;
+}
+
+
+
+li:hover{
+    cursor: pointer;
+    transition: all .5s;
+    border-bottom: 5px solid rgb(30, 146, 214);
 }
 
 .login{
     display: flex;
     flex-direction: row;
+    font-size: 25px;
+    font-weight: bold;
 }
 
 .headimg{
@@ -38,4 +56,14 @@ ul,li{
     background-blend-mode: darken;
     width: 100%;
     height: 750px;
+    overflow-y: hidden;
+}
+
+h1{
+    text-align: center;
+    margin-top: 350px;
+    font-size: 80px;
+    color: white;
+    border-bottom: 1px solid white;
+    
 }
