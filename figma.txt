@@ -3,3 +3,4 @@ debut du figma avec le header et acceuil;
 Incrustation des textes de l'acceuil demandé dans le cahier des charges et test de couleur;
 modification des couleur et de l'acceuil;
 Acceuil fini, j'entame la page à propos;
+Deuxieme page internet sur figma fini;
