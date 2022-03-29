@@ -5,3 +5,4 @@ modification des couleur et de l'acceuil;
 Acceuil fini, j'entame la page à propos;
 Deuxieme page internet sur figma fini;
 pas beaucoup de changement; 
+ajout de la div "creation de poste";
