@@ -34,6 +34,36 @@
         <div id="entredeuxApropos">
             <p>POURQUOI <span>NOUS</span> CHOISIR ?</p>
         </div>
+        <div id="sectionDeuxApropos">
+            <div class="paragrapheApropos" id="boxshadowUn">
+                <div>
+                    <img src="./pictures/valeurs.png" alt=""></img>
+                    <p>Nous sommes des créateurs de <span>possibles.</span></p>
+                </div>
+                <p>Nous croyons en la valeur de chaque individu et avons la conviction que certaines rencontres peuvent changer le cours de notre vie. <br>
+                C’est pourquoi nous mettons tout en œuvre pour créer les meilleures conditions de rencontre entre les talents que nous identifions et les entreprises qui nous confient la constitution de leurs équipes.
+                </p>
+            </div>
+            <div class="paragrapheApropos" id="boxshadowDeux">
+                <div >
+                    <img src="./pictures/valeursDeux.png" alt="">
+                    <p>Nous sommes des passionnés de <span>l’humain.</span></p>
+                </div>
+                <p>Chaque mission qui nous est confiée est une occasion de nous dépasser et de revoir nos méthodes et de développer de nouveaux outils, comme hier avec la formation ou plus récemment avec la marque employeur. <br>
+                Nous pensons que les organisations innovantes sont les organisations qui placent l’humain au centre de tout.
+                </p>
+            </div>
+            <div class="paragrapheApropos" id="boxshadowTrois">
+                <div>
+                    <img src="./pictures/valeursTrois.png" alt="">
+                     <p>Notre devise est <span>proximité, plaisir</span> et <span>performance.</span></p>
+                </div>
+                <p>Nos 19 ans d’expérience nous permettent aujourd’hui de mettre à votre service leplus grand réseau de talentset d’experts du secteur du sport et de l’Entertainment. <br>
+                Ce réseau nous l’avons tissé grâce à notre capacité à créer de l’empathie tant avec nos clients qu’avec nos candidats.
+                </p>
+            </div>
+        </div>
     </section>
+    <?php require_once "footer.php" ?>
 </body>
 </html>
