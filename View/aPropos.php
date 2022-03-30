@@ -27,7 +27,7 @@
           <a href="../Back/Router/router.php?action=all">
             <li>PARCOURIR LES OFFRES</li>
           </a>
-          <a href="">
+          <a href="../Back/Router/router.php?action=create">
             <li>PUBLIER UNE OFFRE</li>
           </a>
         </ul>
@@ -142,7 +142,7 @@
           <a href="../Back/Router/router.php?action=all">
             <li>PARCOURIR LES OFFRES</li>
           </a>
-          <a href="">
+          <a href="../Back/Router/router.php?action=create">
             <li>PUBLIER UNE OFFRE</li>
           </a>
         </ul>

@@ -24,7 +24,7 @@
           <a href="../../View/aPropos.php">
             <li>A PROPOS</li>
           </a>
-          <a href="">
+          <a href="../Router/router.php?action=all">
             <li>PARCOURIR LES OFFRES</li>
           </a>
           <a href="./router.php?action=create">
@@ -44,10 +44,11 @@
     <section id="criteres">
       <p>Critères de recherche</p>
       <form action="<?= router ?>router.php" method="post">
-        
+
         <div>
           <label for="typeContrat">Type de contrat : </label>
           <select id="typeContrat" name="typeContrat">
+            <option value="CDI"></option>
             <option value="CDI">CDI</option>
             <option value="CDD">CDD</option>
           </select>
@@ -100,7 +101,7 @@
           <a href="../../View/aPropos.php">
             <li>A PROPOS</li>
           </a>
-          <a href="">
+          <a href="../Router/router.php?action=all">
             <li>PARCOURIR LES OFFRES</li>
           </a>
           <a href="./router.php?action=create">

@@ -35,7 +35,7 @@ class Offre
 
     public static function getAllOffer()
     {
-        
+
         $request = "SELECT * FROM offre ";
 
         $dao = new DAO();
@@ -43,7 +43,7 @@ class Offre
 
         $stmt = $dbh->query($request);
         $rows = $stmt->fetchAll();
-        
+
         return $rows;
     }
 
@@ -82,7 +82,7 @@ class Offre
         $stmt->bindParam(":id_offer", $id_offer);
         $stmt->execute();
         $row = $stmt->fetch();
-        
+
         return $row;
     }
 
@@ -96,7 +96,7 @@ class Offre
         $stmt->bindParam(":contract", $post['typeContrat']);
         $stmt->execute();
         $rows = $stmt->fetchAll();
+        echo $post['typeContrat'];
         return $rows;
     }
-
 }

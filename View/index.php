@@ -103,7 +103,7 @@
           <a href="../Back/Router/router.php">
             <li>PARCOURIR LES OFFRES</li>
           </a>
-          <a href="">
+          <a href="../Back/Router/router.php?action=create">
             <li>PUBLIER UNE OFFRE</li>
           </a>
         </ul>
