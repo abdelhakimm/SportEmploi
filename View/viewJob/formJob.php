@@ -13,13 +13,13 @@
     <form action="../../Back/Router/RouterJob.php" method="post">
 
         <label for="name_job">Intitulé du poste</label>  
-        <input type="text" name="name_job" id="name_job">
+        <input type="text" name="name" id="name">
 
         <label for="employer">Société</label>
         <input type="text" name="employer" id="employer">
 
-        <label for="Localisation">Localisation</label>
-        <input type="text" name="Localisation" id="Localisation">
+        <label for="localisation">Localisation</label>
+        <input type="text" name="localisation" id="localisation">
 
         <label for="start_date">Poste à pouvoir pour : </label>
         <input type="text" name="start_date" id="start_date">

@@ -18,21 +18,23 @@ Class ControllerJob{
 
     public static function createJob($post){
         echo "dans controller createjob";
-        Job::createJob($post['name_job'], $post['localisation'], 
-        $post['start_date'], $post['end_date'], $post['type'], $post['hours_week'],
-        $post['salary_month'], $post['salary_year'], $post['description'], $post['employer']);
-
+        $job = new Job($post['name'], $post['localisation'], 
+        $post['start_date'], $post['type'], $post['hours_week'],
+        $post['salary_month'], $post['description'],$post['employer'], $post['salary_year'], $post['end_date']);
+        echo "apres appel a la classe job::creatjob()";
+        $job->createJob();
         self::getAllJob();
     }
 
     public static function updateJob($post){
         
-        $row = new Job($post['name'], $post['localisation'], 
-        $post['start_date'], $post['end_date'], $post['type'], $post['hours_week'],
+        $job = new Job($post['name'], $post['localisation'], 
+        $post['start_date'], $post['end_Date'], $post['type'], $post['hours_week'],
         $post['salary_month'], $post['salary_year'], $post['description'], $post['employer']);
 
-        $row->updateJob($post['name'], $post['localisation'], 
-        $post['start_date'], $post['end_date'], $post['type'], $post['hours_week'],
+        $job->setId_Job($post["id"]);
+        $job->updateJob($post['name'], $post['localisation'], 
+        $post['start_date'], $post['end_Date'], $post['type'], $post['hours_week'],
         $post['salary_month'], $post['salary_year'], $post['description'], $post['employer']);
         self::getAllJob();
     }
@@ -45,7 +47,7 @@ Class ControllerJob{
 
     public static function formUpdateJob($id_job){
 
-        $row = Job::getJobByid($id_job);
+        $job = Job::getJobByid($id_job);
         require front."/viewJob/formUpdateJob.php";
     }
 

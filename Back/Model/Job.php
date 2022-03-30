@@ -15,16 +15,16 @@ class Job{
     private $salary_year = NULL;
     private $description;
 
-    public function __construct($name_job,$employer,$localisation,$start_date,$type,$hours_week,$salary_month,$description,$salary_year = NULL,$end_date = NULL){
+    public function __construct($name_job,$localisation,$start_date,$type,$hours_week,$salary_month,$description,$employer,$salary_year = NULL,$end_date = NULL){
         $this->name_job = $name_job;
         $this->employer = $employer;
         $this->localisation = $localisation;
         $this->start_date = $start_date;
         $this->end_date = $end_date;
         $this->type = $type;
-        $this->hours_week = $hours_week;
-        $this->salary_month = $salary_month;
-        $this->salary_year = $salary_year;
+        $this->hours_week = (int)$hours_week;
+        $this->salary_month = (int)$salary_month;
+        $this->salary_year = (int)$salary_year;
         $this->description = $description;
         
     }
@@ -267,21 +267,33 @@ class Job{
 
         return $stmt->fetch();
     }
-    public static function createJob($name_job,$employer,$localisation,$star_date,$end_date,$type,$hours_week,$salary_month,$salary_year,$description){
+    public function createJob(){
         $dao = new DAO();
         $dbh = $dao->getDbh();
-        $stmt= $dbh->prepare("INSERT INTO Job (Name_Job, Localisation, Start_Date, End_Date, Type, Hours_Week, Salary_Month, Salary_Year, Description, Employer) VALUES (:name_job, :localisation, :start_date, :end_date, :type, :hours_week, :salary_month, :salary_year, :description, :employer)");
-        $stmt->bindParam(':name_job', $name_job);
-        $stmt->bindParam(':localisation', $localisation);
-        $stmt->bindParam(':start_date', $start_date);
-        $stmt->bindParam(':end_date', $end_date);
-        $stmt->bindParam(':type', $type);
-        $stmt->bindParam(':hours_week', $hours_week);
-        $stmt->bindParam(':salary_month', $salary_month);
-        $stmt->bindParam(':salary_year', $salary_year);
-        $stmt->bindParam(':description', $description);
-        $stmt->bindParam(':employer', $employer);
-
+        $stmt= $dbh->prepare("INSERT INTO Job (Name_Job, Localisation, Start_Date, End_Date, Type, Hours_Week, Salary_Month, Salary_Year, Description, Employer) 
+        VALUES 
+        (:name_job, :localisation, :start_date, :end_date, :type, :hours_week, :salary_month, :salary_year, :description, :employer)");
+        echo $this->name_job;
+        echo $this->localisation;
+        echo $this->start_date;
+        echo $this->end_date;
+        echo $this->type;
+        echo $this->hours_week;
+        echo $this->salary_month;
+        echo $this->salary_year;
+        echo $this->description;
+        echo $this->employer;
+        $stmt->bindParam(':name_job', $this->name_job);
+        $stmt->bindParam(':localisation', $this->localisation);
+        $stmt->bindParam(':start_date', $this->start_date);
+        $stmt->bindParam(':end_date', $this->end_date);
+        $stmt->bindParam(':type', $this->type);
+        $stmt->bindParam(':hours_week', $this->hours_week);
+        $stmt->bindParam(':salary_month', $this->salary_month);
+        $stmt->bindParam(':salary_year', $this->salary_year);
+        $stmt->bindParam(':description', $this->description);
+        $stmt->bindParam(':employer', $this->employer);
+        echo "apres insert avant execute";
         $stmt->execute();
     }
     public static function updateJob($id_job,$name_job,$employer,$localisation,$star_date,$end_date,$type,$hours_week,$salary_month,$salary_year,$description){
@@ -300,16 +312,14 @@ class Job{
         $stmt->bindParam(':salary_month', $salary_month);
         $stmt->bindParam(':salary_year', $salary_year);
         $stmt->bindParam(':description', $description);
-        echo "apres bind param";
         $stmt->execute();
-        echo "apres exec update";
     }
-    public static function deleteJobById($id_employer){
+    public static function deleteJobById($id_job){
         $dao = new DAO();
         $dbh = $dao->getDbh();
 
-        $stmt = $dbh->prepare("DELETE FROM Job WHERE Id_Job = :idJob");
-        $stmt->bindParam(':idemployer', $id_employer);
+        $stmt = $dbh->prepare("DELETE FROM Job WHERE Id_Job = :idjob");
+        $stmt->bindParam(':idjob', $id_job);
 
         $stmt->execute();
     }

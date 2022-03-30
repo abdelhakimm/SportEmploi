@@ -16,7 +16,7 @@ if(isset($_GET["action"])){
         ControllerCandidate::deleteCandidateById($_GET["id"]);
 
     }elseif($_GET["action"] == "create"){
-        ControllerCandidate::formCandidate();
+        ControllerCandidate::formCandidate($_GET["Id_Job"]);
     }
 
 }elseif(isset($_POST["submit"])){
