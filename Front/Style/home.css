@@ -1,0 +1,45 @@
+body{
+    width: 1440px;
+}
+
+header{
+    background-color: #FF5C16;
+    opacity: calc(65%);
+}
+
+header nav ul li{
+    list-style-type: none;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 30px;
+    color: #ffffff;
+
+}
+
+header a{
+    color: #ffffff;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#allNav{
+    display: flex;
+}
+
+.flexNav{
+    display: flex;
+    margin-right: 100px;
+}
+
+#fond{
+    background-image: url("./Image/SliderHomev2.jpg"); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1440px;
+    height: 770px;
+    margin: 0 auto;
+}
