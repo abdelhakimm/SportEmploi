@@ -8,7 +8,8 @@ avancement front
 - maquette "A propos" terminée
 - maquette "Parcourir les offres" terminée
 - maquette "consultez cette offre" terminée
-- maquette "postulez maintenant" en cours
+- maquette "postulez maintenant" terminée
+- maquette "publier une offre" en cours
 
 avancement Back 
 
