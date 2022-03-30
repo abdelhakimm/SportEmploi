@@ -1,6 +1,7 @@
 <?php
 
 require_once "../Model/Offre.php";
+require_once "../Model/Application.php";
 
 define("view", "../../View/View_Offer/");
 define("router", "../Router/");
@@ -13,6 +14,13 @@ class Controller
         $allOffer = Offre::getAllOffer();
         
         require view . "parcourirOffres.php";
+    }
+
+    public static function getAllApplication()
+    {
+        $allApplication = Application::getAllApplication();
+
+        require view . "parcourirApplication.php";
     }
 
     public static function createOffer($post)
@@ -40,12 +48,30 @@ class Controller
     public static function getOfferById($id_offer)
     {
         $offer = Offre::getOfferById($id_offer);
+        $allApplication = Application::getApplicationForOffer($id_offer);
         require view . "detailsOffre.php";
     }
 
-    public static function candidater()
+    public static function candidater($id_offer)
     {
+        $offer = Offre::getOfferById($id_offer);
         require view . "candidater.php";
     }
 
+    public static function createApplication($post)
+    {
+        $application = new Application(
+            $post['name'],
+            $post['firstname'],
+            $post['email'],
+            $post['phone'],
+            $post['motivation']
+        );
+        $application->createApplication();
+
+        self::getAllApplication();
+    }
+
 }
+
+

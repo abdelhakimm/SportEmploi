@@ -304,3 +304,10 @@ input {
     display: flex;
     justify-content: center;
 }
+/* ------------------------------------------------------------------------*/
+.parcourirCandidatures{
+    height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

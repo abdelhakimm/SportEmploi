@@ -18,6 +18,34 @@
         <li><?= $offer["End"] ?></li>
     </ul>
 
+    <?php foreach ($allApplication as $application) : ?>
+
+        <ul>
+            <li>
+                <ul class="position">
+                    <li>
+                        <?= $application["Name"] ?>
+                    </li>
+                    <li>
+                        <?= $application["Firstname"] ?>
+                    </li>
+                    <li>
+                        <?= $application["Email"] ?>
+                    </li>
+                    <li>
+                        <?= $application["Phone"] ?>
+                    </li>
+                    <li>
+                        <?= $application["Motivation"] ?>
+                    </li>
+                </ul>
+
+            </li>
+
+        </ul>
+
+    <?php endforeach ?>
+
     <a href="<?= router ?>router.php?action=candidater&id=<?= $offer['Id_Offer'] ?>">CANDIDATER</a>
 </body>
 
