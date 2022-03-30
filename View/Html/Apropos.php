@@ -6,17 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Css/apropos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <title>Document</title>
 </head>
 
 <body>
     <?php
 
-    require_once "header.php";
+    require "header.php";
 
     ?>
 
-    <div class="main">
+    <div class="main scroll">
         <h1>Bienvenue sur Sportcarriere, dans « votre » univers : le Sport et l’Entertainment !</h1>
         <div class="alain">
             <div class="text one">
@@ -30,37 +32,44 @@
                 <img src="../Pictures/Alainghibaudo.png" alt="" srcset="" id="alain">
             </div>
         </div>
-        <div>
-            <img src="../Pictures/signature.png" alt="">
+        <div class="signature">
+            <img src="../Pictures/signature.png" alt="" id="sign">
         </div>
     </div>
 
-    <div class="section first">
-        <div><img src="" alt="" srcset=""></div>
-        <div>
+
+
+<!--DEBUTMID-->
+
+    <div class="section scroll">
+        <div class="imgagesection"><img src="../Pictures/SC1.png" alt="" srcset="" class="sc"></div>
+        <div class="sect first">
             <p>Nous croyons en la valeur de chaque individu et avons la conviction que certaines rencontres peuvent changer le cours de notre vie.
 C’est pourquoi nous mettons tout en œuvre pour créer les meilleures conditions de rencontre entre les talents que nous identifions et les entreprises qui nous confient la constitution de leurs équipes.</p>
         </div>
     </div>
 
-    <div class="section too">
-        <div>
+    <div class="section scroll">
+        <div class="sect too">
             <p>Nos 19 ans d’expérience nous permettent aujourd’hui de mettre à votre service leplus grand réseau de talentset d’experts du secteur du sport et de l’Entertainment.
 Ce réseau nous l’avons tissé grâce à notre capacité à créer de l’empathie tant avec nos clients qu’avec nos candidats.</p>
         </div>
-            <div><img src="" alt="" srcset=""></div>
+        <div class="imgagesection"><img src="../Pictures/SC2.png" alt="" srcset="" class="sc"></div>
     </div>
 
-    <div class="section three">
-        <div><img src="" alt="" srcset=""></div>
-        <div>
+    <div class="section scroll">
+        <div class="imgagesection"><img src="../Pictures/SC3.png" alt="" srcset="" class="sc"></div>
+        <div class="sect three">
             <p>
-Chaque mission qui nous est confiée est une occasion de nous dépasser et de revoir nos méthodes et de développer de nouveaux outils, comme hier avec la formation ou plus récemment avec la marque employeur.
-Nous pensons que les organisations innovantes sont les organisations qui placent l’humain au centre de tout.</p>
+            Chaque mission qui nous est confiée est une occasion de nous dépasser et de revoir nos méthodes et de développer de nouveaux outils, comme hier avec la formation ou plus récemment avec la marque employeur.
+            Nous pensons que les organisations innovantes sont les organisations qui placent l’humain au centre de tout.</p>
         </div>
     </div>
 
+<?php 
 
+require "footer.php";
+?>
 
 
 
