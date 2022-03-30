@@ -10,6 +10,27 @@
 </head>
 <body>
 
+    <header>
+        <div id="flexAll">
+            <div class="logo">
+                <img src="../logoEtIcon/logo.png" width="100px" height="100px">
+            </div>
+
+            <nav>
+                <ul>
+                    <div class="flexNav">
+                        <li>Accueil</li>
+                        <li>A propos</li>
+                    </div>
+                    <div class="flexNav">
+                        <li>Parcourir les offres</li>
+                        <li>Publier une offre</li>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
   <h1>Recrutons ensemble votre talent idéal</h1>
 
   <p>
