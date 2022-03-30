@@ -27,6 +27,7 @@
                 <img src="./pictures/signature.png" alt="">
             </div>
             <div id="profilAlain">
+                <span></span>
                 <img src="./pictures/Alainghibaudo.png" alt="">
             </div>
         </div>

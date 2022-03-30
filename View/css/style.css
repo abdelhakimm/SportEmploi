@@ -249,3 +249,25 @@ footer>div>img{
 #descriptionAlain>img{
     align-self: flex-end;
 }
+
+#profilAlain{
+    height: 530px;
+    width: 530px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#profilAlain>span{
+    height: 450px;
+    width: 450px;
+    background-color: #FF5C16;
+    border-radius: 50%;
+    position: absolute;
+}
+
+#profilAlain>img{
+    height: 410px;
+    width: 350px;
+    position: absolute;
+}
