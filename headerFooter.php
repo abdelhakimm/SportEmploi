@@ -39,7 +39,11 @@
         </ul>
         <div>
             <img src="./pictures/logo.png" alt="">
-            
+            <div id="copyright">
+            <i class="fa-regular fa-copyright"></i>
+            <p>S’JOB, 2022</p>
+            </div>
+
         </div>
 
     </footer>
