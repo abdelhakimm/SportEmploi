@@ -11,24 +11,24 @@
 <body>
 
     <header>
-        <div id="flexAll">
             <div class="logo">
                 <img src="../logoEtIcon/logo.png" width="100px" height="100px">
             </div>
 
             <nav>
                 <ul>
-                    <div class="flexNav">
-                        <li>Accueil</li>
-                        <li>A propos</li>
-                    </div>
-                    <div class="flexNav">
-                        <li>Parcourir les offres</li>
-                        <li>Publier une offre</li>
+                    <div id="allNav">
+                        <div class="flexNav">
+                           <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">Accueil</a></li>
+                           <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">A propos</a></li>
+                        </div>
+                        <div class="flexNav">
+                           <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">Parcourir les offres</a></li>
+                           <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">Publier une offre</a></li>
+                        </div>
                     </div>
                 </ul>
             </nav>
-        </div>
     </header>
 
   <h1>Recrutons ensemble votre talent idéal</h1>
@@ -36,8 +36,9 @@
   <p>
     Trouver le candidat idéal demande parfois un temps précieux. Avec les outils Indeed, identifiez, présélectionnez et recrutez rapidement vos candidats, en toute simplicité.
     Vous savez quel profil vous recherchez. <br>
+    <br>
     Nous vous aidons à le trouver.
-  </p>
+  </p> <br>
 
   <p>Votre annonce :</p>
 
@@ -45,55 +46,61 @@
 
 
     <form action="../../Back/Router/RouterRecruiter.php" method="post">
+        <div id="allItem"></div>
 
-        <label for="societyName">Nom de la Société :</label>
-        <input type="text" name="societyName" id="societyName" required>
+            <div class="itemOne">
 
-        <label for="jobName">Intitulé du poste :</label>
-        <input type="text" name="jobName" id="jobName" required>
-        
-        <div id="itemUn">
+                <label for="societyName">Nom de la Société :</label>
+                <input type="text" name="societyName" id="societyName" required>
 
-            <label for="contractType">Type de contrat :</label>
-            <select name="contractType" id="contractType" required>
-                <option value="CDD">CDD</option>
-                <option value="Interim">Interim</option>
-                <option value="CDI">CDI</option>
-            </select>
+                <label for="jobName">Intitulé du poste :</label>
+                <input type="text" name="jobName" id="jobName" required>
 
-            <label for="hours">Nombre d'heures :</label>
-            <input type="number" name="hours" id="hours" required>
-            <select name="hours" id="hours" required>
-                <option value="semaine">Semaine</option>
-                <option value="mois">Mois</option>
-            </select>
+            </div>
+            <div class="itemTwo">
 
-        </div>
+                <label for="contractType">Type de contrat :</label>
+                <select name="contractType" id="contractType" required>
+                    <option value="CDD">CDD</option>
+                    <option value="Interim">Interim</option>
+                    <option value="CDI">CDI</option>
+                </select>
 
-        <div id="itemDeux">
+                <label for="hours">Nombre d'heures :</label>
+                <input type="number" name="hours" id="hours" required>
+                <select name="hours" id="hours" required>
+                    <option value="semaine">Semaine</option>
+                    <option value="mois">Mois</option>
+                </select>
 
-            <label for="debutContract">Date de début de contrat :</label>
-            <input type="text" name="debutContract" id="debutContract" required>
+            </div>
 
-            <label for="endContract">Date de fin de contrat :</label>
-            <input type="text" name="endContract" id="endContract" required>
+            <div class="itemThree">
 
-        </div>
+                <label for="debutContract">Date de début de contrat :</label>
+                <input type="text" name="debutContract" id="debutContract" required>
 
-        <div id="itemTrois">
+                <label for="endContract">Date de fin de contrat :</label>
+                <input type="text" name="endContract" id="endContract" required>
 
-            <label for="salary">Salaire :</label>
-            <input type="text" name="salary" id="salary" required>
+            </div>
 
-            <label for="city">Ville :</label>
-            <input type="text" name="city" id="city" required>
+            <div class="itemFour">
 
-        </div>
+                <label for="salary">Salaire :</label>
+                <input type="text" name="salary" id="salary" required>
 
-        <label for="description">Description :</label>
-        <textarea name="description" id="description" cols="30" rows="10" required></textarea>
+                <label for="city">Ville :</label>
+                <input type="text" name="city" id="city" required>
 
-        <input type="submit" value="Poster votre annonce" name="submit">
+            </div>
+
+            <label for="description">Description :</label>
+            <textarea name="description" id="description" cols="30" rows="10" required></textarea>
+
+            <input type="submit" value="Poster votre annonce" name="submit">
+
+        </div>     
 
     </form>
 

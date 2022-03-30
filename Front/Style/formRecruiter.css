@@ -7,24 +7,32 @@ header{
     opacity: calc(65%);
 }
 
-#flexAll
-
-header nav ul{
-    display: flex;
-    justify-content: space-between;
-}
-
 header nav ul li{
     list-style-type: none;
     margin-left: 20px;
+    margin-right: 20px;
     font-size: 30px;
     color: #ffffff;
 
 }
 
+header a{
+    color: #ffffff;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#allNav{
+    display: flex;
+}
+
 .flexNav{
     display: flex;
-
+    margin-right: 100px;
 }
 
 h1{
@@ -38,6 +46,7 @@ p{
 
 label{
     font-size: 22px;
+    width: max-content;
 }
 
 #societyName, #jobName{
@@ -59,12 +68,38 @@ label{
 }
 
 form{
-    width: 100%;
+    width: 1220px;
+    height: 900px;
     display: flex;
     flex-direction: column;
 }
 
-#itemUn, #itemDeux, #itemTrois{
+#allItem{
+    display: flex;
+}
+
+.itemOne{
+    display: flex;
+    flex-direction: column;
+}
+
+.itemTwo{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.itemThree{
+    display: flex;
+}
+
+.itemFour{
+    display: flex;
+}
+
+
+/*, #itemDeux, #itemTrois{
     padding-right: 10px;
     padding-left: 10px;
     display: flex;
