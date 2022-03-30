@@ -24,7 +24,7 @@
                     <a href="../../View/aPropos.php">
                         <li>A PROPOS</li>
                     </a>
-                    <a href="">
+                    <a href="../Router/router.php?action=all">
                         <li>PARCOURIR LES OFFRES</li>
                     </a>
                     <a href="">
@@ -104,7 +104,7 @@
                     <a href="../../View/aPropos.php">
                         <li>A PROPOS</li>
                     </a>
-                    <a href="">
+                    <a href="../Router/router.php?action=all">
                         <li>PARCOURIR LES OFFRES</li>
                     </a>
                     <a href="">

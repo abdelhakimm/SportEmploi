@@ -65,11 +65,12 @@ class Controller
             $post['firstname'],
             $post['email'],
             $post['phone'],
-            $post['motivation']
+            $post['motivation'],
+            $post['id_offer']
         );
         $application->createApplication();
 
-        self::getAllApplication();
+        self::getAllOffer();
     }
 
 }

@@ -1,6 +1,7 @@
 <form action="<?= router ?>router.php" method="post">
 
-    <input type="hidden" id="Id_Offer" name="Id_Offer" value="<?= $offer['Id_Offer'] ?>">
+    <input type="hidden" id="id_offer" name="id_offer" value="<?= $offer['Id_Offer'] ?>">
+    <input type="hidden" id="Id_Application" name="Id_Application">
 
     <div class="ligneForm">
         <label for="name">Nom : </label>

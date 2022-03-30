@@ -11,14 +11,16 @@ class Application
     private $email;
     private $phone;
     private $motivation;
+    private $id_offer;
    
-    public function __construct($name, $firstname, $email, $phone, $motivation)
+    public function __construct($name, $firstname, $email, $phone, $motivation, $id_offer)
     {
         $this->name = $name;
         $this->firstname = $firstname;
         $this->email = $email;
         $this->phone = $phone;
         $this->motivation = $motivation;
+        $this->id_offer = $id_offer;
     }
 
     public static function getAllApplication()
@@ -38,8 +40,8 @@ class Application
     public function createApplication()
     {
 
-        $request = "INSERT INTO Application (Name, Firstname, Email, Phone, Motivation) 
-            VALUES (:Name, :Firstname, :Email, :Phone, :Motivation)";
+        $request = "INSERT INTO Application (Name, Firstname, Email, Phone, Motivation, Id_Offer) 
+            VALUES (:Name, :Firstname, :Email, :Phone, :Motivation, :Id_Offer)";
 
         $dao = new DAO();
         $dbh = $dao->getDbh();
@@ -51,6 +53,7 @@ class Application
         $stmt->bindParam(":Email", $this->email);
         $stmt->bindParam(":Phone", $this->phone);
         $stmt->bindParam(":Motivation", $this->motivation);
+        $stmt->bindParam(":Id_Offer", $this->id_offer);
 
         $stmt->execute();
     }
