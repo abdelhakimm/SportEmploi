@@ -21,10 +21,11 @@ Class ControllerRecruiter{
     }
 
     public static function createRecruiter($post){
-        $hours =$post['hou'] + $post['rs'] ;
+        $hours = $post['hour'].$post['hou'];
+
 
         $recruiter = new Recruiter($post['societyName'], $post['jobName'], $post['debutDate'], $post['endDate'],
-         $post['contractType'], $hours /*, $post['salary']*/, $post['description'], $post['city']);
+         $post['contractType'], $hours, $post['salary'], $post['description'], $post['city']);
         $recruiter->createRecruiter();
         self::getAllRecruiter();
         

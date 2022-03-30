@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta chaet="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Publier une annonce</title>
@@ -67,8 +67,8 @@
                 </select>
 
                 <label for="hours">Nombre d'heures :</label>
-                <input type="number" name="hou" id="hou" required>
-                <select name="rs" id="rs" required>
+                <input type="text" name="hou" id="hou" required>
+                <select name="hour" id="hour" required>
                     <option value="semaine">Semaine</option>
                     <option value="mois">Mois</option>
                 </select>
