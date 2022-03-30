@@ -112,8 +112,9 @@ footer>div>img{
     margin-left: 20px;
     
 }
+/* accueil */
 
-#backgroundAccueil>img{
+#backgroundAccueil{
     height: 660px;
     width: 100%;
     background-size: cover;
