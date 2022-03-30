@@ -9,7 +9,9 @@ avancement front
 - maquette "Parcourir les offres" terminée
 - maquette "consultez cette offre" terminée
 - maquette "postulez maintenant" terminée
-- maquette "publier une offre" en cours
+- maquette "publier une offre" terminée
+- maquette "consulter les candidats" terminée
+- maquette "voir le candidat" terminée
 
 avancement Back 
 
