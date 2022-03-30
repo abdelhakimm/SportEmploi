@@ -1,5 +1,5 @@
 <?php
-require "./DAO.php";
+require "c:/wamp64/www/SJOB/SportEmploi/Back/Model/DAO.php";
 
 class Recruiter{
     private $idRecruiter;
@@ -10,19 +10,20 @@ class Recruiter{
     private $contractType;
     private $hours;
     private $salary;
-    private $description;
     private $city;
+    private $description;
+    
 
     public function __construct($societyName,$jobName,$debutDate,$endDate,$contractType,$hours,$salary,$description,$city){
-        $this->societyName = $societyName
+        $this->societyName = $societyName;
         $this->jobName = $jobName;
         $this->debutDate = $debutDate;
         $this->endDate = $endDate;
         $this->contractType = $contractType;
         $this->hours = $hours;
         $this->salary = $salary;
-        $this->description = $description  
-        $this->city = $city  
+        $this->city = $city;
+        $this->description = $description;  
     }
 
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta chaet="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Publier une annonce</title>
@@ -67,8 +67,8 @@
                 </select>
 
                 <label for="hours">Nombre d'heures :</label>
-                <input type="number" name="hours" id="hours" required>
-                <select name="hours" id="hours" required>
+                <input type="number" name="hou" id="hou" required>
+                <select name="rs" id="rs" required>
                     <option value="semaine">Semaine</option>
                     <option value="mois">Mois</option>
                 </select>
@@ -77,11 +77,11 @@
 
             <div class="itemThree">
 
-                <label for="debutContract">Date de début de contrat :</label>
-                <input type="text" name="debutContract" id="debutContract" required>
+                <label for="debutDate">Date de début de contrat :</label>
+                <input type="date" name="debutDate" id="debutDate" required>
 
-                <label for="endContract">Date de fin de contrat :</label>
-                <input type="text" name="endContract" id="endContract" >
+                <label for="endDate">Date de fin de contrat :</label>
+                <input type="date" name="endDate" id="endDate">
 
             </div>
 

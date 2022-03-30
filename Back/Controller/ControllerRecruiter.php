@@ -16,13 +16,15 @@ Class ControllerRecruiter{
 
     public static function getRecruiterById($idRecruiter){
         $recruiter = Recruiter::getRecruiterById($idRecruiter);
-        require_once "../../Front/frontRecruiter/readRecruiterByContractType.php";
+        require_once "../../Front/frontRecruiter/readRecruiterById.php";
         
     }
 
     public static function createRecruiter($post){
+        $hours =$post['hou'] + $post['rs'] ;
+
         $recruiter = new Recruiter($post['societyName'], $post['jobName'], $post['debutDate'], $post['endDate'],
-         $post['contractType'], $post['hours'], $post['salary'], $post['description'], $post['city']);
+         $post['contractType'], $hours /*, $post['salary']*/, $post['description'], $post['city']);
         $recruiter->createRecruiter();
         self::getAllRecruiter();
         
@@ -47,12 +49,10 @@ Class ControllerRecruiter{
         
     }
 
-    public static function updateRecruiter($idRecruiter){
+    /*public static function updateRecruiter($idRecruiter){
         $recruiter = Recruiter::getRecruiterById($idRecruiter);
         require_once "../../Front/frontRecruiter/formUpdateRecruiter.php";
-        var_dump($e);
-        echo 'cheh'; 
-    }
+    }*/
     
 }
 

@@ -14,8 +14,8 @@
             <li><?=$recruiter["societyName"]?></li>
             <li><?=$recruiter["jobName"]?></li>
             <li><?=$recruiter["contractType"]?></li>
-            <li><?=$recruiter["debutContract"]?></li>
-            <li><?=$recruiter["endContract"]?></li>
+            <li><?=$recruiter["debutDate"]?></li>
+            <li><?=$recruiter["endDate"]?></li>
             <li><?=$recruiter["salary"]?></li>
             <li><?=$recruiter["city"]?></li>
 
