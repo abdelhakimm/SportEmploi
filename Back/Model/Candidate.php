@@ -1,4 +1,5 @@
 <?php
+
 require "./DAO.php";
 
 class Candidate{
@@ -13,8 +14,8 @@ class Candidate{
         $this->firstName = $firstName;
         $this->lastName = $lastName;
         $this->eMail = $eMail;
-        $this->phone = $phone;;
-        $this->motivation = $motivation
+        $this->phone = $phone;
+        $this->motivation = $motivation;
     }
     
     /**
@@ -180,7 +181,7 @@ class Candidate{
         $dao = new DAO();
         $dbh =$dao->getDbh();
 
-        $stmt = $dbh->prepare("UPDATE Candidate SET firstName=:firstName, lastName=:lastName, eMail=:eMail, phone=:phone, motivation=:motivation WHERE Id_Candidate = :id_Candidate;");
+        $stmt = $dbh->prepare("UPDATE Candidate SET firstName=:firstName, lastName=:lastName, eMail=:eMail, phone=:phone, motivation=:motivation WHERE idCandidate = :idCandidate;");
 
        
 
@@ -193,11 +194,11 @@ class Candidate{
       return $stmt->execute();
     }
 
-    public static function deletelastNameById($id_Candidate){
+    public static function deletelastNameById($idCandidate){
         $dao = new DAO();
         $dbh = $dao->getDbh();
-        $stmt = $dbh->prepare("DELETE FROM Candidate WHERE Id_Candidate = :id_Candidate;");
-        $stmt->bindParam("id_Candidate",$id_Candidate);
+        $stmt = $dbh->prepare("DELETE FROM Candidate WHERE idCandidate = :idCandidate;");
+        $stmt->bindParam("idCandidate",$idCandidate);
         $stmt->execute();
          
     }

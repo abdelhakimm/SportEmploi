@@ -45,7 +45,7 @@
   <a href="../../Back/Router/RouterRecruiter.php?action=all">Les Recruiter</a>
 
 
-    <form action="../../Back/Router/RouterRecruiter.php" method="post">
+    <form action="../../Back/Router/RouterRecruiter.php" method="POST">
         <div id="allItem"></div>
 
             <div class="itemOne">
