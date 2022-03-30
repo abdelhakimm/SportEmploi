@@ -212,3 +212,11 @@ footer>div>img{
     color: #FFC799;
 }
 /* fin accueil */
+/* a propos */
+
+#entredeuxApropos{
+    height: 100;
+    width: 100%;
+    background-color: black;
+    border: black;
+}
