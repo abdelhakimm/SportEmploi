@@ -1,6 +1,6 @@
 <?php
 
-require "./DAO.php";
+require "c:/wamp64/www/SJOB/SportEmploi/Back/Model/DAO.php";
 
 class Candidate{
     private $idCandidate;

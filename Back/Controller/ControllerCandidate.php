@@ -6,14 +6,14 @@ Class ControllerCandidate{
         
 
       $allCandidate = Candidate::getAllCandidate();
-     require_once "../../Front/readAllCandidate.php";
+     require_once "../../Front/frontCandidate/readAllCandidate.php";
     }
 
     public static function getCandidateById($idCandidate){
         
 
         $candidate = Candidate::getCandidateById($idCandidate);
-        require_once "../../Front/readCandidateById.php";
+        require_once "../../Front/frontCandidate/readCandidateById.php";
     }
 
     public static function createCandidate($post){
@@ -42,11 +42,6 @@ Class ControllerCandidate{
         $candidate = Candidate::deleteCandidateById($idCandidate);
     
         self::getAllCandidate();
-    }
-
-    public static function updateCandidate($idCandidate){
-        $candidate = Candidate::getCandidateByid($idCandidate);
-        require_once "../../Front/formUpdateCandidate.php";
     }
     
 }

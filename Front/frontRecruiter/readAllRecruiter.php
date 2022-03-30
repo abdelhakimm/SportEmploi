@@ -19,7 +19,7 @@
             <li><?=$recruiter["contractType"]?></li>
             <li><?=$recruiter["salary"]?></li>
 
-            <a href="../Back/Router/RouterRecruiter.php?action=iddRecruiter&idRecruiter=<?=$recruiter["idRecruiter"]?>"></a>
+            <a href="../Back/Router/RouterRecruiter.php?action=idRecruiter&idRecruiter=<?=$recruiter["idRecruiter"]?>"></a>
 
         </ul>
 

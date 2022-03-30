@@ -11,6 +11,7 @@
 <a href="../Back/Router/RouterCandidate.php?action=all">les addresses</a>
 
     <form action="../../Back/Router/RouterCandidate.php" method="post">
+        
         <div id="allItem"></div>
         
             <input type="hidden" name="idCandidate" value="<?=$candidate['idCandidate']?>">
