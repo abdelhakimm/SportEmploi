@@ -259,12 +259,12 @@ class Job{
     public static function getJobById($id_job){
         $dao = new DAO();
         $dbh = $dao->getDbh();
-    
+        
         $stmt = $dbh->prepare("SELECT * FROM Job WHERE Id_Job=:idJob;");
         $stmt->bindParam(":idJob", $id_job);
-    
+        
         $stmt->execute();
-    
+
         return $stmt->fetch();
     }
     public static function createJob($id_job,$name_job,$employer,$localisation,$star_date,$end_date,$type,$hours_week,$salary_month,$salary_year,$description){

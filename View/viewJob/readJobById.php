@@ -4,25 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Candidat</title>
+    <title>Voir l'offre</title>
 </head>
 <body>
 <a href="../../Back/Router/RouterJob.php?action=all">Retourner aux offres</a>
 
     <ul>
-        <li><?=$job["Name_Job"]?></li>
-        <li><?=$job["Localisation"]?></li>
-        <li><?=$job["Start_Date"]?></li>
-        <li><?=$job["End_Date"]?></li>
-        <li><?=$job["Type"]?></li>
-        <li><?=$job["House_Week"]?></li>
-        <li><?=$job["Salary_Month"]?></li>
-        <li><?=$job["Salary_Year"]?></li>
-        <li><?=$job["Description"]?></li>
-        <li><?=$job["Employer"]?></li>
+            <li><?=$row["Name_Job"]?></li>
+            <li><?=$row["Localisation"]?></li>
+            <li><?=$row["Start_Date"]?></li>
+            <li><?=$row["End_Date"]?></li>
+            <li><?=$row["Type"]?></li>
+            <li><?=$row["Hours_Week"]?></li>
+            <li><?=$row["Salary_Month"]?></li>
+            <li><?=$row["Salary_Year"]?></li>
+            <li><?=$row["Description"]?></li>
+            <li><?=$row["Employer"]?></li>
 
-        <a href="../../Back/Router/Routerjob.php?action=update&id=<?=$job["Id_job"]?>">Modifier</a>
-        <a href="../../Back/Router/Routerjob.php?action=delete&id=<?=$job["Id_job"]?>">Supprimer</a>
+        <a href="../../Back/Router/RouterCandidate?action=create&id=<?=$row["Id_job"]?>">Postuler maintenant</a>
+        <a href="../../Back/Router/Routerjob.php?action=update&id=<?=$row["Id_job"]?>">Modifier l'offre</a>
+        <a href="../../Back/Router/Routerjob.php?action=delete&id=<?=$row["Id_job"]?>">Supprimer</a>
 
     </ul>
 

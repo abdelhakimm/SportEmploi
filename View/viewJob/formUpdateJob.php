@@ -14,26 +14,37 @@
 
         <input type="hidden" name="id" value="<?=$Job['Id_Job']?>">
 
-        <label for = "firstname"> Prénom </label>
-        <input type = "text" name = "firstname" id = "firstname" required value="<?=$Job['firstname']?>"> <br>
+        <label for="type">Intitulé du poste</label>  
+        <input type="text" name="type" id="type" required value="<?=$Job['Name_Job']?>"> <br>
 
-        <label for = "lastname"> Nom </label> 
-        <input type = "text" name = "lastname" id = "lastname" value="<?=$Job['lastname']?>" required> <br>
+        <label for="employer">Société</label>
+        <input type="text" name="employer" id="employer"required value="<?=$Job['Employer']?>"> <br>
 
-        <label for = "mail"> Email </label> 
-        <input type = "text" name = "mail" id = "mail" value="<?=$Job['mail']?>" required> <br>
+        <label for="Localisation">Localisation</label>
+        <input type="text" name="Localisation" id="Localisation" required value="<?=$Job['Localisation']?>"> <br>
 
-        <label for = "phone"> Téléphone </label>
-        <input type = "number" name = "phone" id = "phone" value="<?=$Job['phone']?>"> <br>
+        <label for="start_date">Poste à pouvoir pour : </label>
+        <input type="hours_week" name="start_date" id="start_date" required value="<?=$Job['Start_Date']?>">
 
-        <label for = "motivation"> Lettre de motivation </label>
-        <input type = "number" name = "motivation" id = "motivation" value="<?=$Job['motivation']?>"> <br>
+        <label for="end_date">Fin du poste : </label>
+        <input type="text" name="end_date" id="end_date" required value="<?=$Job['End_Date']?>">
 
-        <label for = "name_job"> Nom de l'annonce </label>
-        <input type = "number" name = "name_job" id = "name_job" value="<?=$Job['name_job']?>"> <br>
+        <label for="type">Type de contrat : </label>
+        <input type="text" name="type" id="type" required value="<?=$Job['Type']?>">
 
-        <label for="Envoyer"></label>
-        <input type="submit" name="submit"  value="Envoyer">
+        <label for="hours_week">Nombre d'heure par semaine</label>
+        <input type="hours_week" name="hours_week" id="hours_week" required value="<?=$Job['Hours_Week']?>">
+
+        <label for="salary_month">Salaire mensuel : </label>
+        <input type="text" name="salary_month" id="salary_month" required value="<?=$Job['Salary_Month']?>">
+
+        <label for="salary_year">Salaire annuel : </label>
+        <input type="hours_week" name="salary_year" id="salary_yearcode" required value="<?=$Job['Salary_Year']?>">
+
+        <label for="description">Description du poste : </label>
+        <input type="text" name="description" id="description"required value="<?=$Job['Description']?>">
+
+        <input type="submit" value="envoyer" name="submit">
 
     </form>
 </body>

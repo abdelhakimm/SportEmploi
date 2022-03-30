@@ -12,7 +12,7 @@ Class ControllerJob{
     }
 
     public static function getJobById($id_job){
-        $Job = Job::getJobByid($id_job);
+        $row = Job::getJobByid($id_job);
         require front."/viewJob/readJobById.php";
     }
 
