@@ -31,6 +31,9 @@
                 <img src="./pictures/Alainghibaudo.png" alt="">
             </div>
         </div>
+        <div id="entredeuxApropos">
+            <p>POURQUOI <span>NOUS</span> CHOISIR ?</p>
+        </div>
     </section>
 </body>
 </html>
