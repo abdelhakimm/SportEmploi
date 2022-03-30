@@ -10,31 +10,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
 </head>
 <body>
     <header>
         <ul>
-            <li> <a href="">Accueil</a> </li>
+            <li id="centerLeft"> <a href="">Accueil</a> </li>
             <li><a href="">À propos</a></li>
             <li> <img src="./pictures/logo.png" alt=""></li>
-            <li><a href="">Parcourir les offres</a></li>
-            <li><a href="">Publier une offre</a></li>
+            <li class="offreNav"><a href="">Parcourir les offres</a></li>
+            <li class="offreNav"><a href="">Publier une offre</a></li>
         </ul>
     </header>
 
     <footer>
         <ul>
-            <li id="menu"><a href="">Menu :</a></li>
+            <li class="menu" id="menuSolo"><a href="">Menu :</a></li>
             <li><a href="">Accueil</a></li>
             <li><a href="">À propos</a></li>
             <li><a href="">Parcourir les offres</a></li>
             <li><a href="">Publier une offre</a></li>
         </ul>
         <ul>
-            <li><img src="../" alt=""></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li class="menu">Réseaux sociaux :</li>
+            <li class="iconeSociaux"><i class="fa-brands fa-facebook"></i></li>
+            <li class="iconeSociaux"><i class="fa-brands fa-linkedin-in"></i></li>
+            <li class="iconeSociaux"><i class="fa-brands fa-twitter"></i></li>
         </ul>
         <div>
             <img src="./pictures/logo.png" alt="">

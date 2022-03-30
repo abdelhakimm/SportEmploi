@@ -19,6 +19,14 @@ header>ul>li{
     list-style: none;
 }
 
+#centerLeft{
+    margin-left: 50px;
+}
+
+.offreNav{
+    width: 150px;
+    text-align: center;
+}
 header>ul>li>img{
     width: 150px;
     height: 150px;
@@ -57,10 +65,22 @@ footer>ul>li>a{
 
 }
 
-
-#menu{
+.menu{
     font-weight: bolder;
     line-height: 50px;
+    color: white;
+    font-size: 23px;
+    margin-top: 0px;
+}
+
+#menuSolo{
+    margin-top: 20px;
+}
+
+.iconeSociaux{
+    font-size: 40px;
+    color: white;
+    margin-top: 10px;
 }
 footer>div>img{
     width: 250px;
