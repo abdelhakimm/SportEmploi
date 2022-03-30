@@ -3,7 +3,7 @@
 require_once "DAO.php";
 
 class Job{
-    private $id_Job;
+    private $id_job;
     private $name_job;
     private $employer;
     private $localisation;
@@ -251,20 +251,17 @@ class Job{
     public static function getAllJob(){
         $dao = new DAO();
         $dbh = $dao->getDbh();
-        echo "dans la class Job getAll";
-        $stmt = $dbh->prepare("SELECT * FROM 'Job';");
-    
+        $stmt = $dbh->prepare("SELECT * FROM Job;");
         $stmt->execute();
         $allRows = $stmt->fetchAll();
-    
         return $allRows;
     }
-    public static function getJobById($id_Job){
+    public static function getJobById($id_job){
         $dao = new DAO();
         $dbh = $dao->getDbh();
     
         $stmt = $dbh->prepare("SELECT * FROM Job WHERE Id_Job=:idJob;");
-        $stmt->bindParam(":idJob", $id_Job);
+        $stmt->bindParam(":idJob", $id_job);
     
         $stmt->execute();
     

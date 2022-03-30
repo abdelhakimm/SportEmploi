@@ -1,4 +1,5 @@
 <?php
+
 require_once "../Model/Job.php";
 
 define('front', '../../View');
@@ -6,14 +7,12 @@ define('front', '../../View');
 Class ControllerJob{
 
     public static function getAllJob(){
-      $allJob = Job::getAllJob();
-      echo "dans le controller getAllJob";
-     require front."/viewJob/allJob.php";
+        $allRows = Job::getAllJob();
+        require front."/viewJob/allJob.php";
     }
 
-    public static function getJobById($id){
-
-        $Job = Job::getJobByid($id);
+    public static function getJobById($id_job){
+        $Job = Job::getJobByid($id_job);
         require front."/viewJob/readJobById.php";
     }
 

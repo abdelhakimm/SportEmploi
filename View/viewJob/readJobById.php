@@ -7,7 +7,7 @@
     <title>Candidat</title>
 </head>
 <body>
-<a href="../../Back/Router/RouterJob.php?action=all">Les Annonces</a>
+<a href="../../Back/Router/RouterJob.php?action=all">Retourner aux offres</a>
 
     <ul>
         <li><?=$job["Name_Job"]?></li>

@@ -8,22 +8,22 @@
 </head>
 <body>
 
-    <?php foreach($allcandidate as $candidate): ?>
+    <?php foreach($allRows as $row): ?>
         
         <ul>
-            <li><?=$job["Name_Job"]?></li>
-            <li><?=$job["Localisation"]?></li>
-            <li><?=$job["Start_Date"]?></li>
-            <li><?=$job["End_Date"]?></li>
-            <li><?=$job["Type"]?></li>
-            <li><?=$job["House_Week"]?></li>
-            <li><?=$job["Salary_Month"]?></li>
-            <li><?=$job["Salary_Year"]?></li>
-            <li><?=$job["Description"]?></li>
-            <li><?=$job["Employer"]?></li>
+            <li><?=$row["Name_Job"]?></li>
+            <li><?=$row["Localisation"]?></li>
+            <li><?=$row["Start_Date"]?></li>
+            <li><?=$row["End_Date"]?></li>
+            <li><?=$row["Type"]?></li>
+            <li><?=$row["Hours_Week"]?></li>
+            <li><?=$row["Salary_Month"]?></li>
+            <li><?=$row["Salary_Year"]?></li>
+            <li><?=$row["Description"]?></li>
+            <li><?=$row["Employer"]?></li>
         </ul>
         
-        <p><a href="Routercandidate.php?action=id&id=<?=$candidate["Id_candidate"]?>">Voir ce poste</a></p>
+        <p><a href="RouterJob.php?action=id&id=<?=$row["Id_Job"]?>">Voir ce poste</a></p>
 
     <?php endforeach?>
 
