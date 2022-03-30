@@ -17,12 +17,11 @@ Class ControllerJob{
     }
 
     public static function createJob($post){
-        
-        $Job = new Job($post['name'], $post['localisation'], 
+        echo "dans controller createjob";
+        Job::createJob($post['name_job'], $post['localisation'], 
         $post['start_date'], $post['end_date'], $post['type'], $post['hours_week'],
         $post['salary_month'], $post['salary_year'], $post['description'], $post['employer']);
 
-        $Job->createJob();
         self::getAllJob();
     }
 

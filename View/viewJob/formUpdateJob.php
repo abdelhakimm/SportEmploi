@@ -12,37 +12,37 @@
 
     <form action="../../Back/Router/RouterJob.php" method="post">
 
-        <input type="hidden" name="id" value="<?=$Job['Id_Job']?>">
+        <input type="hidden" name="id" value="<?=$row['Id_Job']?>">
 
         <label for="type">Intitulé du poste</label>  
-        <input type="text" name="type" id="type" required value="<?=$Job['Name_Job']?>"> <br>
+        <input type="text" name="type" id="type" required value="<?=$row['Name_Job']?>"> <br>
 
         <label for="employer">Société</label>
-        <input type="text" name="employer" id="employer"required value="<?=$Job['Employer']?>"> <br>
+        <input type="text" name="employer" id="employer"required value="<?=$row['Employer']?>"> <br>
 
         <label for="Localisation">Localisation</label>
-        <input type="text" name="Localisation" id="Localisation" required value="<?=$Job['Localisation']?>"> <br>
+        <input type="text" name="Localisation" id="Localisation" required value="<?=$row['Localisation']?>"> <br>
 
         <label for="start_date">Poste à pouvoir pour : </label>
-        <input type="hours_week" name="start_date" id="start_date" required value="<?=$Job['Start_Date']?>">
+        <input type="hours_week" name="start_date" id="start_date" required value="<?=$row['Start_Date']?>">
 
         <label for="end_date">Fin du poste : </label>
-        <input type="text" name="end_date" id="end_date" required value="<?=$Job['End_Date']?>">
+        <input type="text" name="end_date" id="end_date" required value="<?=$row['End_Date']?>">
 
         <label for="type">Type de contrat : </label>
-        <input type="text" name="type" id="type" required value="<?=$Job['Type']?>">
+        <input type="text" name="type" id="type" required value="<?=$row['Type']?>">
 
         <label for="hours_week">Nombre d'heure par semaine</label>
-        <input type="hours_week" name="hours_week" id="hours_week" required value="<?=$Job['Hours_Week']?>">
+        <input type="hours_week" name="hours_week" id="hours_week" required value="<?=$row['Hours_Week']?>">
 
         <label for="salary_month">Salaire mensuel : </label>
-        <input type="text" name="salary_month" id="salary_month" required value="<?=$Job['Salary_Month']?>">
+        <input type="text" name="salary_month" id="salary_month" required value="<?=$row['Salary_Month']?>">
 
         <label for="salary_year">Salaire annuel : </label>
-        <input type="hours_week" name="salary_year" id="salary_yearcode" required value="<?=$Job['Salary_Year']?>">
+        <input type="hours_week" name="salary_year" id="salary_yearcode" required value="<?=$row['Salary_Year']?>">
 
         <label for="description">Description du poste : </label>
-        <input type="text" name="description" id="description"required value="<?=$Job['Description']?>">
+        <input type="text" name="description" id="description"required value="<?=$row['Description']?>">
 
         <input type="submit" value="envoyer" name="submit">
 

@@ -267,10 +267,10 @@ class Job{
 
         return $stmt->fetch();
     }
-    public static function createJob($id_job,$name_job,$employer,$localisation,$star_date,$end_date,$type,$hours_week,$salary_month,$salary_year,$description){
+    public static function createJob($name_job,$employer,$localisation,$star_date,$end_date,$type,$hours_week,$salary_month,$salary_year,$description){
         $dao = new DAO();
         $dbh = $dao->getDbh();
-        $stmt= $dbh->prepare("INSERT INTO Job (Name_Job, Employer, Localisation, Start_date, End_date, Type, Hours_Week, Salary_Month, Salary_Year, Description) VALUES (:name_job, :employer, :localisation, :start_date, :end_date, :type, :id_job)");
+        $stmt= $dbh->prepare("INSERT INTO Job (Name_Job, Employer, Localisation, Start_date, End_date, Type, Hours_Week, Salary_Month, Salary_Year, Description) VALUES (:name_job, :employer, :localisation, :start_date, :end_date, :type, :hours_week, :salary_month, :salary_year, :description)");
         $stmt->bindParam(':name_job', $name_job);
         $stmt->bindParam(':employer', $employer);
         $stmt->bindParam(':localisation', $localisation);
@@ -281,7 +281,6 @@ class Job{
         $stmt->bindParam(':salary_month', $salary_month);
         $stmt->bindParam(':salary_year', $salary_year);
         $stmt->bindParam(':description', $description);
-        
 
         $stmt->execute();
     }
