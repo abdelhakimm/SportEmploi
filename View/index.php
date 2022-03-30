@@ -14,7 +14,28 @@
 <?php require_once "headerFooter.php" ?>
     <section>
         <div id="backgroundAccueil">
-            <img src="./pictures/background.jpg" alt="">
+            <p>L’expert emplois 100 % Sport</p>
+        </div>
+        <div id="entreSection">
+            <p>POURQUOI CHOISIR S’JOB ?</p>
+        </div>
+        <div id="iconeAccueil">
+            <div>
+                <img src="./pictures/computer.png" alt=""></img>
+                <p>JOBBOARD</p>
+            </div>
+            <div>
+                <img src="./pictures/crosshair.png" alt="">
+                <p>CABINET DE RECRUTEMENT</p>
+            </div>
+            <div>
+                <img src="./pictures/network.png" alt="">
+                <p>ACCOMPAGNEMENT & CONSEIL</p>
+            </div>
+            <div>
+                <img src="./pictures/lampe.png" alt="">
+                <p>MÉDIA</p>
+            </div>
         </div>
     </section>
     
