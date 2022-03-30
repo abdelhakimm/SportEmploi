@@ -6,8 +6,8 @@ define('front', '../../View');
 Class ControllerJob{
 
     public static function getAllJob(){
-        
       $allJob = Job::getAllJob();
+      echo "dans le controller getAllJob";
      require front."/viewJob/allJob.php";
     }
 

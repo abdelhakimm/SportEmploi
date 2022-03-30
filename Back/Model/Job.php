@@ -12,10 +12,10 @@ class Job{
     private $type;
     private $hours_week;
     private $salary_month;
-    private $salary_year;
+    private $salary_year = NULL;
     private $description;
 
-    public function __construct($name_job,$employer,$localisation,$start_date,$type,$hours_week,$salary_month,$salary_year,$description,$end_date = NULL){
+    public function __construct($name_job,$employer,$localisation,$start_date,$type,$hours_week,$salary_month,$description,$salary_year = NULL,$end_date = NULL){
         $this->name_job = $name_job;
         $this->employer = $employer;
         $this->localisation = $localisation;
@@ -251,7 +251,8 @@ class Job{
     public static function getAllJob(){
         $dao = new DAO();
         $dbh = $dao->getDbh();
-        $stmt = $dbh->prepare("SELECT * FROM Job;");
+        echo "dans la class Job getAll";
+        $stmt = $dbh->prepare("SELECT * FROM 'Job';");
     
         $stmt->execute();
         $allRows = $stmt->fetchAll();
