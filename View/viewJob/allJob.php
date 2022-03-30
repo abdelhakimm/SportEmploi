@@ -11,6 +11,7 @@
     <?php foreach($allRows as $row): ?>
         
         <ul>
+            <li><?=$row["Id_Job"]?></li>
             <li><?=$row["Name_Job"]?></li>
             <li><?=$row["Localisation"]?></li>
             <li><?=$row["Start_Date"]?></li>
@@ -23,7 +24,7 @@
             <li><?=$row["Employer"]?></li>
         </ul>
         
-        <p><a href="RouterJob.php?action=id&id=<?=$row["Id_Job"]?>">Voir ce poste</a></p>
+        <p><a href="RouterJob.php?action=id&id=<?=$row["Id_Job"]?>">Voir cette offre</a></p>
 
     <?php endforeach?>
 

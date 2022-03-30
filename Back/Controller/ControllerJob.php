@@ -27,12 +27,11 @@ Class ControllerJob{
 
     public static function updateJob($post){
         
-        $Job = new Job($post['name'], $post['localisation'], 
+        $row = new Job($post['name'], $post['localisation'], 
         $post['start_date'], $post['end_date'], $post['type'], $post['hours_week'],
         $post['salary_month'], $post['salary_year'], $post['description'], $post['employer']);
 
-        $Job->setId_Job($post["id_Job"]);//pas neccessaire pour update
-        $Job->updateJob($post['name'], $post['localisation'], 
+        $row->updateJob($post['name'], $post['localisation'], 
         $post['start_date'], $post['end_date'], $post['type'], $post['hours_week'],
         $post['salary_month'], $post['salary_year'], $post['description'], $post['employer']);
         self::getAllJob();
@@ -40,13 +39,13 @@ Class ControllerJob{
 
     public static function deleteJobById($id){
        
-        $Job = Job::deleteJobById($id);
+        Job::deleteJobById($id);
         self::getAllJob();
     }
 
-    public static function formUpdateJob($id){
+    public static function formUpdateJob($id_job){
 
-        $Job = Job::getJobByid($id);
+        $row = Job::getJobByid($id_job);
         require front."/viewJob/formUpdateJob.php";
     }
 

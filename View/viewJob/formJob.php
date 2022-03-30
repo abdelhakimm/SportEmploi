@@ -37,11 +37,11 @@
         <input type="number" name="salary_month" id="salary_month">
 
         <label for="salary_year">Salaire annuel : </label>
-        <input type="number" name="salary_year" id="salary_yearcode">
+        <input type="number" name="salary_year" id="salary_year">
 
         <label for="description">Description du poste : </label>
-        <input type="text" name="description" id="description">
-
+        <textarea name="description" id="description" cols="30" rows="10"></textarea>
+        
         <input type="submit" value="envoyer" name="submit">
     </form>
 </body>

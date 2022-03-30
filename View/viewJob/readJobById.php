@@ -10,6 +10,7 @@
 <a href="../../Back/Router/RouterJob.php?action=all">Retourner aux offres</a>
 
     <ul>
+            <li><?=$row["Id_Job"]?></li>
             <li><?=$row["Name_Job"]?></li>
             <li><?=$row["Localisation"]?></li>
             <li><?=$row["Start_Date"]?></li>
