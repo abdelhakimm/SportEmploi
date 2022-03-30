@@ -81,7 +81,7 @@
                 <input type="text" name="debutContract" id="debutContract" required>
 
                 <label for="endContract">Date de fin de contrat :</label>
-                <input type="text" name="endContract" id="endContract" required>
+                <input type="text" name="endContract" id="endContract" >
 
             </div>
 

@@ -6,7 +6,7 @@ class Recruiter{
     private $societyName;
     private $jobName;
     private $debutDate;
-    private $endDate;
+    private $endDate = NULL;
     private $contractType;
     private $hours;
     private $salary;
