@@ -16,8 +16,8 @@
     <section>
         <div id="sectionAccueilUn">
             <div id="descriptionAlain">
-                <p id="titrePropos">Bienvenue sur <span>S’Job</span>, dans « votre » univers : le Sport et l’Entertainment !</p>
-                <p>
+                <p id="titrePropos">Bienvenue sur <span>S’Job</span>, dans « votre » univers : <br> le Sport et l’Entertainment !</p>
+                <p id="descriptionAlainDeux">
                 Premier Sjob, Cabinet de recrutement et de conseil à s’être créé en Europe en 2001, nous sommes très fiers d’être les précurseurs du marché et de représenter l’expertise française. <br><br>
                 Acteurs nationaux ou internationaux, acteurs de proximité au cœur des problématiques sportives, Sjob vous propose un service global ressources humaines pour répondre à vos besoins. Tout un monde, un univers autour d’une passion commune : le sport. <br><br>
                 Chez Sjob, notre ambition est simple : offrir la meilleure expérience de recrutement possible pour les candidats et les entreprises du marché du sport et de l’Entertainment. <br><br>
@@ -26,7 +26,7 @@
                 </p>
                 <img src="./pictures/signature.png" alt="">
             </div>
-            <div>
+            <div id="profilAlain">
                 <img src="./pictures/Alainghibaudo.png" alt="">
             </div>
         </div>
