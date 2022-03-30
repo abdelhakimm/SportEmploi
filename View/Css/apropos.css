@@ -102,12 +102,12 @@ h1{
 /*DEBUT MID*/
 
 .section{
-    margin-top: 380px;
+    margin-top: 430px;
     display: flex;
     width: 100%;
-    height: 500px;
+    height: 600px;
     font-size: 60px;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .sc{
@@ -122,10 +122,13 @@ h1{
 }
 
 .sect{
-    width: 1300px;
+    width: 1400px;
     text-align: center;
     font-weight: 500;
+    margin-left: 200px;
 }
+
+
 /*FIN MID*/
 
 /*FOOTER*/

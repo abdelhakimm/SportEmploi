@@ -51,9 +51,11 @@
         </div>
        
     </div>
-     <div class="text">
-            <p>Dans la définition du profil idéal, la mise en place d’une stratégie de communication RH adéquate, la constitution d’un organigramme ou encore sur les pratiques économiques du marché</p>
-        </div>
+    <div class="centre">
+            <div class="text">
+                <p>Dans la définition du profil idéal, la mise en place d’une stratégie de communication RH adéquate, la constitution d’un organigramme ou encore sur les pratiques économiques du marché</p>
+            </div>
+    </div>
 </div>
 
     <!-- deuxieme section-->
@@ -70,9 +72,11 @@
             </div>
             
         </div>
-         <div class="text">
+        <div class="centre">
+            <div class="text">
                 <p>Dans la recherche des meilleurs candidats par notre connaissance des acteurs, le bouche à oreille, des interventions auprès de colloques et formations de renoms...</p>
             </div>
+        </div>
     </div>
 
 
@@ -85,9 +89,11 @@
            
 
         </div>
-         <div class="text">
+        <div class="centre">
+            <div class="text">
                 <p>Sjob.com regroupant sous la forme d’un job-board les offres d’emploi de nos clients, et proposant des outils pour favoriser leur attractivité.</p>
             </div>
+        </div>
     </div>
 
 
