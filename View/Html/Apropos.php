@@ -12,7 +12,8 @@
 <body>
     <?php
 
-    header();
+    require_once "header.php";
+
     ?>
 
     <div class="main">
@@ -63,8 +64,6 @@ Nous pensons que les organisations innovantes sont les organisations qui placent
 
 
 
-    <? footer();
-    ?>
     <script src="../Js/javascritp.js"></script>
 </body>
 
