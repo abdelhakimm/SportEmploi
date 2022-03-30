@@ -11,14 +11,14 @@
 </head>
 
 <body>
-  <header>
+  <header class="fondGrisClair">
     <div class="logoMenu">
       <div class="logo">
         <img id="logo" src="./images/logo.png" alt="logo" />
       </div>
       <div class="nav">
         <ul>
-          <a href="">
+          <a href="./index.php">
             <li>ACCUEIL</li>
           </a>
           <a href="">
@@ -32,9 +32,6 @@
           </a>
         </ul>
       </div>
-    </div>
-    <div class="grosTitre">
-      <h1>L'expert emploi 100 % Sport</h1>
     </div>
   </header>
 
@@ -136,13 +133,13 @@
       </div>
       <div class="nav">
         <ul>
-          <a href="">
+          <a href="./index.php">
             <li>ACCUEIL</li>
           </a>
           <a href="">
             <li>A PROPOS</li>
           </a>
-          <a href="">
+          <a href="../Back/Router/router.php">
             <li>PARCOURIR LES OFFRES</li>
           </a>
           <a href="">

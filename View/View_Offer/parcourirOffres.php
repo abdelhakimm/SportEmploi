@@ -11,20 +11,20 @@
 </head>
 
 <body>
-  <header>
+  <header class="fondGrisClair">
     <div class="logoMenu">
       <div class="logo">
         <img id="logo" src="../../View/images/logo.png" alt="logo" />
       </div>
       <div class="nav">
         <ul>
-          <a href="">
+          <a href="../../View/index.php">
             <li>ACCUEIL</li>
           </a>
-          <a href="">
+          <a href="../../View/aPropos.php">
             <li>A PROPOS</li>
           </a>
-          <a href="../Back/Router/router.php">
+          <a href="">
             <li>PARCOURIR LES OFFRES</li>
           </a>
           <a href="">
@@ -33,12 +33,14 @@
         </ul>
       </div>
     </div>
-    <div class="grosTitre">
-      <h1>L'expert emploi 100 % Sport</h1>
-    </div>
   </header>
 
   <main>
+
+    <div class="parcourirOffres">
+      <h2 class="alignCenter">PARCOURIR LES OFFRES</h2>
+    </div>
+
     <section id="criteres">
 
     </section>
@@ -76,10 +78,10 @@
       </div>
       <div class="nav">
         <ul>
-          <a href="">
+          <a href="../../View/index.php">
             <li>ACCUEIL</li>
           </a>
-          <a href="">
+          <a href="../../View/aPropos.php">
             <li>A PROPOS</li>
           </a>
           <a href="">

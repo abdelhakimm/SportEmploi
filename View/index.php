@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <header>
+  <header class="chrono">
     <div class="logoMenu">
       <div class="logo">
         <img id="logo" src="./images/logo.png" alt="logo" />
@@ -21,7 +21,7 @@
           <a href="">
             <li>ACCUEIL</li>
           </a>
-          <a href="">
+          <a href="./aPropos.php">
             <li>A PROPOS</li>
           </a>
           <a href="../Back/Router/router.php">
@@ -97,10 +97,10 @@
           <a href="">
             <li>ACCUEIL</li>
           </a>
-          <a href="">
+          <a href="./aPropos.php">
             <li>A PROPOS</li>
           </a>
-          <a href="">
+          <a href="../Back/Router/router.php">
             <li>PARCOURIR LES OFFRES</li>
           </a>
           <a href="">
