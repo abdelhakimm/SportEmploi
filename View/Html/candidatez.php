@@ -23,23 +23,22 @@
                 <input type="text" id="" name="Nom" value="" placeholder="Exemple : Alain" required><br><br>
             <div class="inli">
                  <div>
-                        <label for="">Email</label>
-                        <input type="mail" id="" name="email" value=""  required>
+                        <label for="">Email</label><br>
+                        <input type="mail" id="" name="email" value="" placeholder="Exemple : DupontAlain@gmail.com" required>
 
                         <label for="">Telephone</label>
-                        <input type="int" id="" name="telephone" value=""  required><br><br>
+                        <input type="number" id="" name="telephone" value="" placeholder="Exemple : 07********" required><br><br>
                 </div>
             </div>
                 <label for="">Description</label><br>
-                <textarea name="description" rows="8" cols="60" ></textarea>        
+                <textarea name="description" rows="8" cols="60" ></textarea>
+
+                <div class="sub">
+                <input type="submit">
+                </div>
+                
         </div>
-
-
-
-
-
-
-
+      
 
         </form>
     </div>

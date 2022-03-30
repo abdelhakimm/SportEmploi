@@ -53,11 +53,12 @@ li:hover{
 .form{
     display: flex;
     justify-content: center;
+    margin-top: 150px;
     
 }
 
 .inli{
-    display: inline-block;
+    display: flex;
 
 }
 
@@ -69,7 +70,7 @@ h1{
 
 .candid{
     width: 1000px;
-    height: 650px;
+    height: 850px;
     margin-left: 250px;
     background-color: #E7E7E7;
     border-radius: 15px;
@@ -80,9 +81,59 @@ form{
     margin-left: 30px;
 }
 
+input[type=text]{
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 4px;
+    width: 300px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
 
+input[type=text] {
+    transition: width 0.4s ease-in-out;
+  }
+  
+input[type=text]:focus {
+    width: 50%;
+}
 
+input[type=mail]{
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 4px;
+    width: 300px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
 
+input[type=number]{
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 4px;
+    width: 300px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+label{
+    font-weight: 700;
+}
+
+.sub{
+    margin-top: 70px;
+    margin-left: 400px;
+}
+
+input[type=submit]{
+    color: white;
+    background-color: #5FAAE0;
+    border: 2px solid rgb(64, 164, 231);
+    border-radius: 4px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
 
 
 
