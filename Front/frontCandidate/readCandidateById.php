@@ -11,13 +11,13 @@
 
     
     <ul>
+        
         <li><?=$candidate["firstName"]?></li>
         <li><?=$candidate["lastName"]?></li>
         <li><?=$candidate["eMail"]?></li>
         <li><?=$candidate["phone"]?></li>
 
         <li><?=$candidate["motivation"]?></li>
-
     </ul>
     <a href="../Back/Router/RouterCandidate.php?action=update&id=<?=$candidate["idCandidate"]?>">Modifier</a>
     <a href="../Back/Router/RouterCandidate.php?action=delete&id=<?=$candidate["idCandidate"]?>">Supprimer</a>
