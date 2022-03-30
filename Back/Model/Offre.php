@@ -73,7 +73,7 @@ class Offre
     public static function getOfferById($id_offer)
     {
 
-        $request = "SELECT * FROM Offre WHERE Id_Offre = :id_offer";
+        $request = "SELECT * FROM Offre WHERE Id_Offer = :id_offer";
 
         $dao = new DAO();
         $dbh = $dao->getDbh();
@@ -82,6 +82,7 @@ class Offre
         $stmt->bindParam(":id_offer", $id_offer);
         $stmt->execute();
         $row = $stmt->fetch();
+        
         return $row;
     }
 

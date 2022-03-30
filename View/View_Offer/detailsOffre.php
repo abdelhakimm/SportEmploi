@@ -12,14 +12,13 @@
     <a href="<?= router ?>router.php?action=all">voir toutes les offres</a>
 
     <ul>
-        <li><?= $offer["position"] ?></li>
-        <li><?= $offer["enterprise"] ?></li>
-        <li><?= $offer["beginDate"] ?></li>
-        <li><?= $offer["endDate"] ?></li>
-
-        
+        <li><?= $offer["Position"] ?></li>
+        <li><?= $offer["Enterprise"] ?></li>
+        <li><?= $offer["Begin"] ?></li>
+        <li><?= $offer["End"] ?></li>
     </ul>
 
+    <a href="<?= router ?>router.php?action=candidater&id=<?= $offer['Id_Offer'] ?>">CANDIDATER</a>
 </body>
 
 </html>

@@ -42,5 +42,10 @@ class Controller
         $offer = Offre::getOfferById($id_offer);
         require view . "detailsOffre.php";
     }
-    
+
+    public static function candidater()
+    {
+        require view . "candidater.php";
+    }
+
 }

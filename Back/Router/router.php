@@ -12,6 +12,9 @@ if (isset($_GET["action"])) {
 
     } elseif ($_GET["action"] == "id") {
         Controller::getOfferById($_GET["id"]);
+
+    } elseif ($_GET["action"] == "candidater") {
+        Controller::candidater($_GET["id"]);
     }
 
 } elseif (isset($_POST["submit"])) {

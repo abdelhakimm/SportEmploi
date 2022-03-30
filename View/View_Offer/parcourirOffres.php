@@ -46,6 +46,7 @@
     </section>
     <section id="liste">
       <?php foreach ($allOffer as $offer) : ?>
+        <p><a href="<?= router ?>router.php?action=id&id=<?= $offer["Id_Offer"] ?>">Afficher l'offre</a></p>
         <ul>
           <li>
             <ul class="position">
