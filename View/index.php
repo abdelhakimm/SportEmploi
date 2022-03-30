@@ -27,7 +27,7 @@
           <a href="../Back/Router/router.php">
             <li>PARCOURIR LES OFFRES</li>
           </a>
-          <a href="">
+          <a href="./View_Offer/publierOffre.php">
             <li>PUBLIER UNE OFFRE</li>
           </a>
         </ul>
