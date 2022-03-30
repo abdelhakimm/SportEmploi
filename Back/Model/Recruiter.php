@@ -269,7 +269,7 @@ class Recruiter{
         return $stmt->fetchAll();
     }
 
-    public function updatedebutDate(){
+    public function updateRecruiter(){
         $dao = new DAO();
         $dbh =$dao->getDbh();
 

@@ -8,7 +8,8 @@
     <title>Recruiter</title>
 </head>
 <body>
-<a href="formRecruiter.php">creer une adresse</a>
+
+<a href="./formRecruiter.php">creer une adresse</a>
 
     <?php foreach($allRecruiter as $recruiter): ?>
         <p><a href="../Back/Router/RouterRecruiter.php?action=id&id=<?=$recruiter["idRecruiter"]?>">Afficher Id_Recruiter</a></p>

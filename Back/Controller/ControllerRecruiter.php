@@ -4,21 +4,28 @@ Class ControllerRecruiter{
 
     public static function getAllRecruiter(){
      $allRecruiter = Recruiter::getAllRecruiter();
-     require_once "../../Front/readAllRecruiter.php";
+     require_once "../../Front/frontRecruiter/readAllRecruiter.php";
+     
     }
 
     public static function getRecruiterByContractType($contractType){
-     $recruiter = Recruiter::getRecruiterByid($contractType);
-     require_once "../../Front/readRecruiterByContractType.php";
+     $recruiter = Recruiter::getRecruiterByContractType($contractType);
+     require_once "../../Front/frontRecruiter/readRecruiterByContractType.php";
+     
+    }
+
+    public static function getRecruiterById($idRecruiter){
+        $recruiter = Recruiter::getRecruiterById($idRecruiter);
+        require_once "../../Front/frontRecruiter/readRecruiterByContractType.php";
+        
     }
 
     public static function createRecruiter($post){
-        
-
         $recruiter = new Recruiter($post['societyName'], $post['jobName'], $post['debutDate'], $post['endDate'],
          $post['contractType'], $post['hours'], $post['salary'], $post['description'], $post['city']);
         $recruiter->createRecruiter();
         self::getAllRecruiter();
+        
 
     }
 
@@ -26,24 +33,25 @@ Class ControllerRecruiter{
         
         $recruiter = new Recruiter($post['societyName'], $post['jobName'], $post['debutDate'], $post['endDate'],
          $post['contractType'], $post['hours'], $post['salary'], $post['description'], $post['city']);
-        $recruiter->setId_Recruiter($post["id"]);
+        $recruiter->setIdRecruiter($post["idRecruiter"]);
         $recruiter->updateRecruiter();
       
         self::getAllRecruiter();
+        
     }
 
     public static function deleteRecruiterById($idRecruiter){
-       
-
-        $Recruiter = Recruiter::deleteRecruiterById($idRecruiter);
+        $recruiter = Recruiter::deleteRecruiterById($idRecruiter);
     
         self::getAllRecruiter();
+        
     }
 
     public static function updateRecruiter($idRecruiter){
-        $Recruiter = Recruiter::getRecruiterByid($idRecruiter);
-        require_once "../../View/formUpdateRecruiter.php";
-        var_dump()
+        $recruiter = Recruiter::getRecruiterById($idRecruiter);
+        require_once "../../Front/frontRecruiter/formUpdateRecruiter.php";
+        var_dump($e);
+        echo 'cheh'; 
     }
     
 }

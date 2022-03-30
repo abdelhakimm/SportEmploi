@@ -7,7 +7,7 @@
     <title>Recruiter</title>
 </head>
 <body>
-<a href="../Back/Router/RouterRecruiter.php?action=all">les Recruiteres</a>
+<a href="../Back/Router/RouterRecruiter.php?action=all">les Recruiter</a>
 
     
     <ul>
