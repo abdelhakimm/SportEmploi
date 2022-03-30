@@ -1,259 +1,264 @@
-    @font-face {
-        font-family: 'Open sans extra bold';
-        src: url(../font/static/OpenSans/OpenSans-ExtraBold.ttf);
-    }
-    
-    @font-face {
-        font-family: 'Open sans semi bold';
-        src: url(../font/static/OpenSans/OpenSans-SemiBold.ttf);
-    }
-    
-    @font-face {
-        font-family: 'Open sans light';
-        src: url(../font/static/OpenSans/OpenSans-Light.ttf);
-    }
-    
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-    a {
-        text-decoration: none;
-        color: #545454;
-    }
-    
-    body {
-        color: #545454;
-        font-family: 'Open sans extra bold';
-    }
-    
-    p {
-        font-family: 'Open sans light';
-    }
-    
-    header {
-        height: 768px;
-        background: url("../images/sliderHome.png");
-        background-size: cover;
-    }
-    
-    header h1 {
-        font-size: 4em;
-        text-align: center;
-    }
-    
-    #logo {
-        width: 400px;
-    }
-    
-    .logo {
-        display: inline-block;
-        margin: 50px;
-    }
-    
-    .nav {
-        display: inline-block;
-        vertical-align: top;
-        font-size: 2em;
-        margin: 50px;
-    }
-    
-    .logoMenu {
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .grosTitre {
-        height: 200px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .nav ul {
-        display: flex;
-        list-style-type: none;
-        gap: 50px;
-        flex-wrap: wrap;
-    }
-    
-    .nav ul a {
-        background-color: #c4c4c4;
-        position: relative;
-        transition: all .4s;
-        z-index: 5;
-        width: 240px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 86px;
-    }
-    
-    .nav ul li {
-        margin: 0 20px;
-        max-width: 200px;
-    }
-    
-    .nav ul a::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 0px;
-        background: #FF5C16;
-        transition: all .4s;
-        z-index: -1;
-    }
-    
-    .nav ul a:hover::before {
-        width: 100%;
-    }
-    
-    .degrade {
-        height: 200px;
-        background: linear-gradient(to bottom, #c4c4c4, #FFFFFF);
-    }
-    
-    .degrade2 {
-        height: 200px;
-        background: linear-gradient(to top, #c4c4c4, #FFFFFF);
-    }
-    
-    #pictos {
-        display: flex;
-        justify-content: center;
-        margin: 50px;
-    }
-    
-    #paragraphes {
-        margin: 100px 20%;
-        display: flex;
-        flex-direction: column;
-        gap: 50px;
-    }
-    
-    .notreMethode {
-        display: flex;
-        flex-direction: column;
-        gap: 50px;
-    }
-    
-    footer {
-        background-color: #EFEFEF;
-    }
-    
-    .reseauxSociaux,
-    .copyright {
-        margin: 50px;
-        font-size: 1rem;
-    }
-    
-    .semibold {
-        font-family: 'Open sans semi bold';
-    }
-    
-    .pictosTexte {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        width: 200px;
-    }
-    
-    .pictosTexte img {
-        width: 100px;
-    }
-    /*---------------------------------------------------------------------------------*/
-    
-    .presentationEntreprise {
-        display: flex;
-        justify-content: center;
-        margin: 100px 0;
-        gap: 50px;
-    }
-    
-    #photoFondateur {
-        width: 30%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-    }
-    
-    #photoFondateur img {
-        width: 90%;
-    }
-    
-    #aProposTexte {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        gap: 50px;
-        max-width: 600px;
-    }
-    
-    #aProposTexte img {
-        width: 160px;
-        align-self: flex-end;
-    }
-    
-    .aProposTextePresentation {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-    
-    h2 {
-        font-size: 3rem;
-    }
-    
-    .fondateur p {
-        font-family: 'Open sans semi bold';
-    }
-    
-    .valeurs {
-        display: flex;
-        justify-content: center;
-        width: 60%;
-        gap: 50px;
-        margin: 50px;
-    }
-    
-    .valeurs img {
-        object-fit: contain;
-    }
-    
-    .valeurs .valeurTexte {
-        min-width: 300px;
-        max-width: 600px;
-    }
-    
-    .autourDesValeurs {
-        margin: 100px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .alignCenter {
-        text-align: center;
-    }
-    /*-----------------------------------------------------------------------------*/
-    
-    #criteres {
-        height: 300px;
-        background-color: #EFEFEF;
-        width: 80%;
-        margin: 50px auto;
-    }
-    
-    #liste {
-        height: 300px;
-        background-color: #EFEFEF;
-        width: 80%;
-        margin: 50px auto;
-    }
+@font-face {
+  font-family: "Open sans extra bold";
+  src: url(../font/static/OpenSans/OpenSans-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: "Open sans semi bold";
+  src: url(../font/static/OpenSans/OpenSans-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: "Open sans light";
+  src: url(../font/static/OpenSans/OpenSans-Light.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #545454;
+}
+
+body {
+  color: #545454;
+  font-family: "Open sans extra bold";
+}
+
+p {
+  font-family: "Open sans light";
+}
+
+header {
+  height: 768px;
+  background: url("../../View/images/sliderHome.png");
+  background-size: cover;
+}
+
+header h1 {
+  font-size: 4em;
+  text-align: center;
+}
+
+#logo {
+  width: 400px;
+}
+
+.logo {
+  display: inline-block;
+  margin: 50px;
+}
+
+.nav {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 2em;
+  margin: 50px;
+}
+
+.logoMenu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.grosTitre {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ul {
+  list-style-type: none;
+}
+.nav ul {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.nav ul a {
+  background-color: #c4c4c4;
+  position: relative;
+  transition: all 0.4s;
+  z-index: 5;
+  width: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 86px;
+}
+
+.nav ul li {
+  margin: 0 20px;
+  max-width: 200px;
+}
+
+.nav ul a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0px;
+  background: #ff5c16;
+  transition: all 0.4s;
+  z-index: -1;
+}
+
+.nav ul a:hover::before {
+  width: 100%;
+}
+
+.degrade {
+  height: 200px;
+  background: linear-gradient(to bottom, #c4c4c4, #ffffff);
+}
+
+.degrade2 {
+  height: 200px;
+  background: linear-gradient(to top, #c4c4c4, #ffffff);
+}
+
+#pictos {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+
+#paragraphes {
+  margin: 100px 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.notreMethode {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+footer {
+  background-color: #efefef;
+}
+
+.reseauxSociaux,
+.copyright {
+  margin: 50px;
+  font-size: 1rem;
+}
+
+.semibold {
+  font-family: "Open sans semi bold";
+}
+
+.pictosTexte {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 200px;
+}
+
+.pictosTexte img {
+  width: 100px;
+}
+/*---------------------------------------------------------------------------------*/
+
+.presentationEntreprise {
+  display: flex;
+  justify-content: center;
+  margin: 100px 0;
+  gap: 50px;
+}
+
+#photoFondateur {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+#photoFondateur img {
+  width: 90%;
+}
+
+#aProposTexte {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  max-width: 600px;
+}
+
+#aProposTexte img {
+  width: 160px;
+  align-self: flex-end;
+}
+
+.aProposTextePresentation {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+.fondateur p {
+  font-family: "Open sans semi bold";
+}
+
+.valeurs {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  gap: 50px;
+  margin: 50px;
+}
+
+.valeurs img {
+  object-fit: contain;
+}
+
+.valeurs .valeurTexte {
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.autourDesValeurs {
+  margin: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.alignCenter {
+  text-align: center;
+}
+/*-----------------------------------------------------------------------------*/
+
+#criteres {
+  height: 300px;
+  background-color: #efefef;
+  width: 80%;
+  margin: 50px auto;
+}
+
+#liste {
+  height: 300px;
+  background-color: #efefef;
+  width: 80%;
+  margin: 50px auto;
+}
+#liste .position {
+  display: flex;
+  justify-content: space-evenly;
+}
