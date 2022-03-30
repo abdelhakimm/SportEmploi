@@ -17,15 +17,17 @@
 
     <div class="main">
         <h1>Bienvenue sur Sportcarriere, dans « votre » univers : le Sport et l’Entertainment !</h1>
-        <div>
-            <p>Premier Sjob, Cabinet de recrutement et de conseil à s’être créé en Europe en 2001, nous sommes très fiers d’être les précurseurs du marché et de représenter l’expertise française.</p>
-            <p>Acteurs nationaux ou internationaux, acteurs de proximité au cœur des problématiques sportives, Sjob vous propose un service global ressources humaines pour répondre à vos besoins. Tout un monde, un univers autour d’une passion commune : le sport.
-                Chez Sjob, notre ambition est simple : offrir la meilleure expérience de recrutement possible pour les candidats et les entreprises du marché du sport et de l’Entertainment.</p>
-            <p>Depuis 2001, nous développons des outils évolutifs adaptés aux spécificités et évolutions du secteur à travers notre plateforme Sjob.com et notre cabinet de recrutement expert du Sport et de l’Entertainment.
-                Merci de votre fidélité, merci aux nouveaux venus dans notre communauté d’experts. Suivez-nous, ce n’est pas fini...</p>
-        </div>
-        <div>
-            <img src="../Pictures/Alainghibaudo.png" alt="" srcset="">
+        <div class="alain">
+            <div class="text one">
+                <p>Premier Sjob, Cabinet de recrutement et de conseil à s’être créé en Europe en 2001, nous sommes très fiers d’être les précurseurs du marché et de représenter l’expertise française.</p>
+                <p>Acteurs nationaux ou internationaux, acteurs de proximité au cœur des problématiques sportives, Sjob vous propose un service global ressources humaines pour répondre à vos besoins. Tout un monde, un univers autour d’une passion commune : le sport.
+                    Chez Sjob, notre ambition est simple : offrir la meilleure expérience de recrutement possible pour les candidats et les entreprises du marché du sport et de l’Entertainment.</p>
+                <p>Depuis 2001, nous développons des outils évolutifs adaptés aux spécificités et évolutions du secteur à travers notre plateforme Sjob.com et notre cabinet de recrutement expert du Sport et de l’Entertainment.
+                    Merci de votre fidélité, merci aux nouveaux venus dans notre communauté d’experts. Suivez-nous, ce n’est pas fini...</p>
+            </div>
+            <div class="imgun">
+                <img src="../Pictures/Alainghibaudo.png" alt="" srcset="" id="alain">
+            </div>
         </div>
         <div>
             <img src="../Pictures/signature.png" alt="">
