@@ -255,14 +255,14 @@ h2 {
 }
 
 #criteres {
-  height: 300px;
+  height: 150px;
   background-color: #efefef;
   width: 80%;
   margin: 0 auto 50px;
 }
 
 #liste {
-  height: 300px;
+  height: 500px;
   background-color: #efefef;
   width: 80%;
   margin: 50px auto;
@@ -310,4 +310,10 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+#inputSubmit{
+    border: none;
+    background-color: #c4c4c4;
+    color: #545454;
+    cursor: pointer;
 }

@@ -17,10 +17,12 @@ if (isset($_GET["action"])) {
 
     if (isset($_POST["Id_Application"])) {
 
-        Controller::createApplication($_POST); //enregistre le formulaire
+        Controller::createApplication($_POST); 
 
+    } elseif(isset($_POST["typeContrat"])){
+        Controller::getOffersByContract($_POST);
 
-    } else {
+    }else {
         Controller::createOffer($_POST);
     }
 }

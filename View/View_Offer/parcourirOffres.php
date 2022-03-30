@@ -42,10 +42,25 @@
     </div>
 
     <section id="criteres">
-
+      <p>Critères de recherche</p>
+      <form action="<?= router ?>router.php" method="post">
+        
+        <div>
+          <label for="typeContrat">Type de contrat : </label>
+          <select id="typeContrat" name="typeContrat">
+            <option value="CDI">CDI</option>
+            <option value="CDD">CDD</option>
+          </select>
+        </div>
+        <div>
+          <div>
+            <input type="submit" id="inputSubmit" value="RECHERCHER" name="submit"></input>
+          </div>
+        </div>
+      </form>
     </section>
     <section id="liste">
-      <?php foreach ($allOffer as $offer) : ?>
+      <?php foreach ($offersByContract as $offer) : ?>
         <p><a href="<?= router ?>router.php?action=id&id=<?= $offer["Id_Offer"] ?>">Afficher l'offre</a></p>
         <ul>
           <li>

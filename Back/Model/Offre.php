@@ -86,4 +86,17 @@ class Offre
         return $row;
     }
 
+    public static function getOffersByContract($post)
+    {
+        $request = "SELECT * FROM Offre WHERE Contract = :contract";
+
+        $dao = new DAO();
+        $dbh = $dao->getDbh();
+        $stmt = $dbh->prepare($request);
+        $stmt->bindParam(":contract", $post['typeContrat']);
+        $stmt->execute();
+        $rows = $stmt->fetchAll();
+        return $rows;
+    }
+
 }
