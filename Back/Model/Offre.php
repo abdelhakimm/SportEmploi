@@ -46,5 +46,43 @@ class Offre
         
         return $rows;
     }
-    
+
+    public function createOffer()
+    {
+
+        $request = "INSERT INTO Offre (Position, Enterprise, Begin, End, Contract, Hours, Salary, Description) 
+            VALUES (:Position, :Enterprise, :Begin, :End, :Contract, :Hours, :Salary, :Description)";
+
+        $dao = new DAO();
+        $dbh = $dao->getDbh();
+
+        $stmt = $dbh->prepare($request);
+
+        $stmt->bindParam(":Position", $this->position);
+        $stmt->bindParam(":Enterprise", $this->enterprise);
+        $stmt->bindParam(":Begin", $this->begin);
+        $stmt->bindParam(":End", $this->end);
+        $stmt->bindParam(":Contract", $this->contract);
+        $stmt->bindParam(":Hours", $this->hours);
+        $stmt->bindParam(":Salary", $this->salary);
+        $stmt->bindParam(":Description", $this->description);
+
+        $stmt->execute();
+    }
+
+    public static function getOfferById($id_offer)
+    {
+
+        $request = "SELECT * FROM Offre WHERE Id_Offre = :id_offer";
+
+        $dao = new DAO();
+        $dbh = $dao->getDbh();
+
+        $stmt = $dbh->prepare($request);
+        $stmt->bindParam(":id_offer", $id_offer);
+        $stmt->execute();
+        $row = $stmt->fetch();
+        return $row;
+    }
+
 }

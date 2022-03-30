@@ -55,11 +55,11 @@
                 </div>
                 <div class="ligneForm">
                     <label for="beginDate">Date de début : </label>
-                    <input type="text" id="beginDate" name="beginDate">
+                    <input type="date" id="beginDate" name="beginDate">
                 </div>
                 <div class="ligneForm">
                     <label for="endDate">Date de fin : </label>
-                    <input type="text" id="endDate" name="endDate">
+                    <input type="date" id="endDate" name="endDate">
                 </div>
                 <div class="ligneForm">
                     <label for="contract">Type de contrat : </label>
@@ -82,7 +82,7 @@
                     <label for="rgpd">j'accèpte les conditions</label>
                 </div>
                 <div class="buttonLigne">
-                    <button id="boutonPublier">PUBLIER</button>
+                    <input type="submit" value="PUBLIER" name="submit"></input>
                 </div>
 
             </form>
