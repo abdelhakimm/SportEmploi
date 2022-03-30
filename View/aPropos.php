@@ -87,7 +87,7 @@
       <div class="autourDesValeurs">
         <article class="valeurs">
           <img src="./images/valeursSC1-110x88.png" alt="" />
-          <div>
+          <div class="valeurTexte">
             <p class="semibold">Nous sommes des créateurs de possibles</p>
             <p>
               Nous croyons en la valeur de chaque individu et avons la
@@ -101,7 +101,7 @@
         </article>
         <article class="valeurs">
           <img src="./images/valeursSC2-110x88.png" alt="" />
-          <div>
+          <div class="valeurTexte">
             <p class="semibold">Nous sommes des passionnés de l’humain</p>
             <p>
               Chaque mission qui nous est confiée est une occasion de nous
@@ -114,7 +114,7 @@
         </article>
         <article class="valeurs">
           <img src="./images/valeursSC3-110x88.png" alt="" />
-          <div>
+          <div class="valeurTexte">
             <p class="semibold">Notre devise est proximité, plaisir et performance</p>
             <p>
               Nos 19 ans d’expérience nous permettent aujourd’hui de mettre à

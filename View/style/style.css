@@ -172,6 +172,7 @@
         display: flex;
         justify-content: center;
         margin: 100px 0;
+        gap: 50px;
     }
     
     #photoFondateur {
@@ -179,11 +180,12 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         gap: 20px;
     }
     
     #photoFondateur img {
-        width: 400px;
+        width: 90%;
     }
     
     #aProposTexte {
@@ -191,6 +193,7 @@
         display: flex;
         flex-direction: column;
         gap: 50px;
+        max-width: 600px;
     }
     
     #aProposTexte img {
@@ -218,6 +221,15 @@
         width: 60%;
         gap: 50px;
         margin: 50px;
+    }
+    
+    .valeurs img {
+        object-fit: contain;
+    }
+    
+    .valeurs .valeurTexte {
+        min-width: 300px;
+        max-width: 600px;
     }
     
     .autourDesValeurs {
