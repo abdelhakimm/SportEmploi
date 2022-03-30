@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
 
@@ -70,7 +71,7 @@
             
         </div>
          <div class="text">
-                <p>dans la recherche des meilleurs candidats par notre connaissance des acteurs, le bouche à oreille, des interventions auprès de colloques et formations de renoms...</p>
+                <p>Dans la recherche des meilleurs candidats par notre connaissance des acteurs, le bouche à oreille, des interventions auprès de colloques et formations de renoms...</p>
             </div>
     </div>
 
@@ -105,7 +106,11 @@
             </ul>
             </div>
          </div>
-        <div class="socialMedia"></div>
+        <div class="socialMedia">
+        <i class="fa-brands fa-twitter-square fa-8x"></i>
+        <i class="fa-brands fa-facebook-square fa-8x"></i>
+        <i class="fa-brands fa-linkedin fa-8x"></i>
+        </div>
         <p>Copyright © 2020 Sjob’ group</p>
     </footer>
 
