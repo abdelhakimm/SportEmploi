@@ -47,7 +47,7 @@ class Offer{
 
     }
 
-    public static function updateOffer($Id_Offer,$Name_Offer,$City,$Contrat_Type,$Week_Hours,$Monthly_Pay,$Annual_Salary,$Description,$Name_Business,$Begin,$Ending,){
+    public static function updateOffer($Id_Offer,$Name_Offer,$City,$Contrat_Type,$Week_Hours,$Monthly_Pay,$Annual_Salary,$Description,$Name_Business,$Begin,$Ending){
         $dao = new DAO();
         $dbh = $dao->getDbh();
 
