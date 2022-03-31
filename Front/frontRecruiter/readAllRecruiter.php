@@ -9,17 +9,17 @@
 </head>
 <body>
 
-<a href="./formRecruiter.php">creer une adresse</a>
+<a href="formRecruiter.php">creer une adresse</a>
 
     <?php foreach($allRecruiter as $recruiter): ?>
-        <p><a href="../Back/Router/RouterRecruiter.php?action=idRecruiter&idRecruiter=<?=$recruiter["idRecruiter"]?>">Afficher Id_Recruiter</a></p>
+        <p><a href="../../Back/Router/RouterRecruiter.php?action=idRecruiter&idRecruiter=<?=$recruiter["idRecruiter"]?>">Afficher cette annonce</a></p>
         <ul>
             <li><?=$recruiter["societyName"]?></li>
             <li><?=$recruiter["jobName"]?></li>
             <li><?=$recruiter["contractType"]?></li>
             <li><?=$recruiter["salary"]?></li>
 
-            <a href="../Back/Router/RouterRecruiter.php?action=idRecruiter&idRecruiter=<?=$recruiter["idRecruiter"]?>"></a>
+            <a href="../../Back/Router/RouterRecruiter.php?action=idRecruiter&idRecruiter=<?=$recruiter["idRecruiter"]?>"></a>
 
         </ul>
 

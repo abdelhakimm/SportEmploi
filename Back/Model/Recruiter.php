@@ -5,7 +5,7 @@ class Recruiter{
     private $idRecruiter;
     private $societyName;
     private $jobName;
-    private $debutDate;
+    private $debutDate ;
     private $endDate = NULL;
     private $contractType;
     private $hours;
@@ -14,7 +14,7 @@ class Recruiter{
     private $description;
     
 
-    public function __construct($societyName,$jobName,$debutDate,$endDate,$contractType,$hours,$salary,$description,$city){
+    public function __construct($societyName,$jobName,$debutDate,$endDate,$contractType,$hours,$salary,$city,$description){
         $this->societyName = $societyName;
         $this->jobName = $jobName;
         $this->debutDate = $debutDate;
@@ -188,26 +188,6 @@ class Recruiter{
     }
 
     /**
-     * Get the value of description
-     */ 
-    public function getDescription()
-    {
-        return $this->description;
-    }
-
-    /**
-     * Set the value of description
-     *
-     * @return  self
-     */ 
-    public function setDescription($description)
-    {
-        $this->description = $description;
-
-        return $this;
-    }
-
-        /**
      * Get the value of city
      */ 
     public function getCity()
@@ -227,12 +207,33 @@ class Recruiter{
         return $this;
     }
 
+    /**
+     * Get the value of description
+     */ 
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set the value of description
+     *
+     * @return  self
+     */ 
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+
     public function createRecruiter(){
         $dao = new DAO();
         $dbh =$dao->getDbh();
 
-        $stmt = $dbh->prepare("INSERT INTO recruiter(societyName,jobName,debutDate,endDate,contractType,hours,salary,description,city) 
-        VALUES(:societyName,:jobName,:debutDate,:endDate,:contractType,:hours,:salary,:description,:city);");
+        $stmt = $dbh->prepare("INSERT INTO recruiter(societyName,jobName,debutDate,endDate,contractType,hours,salary,city,description) 
+        VALUES(:societyName,:jobName,:debutDate,:endDate,:contractType,:hours,:salary,:city,:description);");
 
        
 
@@ -243,8 +244,9 @@ class Recruiter{
         $stmt->bindParam(':contractType',$this->contractType);
         $stmt->bindParam(':hours',$this->hours);
         $stmt->bindParam(':salary',$this->salary);
-        $stmt->bindParam(':description',$this->description);
         $stmt->bindParam(':city',$this->city);
+        $stmt->bindParam(':description',$this->description);
+
         
         return $stmt->execute();
 
@@ -275,7 +277,7 @@ class Recruiter{
         $dbh =$dao->getDbh();
 
         $stmt = $dbh->prepare("UPDATE recruiter SET societyName=:societyName jobName=:jobName, debutDate=:debutDate, endDate=:endDate,
-        contractType=:contractType, hours=:hours, salary=:salary, description=:description, city=:city WHERE idRecruiter=:idRecruiter");
+        contractType=:contractType, hours=:hours, salary=:salary, city=:city, description=:description WHERE idRecruiter=:idRecruiter");
 
        
 
@@ -286,8 +288,9 @@ class Recruiter{
         $stmt->bindParam(':contractType',$this->contractType);
         $stmt->bindParam(':hours',$this->hours);
         $stmt->bindParam(':salary',$this->salary);
-        $stmt->bindParam(':description',$this->description);
         $stmt->bindParam(':city',$this->city);
+        $stmt->bindParam(':description',$this->description);
+
         
       return $stmt->execute();
     }

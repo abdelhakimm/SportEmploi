@@ -21,26 +21,24 @@ Class ControllerRecruiter{
     }
 
     public static function createRecruiter($post){
-        $hours = $post['hour'].$post['hou'];
-
 
         $recruiter = new Recruiter($post['societyName'], $post['jobName'], $post['debutDate'], $post['endDate'],
-         $post['contractType'], $hours, $post['salary'], $post['description'], $post['city']);
+        $post['contractType'], $post['hours'], $post['salary'], $post['city'], $post['description']);
+
         $recruiter->createRecruiter();
         self::getAllRecruiter();
         
-
     }
 
     public static function updateRecruiter($post){
         
         $recruiter = new Recruiter($post['societyName'], $post['jobName'], $post['debutDate'], $post['endDate'],
-         $post['contractType'], $post['hours'], $post['salary'], $post['description'], $post['city']);
+        $post['contractType'], $post['hours'], $post['salary'], $post['city'], $post['description']);
+
         $recruiter->setIdRecruiter($post["idRecruiter"]);
         $recruiter->updateRecruiter();
       
-        self::getAllRecruiter();
-        
+        self::getAllRecruiter();  
     }
 
     public static function deleteRecruiterById($idRecruiter){
@@ -49,11 +47,6 @@ Class ControllerRecruiter{
         self::getAllRecruiter();
         
     }
-
-    /*public static function updateRecruiter($idRecruiter){
-        $recruiter = Recruiter::getRecruiterById($idRecruiter);
-        require_once "../../Front/frontRecruiter/formUpdateRecruiter.php";
-    }*/
     
 }
 

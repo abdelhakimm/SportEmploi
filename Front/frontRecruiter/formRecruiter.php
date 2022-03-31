@@ -36,20 +36,17 @@
 
         <p>
         Trouver le candidat idéal demande parfois un temps précieux. Avec les outils Indeed, identifiez, présélectionnez et recrutez rapidement vos candidats, en toute simplicité.
-        Vous savez quel profil vous recherchez. <br>
+        Vous savez quel profil vous recherchez. 
         <br>
         Nous vous aidons à le trouver.
-        </p> <br>
+        </p>
 
       <p>Votre annonce :</p>
-
-      
-      <a href="../../Back/Router/RouterRecruiter.php?action=all">Les Recruiter</a>
 
     </section>
 
     <section>
-        <form action="../../Back/Router/RouterRecruiter.php" method="POST">
+        <form action="../../Back/Router/RouterRecruiter.php" method="post">
             <div id="allItem"></div>
 
                 <div class="itemOne">
@@ -76,12 +73,8 @@
                     </div>
 
                     <div>
-                        <label for="hours">Nombre d'heures :</label>
-                        <input type="text" name="hou" id="hou" required>
-                        <select name="hour" id="hour" required>
-                            <option value="semaine">Semaine</option>
-                        <option value="mois">Mois</option>
-                        </select>
+                        <label for="hours">Nombre d'heures semaine:</label>
+                        <input type="number" name="hours" id="hours" required>
                     </div>
 
                 </div>
@@ -90,12 +83,12 @@
                     <div>
                          <label for="debutDate">Date de début de contrat :</label>
                          
-                         <input type="date" name="debutDate" id="debutDate" required>
+                         <input type="text" name="debutDate" id="debutDate" required>
                     </div>
                     <div>
                          <label for="endDate">Date de fin de contrat :</label>
                          
-                         <input type="date" name="endDate" id="endDate">
+                         <input type="text" name="endDate" id="endDate">
                     </div>
 
                 </div>
@@ -134,13 +127,10 @@
                 
                 <ul>
                     
-                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">Accueil</a></li>
-                    
-                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">A propos</a></li>
-                    
-                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">Parcourir les offres</a></li>
-                    
-                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">Publier une offre</a></li>
+                    <li><a href="../Home/home.php">Accueil</a></li>
+                    <li><a href="../aPropos/aPropos.php">A propos</a></li>
+                    <li><a href="../frontRecruiter/readAllRecruiter.php">Parcourir les offres</a></li>
+                    <li><a href="../frontRecruiter/formRecruiter.php">Publier une offre</a></li>
                 
                 </ul>
             

@@ -9,7 +9,7 @@ if(isset($_GET["action"])){
     }elseif($_GET["action"] == "contractType"){
         ControllerRecruiter::getRecruiterByContractType($_GET["contractType"]);
 
-    }elseif($_GET["action"] == "contractType"){
+    }elseif($_GET["action"] == "idRecruiter"){
         ControllerRecruiter::getRecruiterById($_GET["idRecruiter"]);
 
     }elseif($_GET["action"] == "update"){
@@ -26,7 +26,6 @@ if(isset($_GET["action"])){
 
         ControllerRecruiter::updateRecruiter($_POST);//enregistre le formulaire
      
-
     }else{
 
         ControllerRecruiter::createRecruiter($_POST);
