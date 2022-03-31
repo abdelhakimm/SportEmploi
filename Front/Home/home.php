@@ -90,28 +90,43 @@
 
     <footer>
         
-        <nav>
-            <ul>
-                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">Accueil</a></li>
-                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">A propos</a></li>
-                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">Parcourir les offres</a></li>
-                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">Publier une offre</a></li>
-            </ul>
-        </nav>
+        <div id="allFooter">    
+            <nav>
+                
+                <ul>
+                    
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">Accueil</a></li>
+                    
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">A propos</a></li>
+                    
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">Parcourir les offres</a></li>
+                    
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">Publier une offre</a></li>
+                
+                </ul>
+            
+            </nav>
 
-  
+            <div id="network">
+                
+                <img src="../logoEtIcon/facebook.png" width="100px" height="100px" alt="">
+                
+                <img src="../logoEtIcon/logo-twitter.png" width="100px" height="100px" alt="">
+                
+                <img src="../logoEtIcon/linkedin.png" width="100px" height="100px" alt="">
+            
+            </div>
 
-        <div>
-            <img src="./logoEtIcon/facebook.png" width="100px" height="100px" alt="">
-            <img src="./logoEtIcon/logo-twitter.png" width="100px" height="100px" alt="">
-            <img src="./logoEtIcon/linkedin.png" width="100px" height="100px" alt="">
+            
+            <div id="copyright">
+                <img src="../logoEtIcon/logo.png" width="353px" height="253px">
+                <div class="copy">
+                    <img src="../logoEtIcon/1200px-Copyright.svg.png" width="30px" height="30px">
+                
+                    <p>S’Job @2022. Tous droits réservés.</p>
+                </div>
+            </div>  
         </div>
-
-        <div>
-            <img src="./logoEtIcon/logo.png">
-            <img src="./logoEtIcon/1200px-Copyright.svg.png" width="30px" height="30px">
-            <p>S’Job @2022. Tous droits réservés.</p>
-        </div>  
 
 
     </footer>

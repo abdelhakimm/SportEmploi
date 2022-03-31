@@ -4,13 +4,13 @@ body{
 
 header{
     background-color: #FF5C16;
-    opacity: calc(65%);
+    opacity: calc(70%);
 }
 
 header nav ul li{
     list-style-type: none;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
     font-size: 30px;
     color: #ffffff;
 
@@ -65,6 +65,7 @@ h2{
     width: 1440px;
     height: 740px;
     display: flex;
+    justify-content: space-evenly;
 }
 
 #partOne{
@@ -136,6 +137,73 @@ h2{
     width: 545px;
     height: 540px;
     font-size: 22px;
+    position: relative;
+    top: 80px;
+}
+
+footer{
+    margin-top: 50px;
+    width: 1440px;
+    height: 500px;
+    background-color: #545454;
+}
+
+#allFooter{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 1440px;
+    height: 500px;
+
+}
+
+footer nav{
+    width: 275px;
+    height: 186px;
+}
+
+footer a{
+    color: #ffffff;
+}
+
+footer nav ul li{
+    list-style-type: none;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 25px;
+}
+
+footer nav ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#network{
+    width: 427px;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#copyright{
+    width: 353px;
+    height: 355px;
+    display: flex;
+    flex-direction: column;
+}
+
+.copy img{
+    position: relative;
+    top: 20px;
+}
+
+.copy{
+
+    color: #ffffff;
+    font-size: 25px;
+    height: 30px;
+    display: flex;
 }
 
 
