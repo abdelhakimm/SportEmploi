@@ -7,7 +7,7 @@ Class ControllerOffer{
     public static function getAllOffer(){
         echo "dans le getalloffer";
 
-        Offer::getAllOffer();
+        $offers = Offer::getAllOffer();
         require "../View/offrePost.php";
     }
 

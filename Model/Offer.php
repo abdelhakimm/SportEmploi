@@ -61,8 +61,8 @@ class Offer{
         $stmt->bindParam(':name_business', $Name_Business);
         $stmt->bindParam(':annual_salary', $Annual_Salary);
         $stmt->bindParam(':monthly_pay', $Monthly_Pay);
-        $stmt->bindParam(':begin', $begin);
-        $stmt->bindParam(':ending', $ending);
+        $stmt->bindParam(':begin', $Begin);
+        $stmt->bindParam(':ending', $Ending);
         $stmt->execute();
     }
     public static function deleteOfferById($Id_Offer){
