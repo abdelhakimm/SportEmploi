@@ -18,10 +18,10 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#">accueil</a></li>
-                <li><a href="#">à propos</a></li>
-                <li><a href="#">parcourir les offres</a></li>
-                <li><a href="#">publier une offre</a></li>
+                <li><a href="index.php">accueil</a></li>
+                <li><a href="Apropos.php">à propos</a></li>
+                <li><a href="ParcourirLesoffres.php">parcourir les offres</a></li>
+                <li><a href="PublierUneOffre.php">publier une offre</a></li>
             </ul>
         </nav>
         <div class="login">
@@ -105,10 +105,10 @@
         <div class="foot">
             <div class="footernav">
             <ul>
-                <li><a href="#">accueil</a></li>
-                <li><a href="#">à propos</a></li>
-                <li><a href="#">parcourir les offres</a></li>
-                <li><a href="#">publier une offre</a></li>
+                <li><a href="index.php">accueil</a></li>
+                <li><a href="Apropos.php">à propos</a></li>
+                <li><a href="ParcourirLesoffres.php">parcourir les offres</a></li>
+                <li><a href="PublierUneOffre.php">publier une offre</a></li>
             </ul>
             </div>
          </div>

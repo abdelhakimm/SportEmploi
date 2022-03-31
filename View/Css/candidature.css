@@ -19,6 +19,7 @@ header{
     margin-top: 40px;
     display: flex;
     justify-content: space-around;
+    background-color: #F7F7F7;
 }
 
 nav{
@@ -64,7 +65,7 @@ span{
     justify-content: center;
 }
 
-.offre{
+.candid{
    width: 1800px ;
    height: 500px;
    background-color: white;
@@ -74,9 +75,37 @@ span{
    margin-left: 500px;
 }
 
-.offre:hover {
+.candid:hover {
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-  }
+}
+
+input[type=submit]{
+    color: white;
+    background-color: #5FAAE0;
+    border: 2px solid rgb(64, 164, 231);
+    border-radius: 4px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    width: 150px;
+    height: 60px;
+    font-size: 20px;
+    margin-top: 400px;
+    margin-right: 80px;
+}
+
+input:hover{
+    cursor: pointer;
+    transition: all 0.8s;
+    background-color: #166aa5 ;
+    
+}
+
+.env{
+    display: flex;
+    justify-content: flex-end;
+    
+}
 
 
 
