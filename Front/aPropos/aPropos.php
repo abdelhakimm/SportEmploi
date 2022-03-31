@@ -59,6 +59,7 @@
     </section>
 
     <section id="colorSection">
+        <br>
         <h4>POURQUOI NOUS CHOISIR ?</h4>
         <div id="allParagraph">
             <div class="paragraphOne">
