@@ -1,5 +1,5 @@
 <?php
-echo $_GET["all"];
+
 require "../Controller/ControllerJob.php";
 echo "dans le controller";
 

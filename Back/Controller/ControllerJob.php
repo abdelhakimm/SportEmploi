@@ -8,7 +8,7 @@ Class ControllerJob{
 
     public static function getAllJob(){
         echo "dans le controller getall";
-        $allRows = Job::getAllJob();
+        Job::getAllJob();
         require front."/viewJob/allJob.php";
     }
 
