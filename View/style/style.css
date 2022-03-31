@@ -259,7 +259,7 @@ h2 {
 .alignCenter {
   text-align: center;
 }
-/*-----------------------------------PARCOURIR OFFRE------------------------------------------*/
+/*-----------------------------------PARCOURIR OFFRES------------------------------------------*/
 
 .parcourirOffres {
   height: 200px;
@@ -311,6 +311,7 @@ input#inputSubmit.rechercherInput:hover {
   display: flex;
   flex-direction: column;
   gap: 20px;
+
 }
 .ligneClair {
   background-color: #efefef;
@@ -447,7 +448,7 @@ input {
   gap: 40px;
   height: 20px;
 }
-
+/*-----------------------------------------------------------------------*/
 .bouttonCandidater a {
   background-color: #c4c4c4;
   width: 150px;
@@ -466,7 +467,23 @@ input {
   gap: 10px;
   max-width: 600px;
 }
+.publierCandidature{
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.formCandidature{
+  border: solid 1px #545454;
+  padding: 50px;
+  box-shadow: 0 0 10px 10px #c4c4c4;
+}
+#candidaterInputSubmit{
+  
+}
+.candidaterInput{
 
+}
 @media screen and (max-width: 800px) {
   .logo {
     margin: 20px;

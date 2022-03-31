@@ -27,7 +27,7 @@
                     <a href="../Router/router.php?action=all">
                         <li>PARCOURIR LES OFFRES</li>
                     </a>
-                    <a href="">
+                    <a href="./router.php?action=create">
                         <li>PUBLIER UNE OFFRE</li>
                     </a>
                 </ul>
@@ -37,28 +37,28 @@
 
     <main>
 
-        <div class="publierOffre">
+        <div class="publierCandidature">
             <h2 class="alignCenter">CANDIDATER</h2>
         </div>
 
         <section id="offre">
 
-            <form action="<?= router ?>router.php" method="post" class="formOffre">
+            <form action="<?= router ?>router.php" method="post" class="formCandidature">
 
                 <input type="hidden" id="id_offer" name="id_offer" value="<?= $offer['Id_Offer'] ?>">
                 <input type="hidden" id="Id_Application" name="Id_Application">
 
                 <div class="ligneForm">
                     <label for="name">Nom : </label>
-                    <input type="text" id="name" name="name">
+                    <input type="text" id="name" name="name" required>
                 </div>
                 <div class="ligneForm">
                     <label for="firstname">Prénom : </label>
-                    <input type="text" id="firstname" name="firstname">
+                    <input type="text" id="firstname" name="firstname" required>
                 </div>
                 <div class="ligneForm">
                     <label for="email">Adresse e-mail : </label>
-                    <input type="email" id="email" name="email">
+                    <input type="email" id="email" name="email" required>
                 </div>
                 <div class="ligneForm">
                     <label for="phone">Numéro de téléphone : </label>
@@ -70,11 +70,11 @@
                 </div>
 
                 <div class="rgpdLigne">
-                    <input type="checkbox" id="rgpd" name="rgpd">
+                    <input type="checkbox" id="rgpd" name="rgpd" required>
                     <label for="rgpd">j'accèpte les conditions</label>
                 </div>
-                <div>
-                    <button class="candidaterInput" id="candidaterInputSubmit" type="submit" value="CANDIDATER" name="submit">CANDIDATER</button>
+                <div class="buttonLigne">
+                    <button class="publierInput" id="inputSubmit" type="submit" value="CANDIDATER" name="submit">CANDIDATER</button>
                 </div>
 
             </form>
@@ -99,7 +99,7 @@
                     <a href="../Router/router.php?action=all">
                         <li>PARCOURIR LES OFFRES</li>
                     </a>
-                    <a href="">
+                    <a href="./router.php?action=create">
                         <li>PUBLIER UNE OFFRE</li>
                     </a>
                 </ul>
