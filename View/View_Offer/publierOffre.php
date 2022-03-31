@@ -43,7 +43,7 @@
 
         <section id="offre">
 
-            <form action="<?= router ?>router.php" method="post">
+            <form action="<?= router ?>router.php" method="post" class="formOffre">
 
                 <div class="ligneForm">
                     <label for="position">Nom du poste : </label>
@@ -78,11 +78,13 @@
                     <textarea id="description" name="description"></textarea>
                 </div>
                 <div class="rgpdLigne">
-                    <input type="checkbox" id="rgpd" name="rgpd">
+                    <input type="checkbox" id="rgpd" name="rgpd" required>
                     <label for="rgpd">j'accèpte les conditions</label>
                 </div>
                 <div class="buttonLigne">
-                    <input type="submit" class="publierInput" id="inputSubmit" value="PUBLIER" name="submit"></input>
+                    <div>
+                        <button class="publierInput" id="inputSubmit" type="submit" value="PUBLIER" name="submit">PUBLIER</button>
+                    </div>
                 </div>
 
             </form>
