@@ -8,8 +8,8 @@
             <ul>
                 <li><a href="index.php">accueil</a></li>
                 <li><a href="Apropos.php">à propos</a></li>
-                <li><a href="ParcourirLesoffres.php">parcourir les offres</a></li>
-                <li><a href="PublierUneOffre.php">publier une offre</a></li>
+                <li><a href="../View_Offre/readAllOffre.php">parcourir les offres</a></li>
+                <li><a href="../View_Offre/readIdOffre.php">publier une offre</a></li>
             </ul>
             </div>
          </div>

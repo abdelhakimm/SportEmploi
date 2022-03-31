@@ -4,7 +4,7 @@ class DAO{
 
     private $host="localhost";
     private $port = "8889";
-    private $dbname ="Devliveroo";
+    private $dbname ="Sportcarriere";
     private $charset = "UTF8";
     private $user = "root";
     private $password= "root";
