@@ -75,8 +75,10 @@ class Controller
 
     public static function getOffersByContract($post)
     {
+
         $offersByContract = Offre::getOffersByContract($post);
         require view . "parcourirOffres.php";
+        
     }
 
 }

@@ -88,15 +88,22 @@ class Offre
 
     public static function getOffersByContract($post)
     {
-        $request = "SELECT * FROM Offre WHERE Contract = :contract";
 
         $dao = new DAO();
         $dbh = $dao->getDbh();
-        $stmt = $dbh->prepare($request);
-        $stmt->bindParam(":contract", $post['typeContrat']);
-        $stmt->execute();
-        $rows = $stmt->fetchAll();
-        echo $post['typeContrat'];
-        return $rows;
+        
+
+        // quand type de contrat non sélectionné, on affiche toutes les offres
+        if ($post['typeContrat'] == 'all') {
+            return self::getAllOffer();
+        } else {
+            $request = "SELECT * FROM Offre WHERE Contract = :contract";
+            $stmt = $dbh->prepare($request);
+            $stmt->bindParam(":contract", $post['typeContrat']);
+            $stmt->execute();
+            $rows = $stmt->fetchAll();
+            return $rows;
+        }
+        
     }
 }
