@@ -42,23 +42,25 @@
     </div>
 
     <section id="criteres">
-      <p>Critères de recherche</p>
-      <form action="<?= router ?>router.php" method="post">
+      <div class="positionementCriteres">
+        <h3>Critères de recherche</h3>
+        <form action="<?= router ?>router.php" method="post">
 
-        <div>
-          <label for="typeContrat">Type de contrat : </label>
-          <select id="typeContrat" name="typeContrat">
-            <option value="all"></option>
-            <option value="CDI">CDI</option>
-            <option value="CDD">CDD</option>
-          </select>
-        </div>
-        <div>
           <div>
-            <input type="submit" id="inputSubmit" value="RECHERCHER" name="submit"></input>
+            <label for="typeContrat">Type de contrat : </label>
+            <select id="typeContrat" name="typeContrat">
+              <option value="all">TOUS</option>
+              <option value="CDI">CDI</option>
+              <option value="CDD">CDD</option>
+            </select>
           </div>
-        </div>
-      </form>
+          <div>
+            <div>
+              <input type="submit" id="inputSubmit" value="RECHERCHER" name="submit"></input>
+            </div>
+          </div>
+        </form>
+      </div>
     </section>
     <section id="liste">
       <?php
@@ -67,27 +69,45 @@
       } else {
         $offres = $allOffer;
       }
+      $ligneFonce = false;
       foreach ($offres as $offer) : ?>
 
         <ul>
           <li>
-            <ul class="position">
-              <li>
-                <a href="<?= router ?>router.php?action=id&id=<?= $offer["Id_Offer"] ?>">
-                  <?= $offer["Position"] ?>
-                </a>
-              </li>
-              <li>
-                <?= $offer["Enterprise"] ?>
-              </li>
-              <li>
-                <?= $offer["Begin"] ?>
-              </li>
-              <li>
-                <?= $offer["Contract"] ?>
-              </li>
-            </ul>
-
+            <?php
+              if (!$ligneFonce) {
+            ?>
+              <div class="ligneClair">
+            <?php
+              $ligneFonce = true;
+              } else {
+            ?>
+              <div class="ligneFonce">
+            <?php
+              $ligneFonce = false;
+              }
+                ?>
+                <div class="lignesOffre">
+                  <ul class="position">
+                    <li>
+                      <p><?= $offer["Id_Offer"] ?></p>
+                    </li>
+                    <li>
+                      <a href="<?= router ?>router.php?action=id&id=<?= $offer["Id_Offer"] ?>">
+                        <?= $offer["Position"] ?>
+                      </a>
+                    </li>
+                    <li>
+                      <p><?= $offer["Enterprise"] ?></p>
+                    </li>
+                    <li>
+                      <p><?= $offer["Begin"] ?></p>
+                    </li>
+                    <li>
+                      <p><?= $offer["Contract"] ?></p>
+                    </li>
+                  </ul>
+                </div>
           </li>
 
         </ul>

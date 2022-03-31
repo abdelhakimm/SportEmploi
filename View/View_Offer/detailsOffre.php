@@ -112,33 +112,37 @@
                     </div>
                 </div>
             </div>
-            <?php foreach ($allApplication as $application) : ?>
+            <div class="candidatures">
+                <?php if (count($allApplication) > 0) { ?>
+                    <h3>Candidatures</h3>
+                <?php } ?>
+                <?php foreach ($allApplication as $application) : ?>
+                    <ul>
+                        <li>
+                            <ul class="application">
+                                <li>
+                                    <p><?= $application["Name"] ?></p>
+                                </li>
+                                <li>
+                                    <p><?= $application["Firstname"] ?></p>
+                                </li>
+                                <li>
+                                    <p><?= $application["Email"] ?></p>
+                                </li>
+                                <li>
+                                    <p><?= $application["Phone"] ?></p>
+                                </li>
+                                <li>
+                                    <p><?= $application["Motivation"] ?></p>
+                                </li>
+                            </ul>
 
-                <ul>
-                    <li>
-                        <ul class="position">
-                            <li>
-                                <?= $application["Name"] ?>
-                            </li>
-                            <li>
-                                <?= $application["Firstname"] ?>
-                            </li>
-                            <li>
-                                <?= $application["Email"] ?>
-                            </li>
-                            <li>
-                                <?= $application["Phone"] ?>
-                            </li>
-                            <li>
-                                <?= $application["Motivation"] ?>
-                            </li>
-                        </ul>
+                        </li>
 
-                    </li>
+                    </ul>
 
-                </ul>
-
-            <?php endforeach ?>
+                <?php endforeach ?>
+            </div>
             <div class="bouttonCandidater">
                 <a href="<?= router ?>router.php?action=candidater&id=<?= $offer['Id_Offer'] ?>">CANDIDATER</a>
             </div>
