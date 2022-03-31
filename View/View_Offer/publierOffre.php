@@ -47,15 +47,15 @@
 
                 <div class="ligneForm">
                     <label for="position">Nom du poste : </label>
-                    <input type="text" id="position" name="position">
+                    <input type="text" id="position" name="position" required>
                 </div>
                 <div class="ligneForm">
                     <label for="enterprise">Nom de l'entreprise : </label>
-                    <input type="text" id="enterprise" name="enterprise">
+                    <input type="text" id="enterprise" name="enterprise" required>
                 </div>
                 <div class="ligneForm">
                     <label for="beginDate">Date de début : </label>
-                    <input type="date" id="beginDate" name="beginDate">
+                    <input type="date" id="beginDate" name="beginDate" required>
                 </div>
                 <div class="ligneForm">
                     <label for="endDate">Date de fin : </label>
@@ -63,15 +63,15 @@
                 </div>
                 <div class="ligneForm">
                     <label for="contract">Type de contrat : </label>
-                    <input type="text" id="contract" name="contract">
+                    <input type="text" id="contract" name="contract" required>
                 </div>
                 <div class="ligneForm">
                     <label for="hours">Nombre d'heures : </label>
-                    <input type="text" id="hours" name="hours">
+                    <input type="text" id="hours" name="hours" required>
                 </div>
                 <div class="ligneForm">
                     <label for="salary">Salaire : </label>
-                    <input type="text" id="salary" name="salary">
+                    <input type="text" id="salary" name="salary" required>
                 </div>
                 <div class="ligneForm">
                     <label for="description">Description</label>
@@ -82,7 +82,7 @@
                     <label for="rgpd">j'accèpte les conditions</label>
                 </div>
                 <div class="buttonLigne">
-                    <input type="submit" value="PUBLIER" name="submit"></input>
+                    <input type="submit" class="publierInput" id="inputSubmit" value="PUBLIER" name="submit"></input>
                 </div>
 
             </form>

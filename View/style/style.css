@@ -173,9 +173,9 @@ footer {
 .pictosTexte img {
   width: 100px;
 }
-.reseauxSociauxDiv{
-    display: flex;
-    gap: 20px;
+.reseauxSociauxDiv {
+  display: flex;
+  gap: 20px;
 }
 /*-----------------------------------A PROPOS----------------------------------------------*/
 
@@ -269,16 +269,19 @@ h2 {
   margin: 0 auto 50px;
   display: flex;
 }
-.bouttonRechercher{
-    background-color: #c4c4c4;
+.rechercherInput {
+  background-color: #c4c4c4;
   width: 150px;
   height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+input#inputSubmit.rechercherInput:hover {
+  border: solid 1px #545454;
+}
 #liste {
-  height: 500px;
+  min-height: 500px;
   background-color: #efefef;
   width: 80%;
   margin: 50px auto;
@@ -295,19 +298,19 @@ h2 {
   width: 250px;
   margin: 15px 0 0 100px;
   display: flex;
-    flex-direction: column;
-    gap: 10px;
+  flex-direction: column;
+  gap: 10px;
 }
-.formRecherche{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.formRecherche {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-.ligneClair{
-    background-color: #efefef;
+.ligneClair {
+  background-color: #efefef;
 }
-.ligneFonce{
-    background-color: #c4c4c4;
+.ligneFonce {
+  background-color: #c4c4c4;
 }
 /* -------------------------------------PUBLIER OFFRE------------------------------*/
 
@@ -347,6 +350,31 @@ input {
 .buttonLigne {
   display: flex;
   justify-content: center;
+}
+input.publierInput {
+  background-color: #c4c4c4;
+  width: 150px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  transition: all 0.4s;
+}
+input.publierInput::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0px;
+  background: #ff5c16;
+  transition: all 0.4s;
+  z-index: -1;
+}
+
+input.publierInput:hover::before {
+  width: 100%;
 }
 /* ------------------------------------------------------------------------*/
 

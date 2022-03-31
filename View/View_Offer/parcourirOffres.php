@@ -49,15 +49,14 @@
             <div>
               <label for="typeContrat">Type de contrat : </label>
               <select id="typeContrat" name="typeContrat">
+                <option value=""></option>
                 <option value="all">TOUS</option>
                 <option value="CDI">CDI</option>
                 <option value="CDD">CDD</option>
               </select>
             </div>
             <div>
-              <div class="bouttonRechercher">
-                <input type="submit" id="inputSubmit" value="RECHERCHER" name="submit"></input>
-              </div>
+              <input type="submit" class="rechercherInput" id="inputSubmit" value="RECHERCHER" name="submit"></input>
             </div>
           </div>
         </form>
