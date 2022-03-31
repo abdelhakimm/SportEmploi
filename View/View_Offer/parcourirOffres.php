@@ -48,7 +48,7 @@
         <div>
           <label for="typeContrat">Type de contrat : </label>
           <select id="typeContrat" name="typeContrat">
-            <option value="CDI"></option>
+            <option value="all"></option>
             <option value="CDI">CDI</option>
             <option value="CDD">CDD</option>
           </select>
@@ -61,7 +61,13 @@
       </form>
     </section>
     <section id="liste">
-      <?php foreach ($offersByContract as $offer) : ?>
+      <?php
+      if (isset($offersByContract)) {
+        $offres = $offersByContract;
+      } else {
+        $offres = $allOffer;
+      }
+      foreach ($offres as $offer) : ?>
         <p><a href="<?= router ?>router.php?action=id&id=<?= $offer["Id_Offer"] ?>">Afficher l'offre</a></p>
         <ul>
           <li>
