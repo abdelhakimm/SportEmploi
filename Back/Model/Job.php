@@ -251,9 +251,12 @@ class Job{
     public static function getAllJob(){
         $dao = new DAO();
         $dbh = $dao->getDbh();
+        echo "dans la class Job";
         $stmt = $dbh->prepare("SELECT * FROM Job;");
+        
         $stmt->execute();
         $allRows = $stmt->fetchAll();
+
         return $allRows;
     }
     public static function getJobById($id_job){
@@ -273,16 +276,6 @@ class Job{
         $stmt= $dbh->prepare("INSERT INTO Job (Name_Job, Localisation, Start_Date, End_Date, Type, Hours_Week, Salary_Month, Salary_Year, Description, Employer) 
         VALUES 
         (:name_job, :localisation, :start_date, :end_date, :type, :hours_week, :salary_month, :salary_year, :description, :employer)");
-        echo $this->name_job;
-        echo $this->localisation;
-        echo $this->start_date;
-        echo $this->end_date;
-        echo $this->type;
-        echo $this->hours_week;
-        echo $this->salary_month;
-        echo $this->salary_year;
-        echo $this->description;
-        echo $this->employer;
         $stmt->bindParam(':name_job', $this->name_job);
         $stmt->bindParam(':localisation', $this->localisation);
         $stmt->bindParam(':start_date', $this->start_date);
@@ -293,17 +286,16 @@ class Job{
         $stmt->bindParam(':salary_year', $this->salary_year);
         $stmt->bindParam(':description', $this->description);
         $stmt->bindParam(':employer', $this->employer);
-        echo "apres insert avant execute";
+
         $stmt->execute();
     }
-    public static function updateJob($id_job,$name_job,$employer,$localisation,$star_date,$end_date,$type,$hours_week,$salary_month,$salary_year,$description){
+    public static function updateJob($id_job,$name_job,$localisation,$star_date,$end_date,$type,$hours_week,$salary_month,$salary_year,$description,$employer,){
         $dao = new DAO();
         $dbh = $dao->getDbh();
 
-        $stmt = $dbh->prepare("UPDATE Job SET Name_Job = :name_job, Employer = :employer, Localisation = :localisation, Start_Date = :start_date, End_Date = :end_date, Type = :type, Hours_Week = :hours_week, Salary_Month = :salary_month, Salary_Year = :salary_year, Description = :description WHERE Id_Job = :idjob");
+        $stmt = $dbh->prepare("UPDATE Job SET Name_Job = :name_job, Localisation = :localisation, Start_Date = :start_date, End_Date = :end_date, Type = :type, Hours_Week = :hours_week, Salary_Month = :salary_month, Salary_Year = :salary_year, Description = :description, Employer = :employer WHERE Id_Job = :idjob");
         $stmt->bindParam(':idjob', $id_job);
         $stmt->bindParam(':name_job', $name_job);
-        $stmt->bindParam(':employer', $employer);
         $stmt->bindParam(':localisation', $localisation);
         $stmt->bindParam(':start_date', $start_date);
         $stmt->bindParam(':end_date', $end_date);
@@ -312,6 +304,7 @@ class Job{
         $stmt->bindParam(':salary_month', $salary_month);
         $stmt->bindParam(':salary_year', $salary_year);
         $stmt->bindParam(':description', $description);
+        $stmt->bindParam(':employer', $employer);
         $stmt->execute();
     }
     public static function deleteJobById($id_job){

@@ -7,6 +7,7 @@ define('front', '../../View');
 Class ControllerJob{
 
     public static function getAllJob(){
+        echo "dans le controller getall";
         $allRows = Job::getAllJob();
         require front."/viewJob/allJob.php";
     }
@@ -17,11 +18,11 @@ Class ControllerJob{
     }
 
     public static function createJob($post){
-        echo "dans controller createjob";
+
         $job = new Job($post['name'], $post['localisation'], 
         $post['start_date'], $post['type'], $post['hours_week'],
         $post['salary_month'], $post['description'],$post['employer'], $post['salary_year'], $post['end_date']);
-        echo "apres appel a la classe job::creatjob()";
+
         $job->createJob();
         self::getAllJob();
     }
@@ -29,13 +30,13 @@ Class ControllerJob{
     public static function updateJob($post){
         
         $job = new Job($post['name'], $post['localisation'], 
-        $post['start_date'], $post['end_Date'], $post['type'], $post['hours_week'],
-        $post['salary_month'], $post['salary_year'], $post['description'], $post['employer']);
+        $post['start_date'], $post['type'], $post['hours_week'],
+        $post['salary_month'], $post['description'], $post['employer'], $post['salary_year'], $post['end_date']);
 
         $job->setId_Job($post["id"]);
         $job->updateJob($post['name'], $post['localisation'], 
-        $post['start_date'], $post['end_Date'], $post['type'], $post['hours_week'],
-        $post['salary_month'], $post['salary_year'], $post['description'], $post['employer']);
+        $post['start_date'], $post['type'], $post['hours_week'],
+        $post['salary_month'], $post['description'],$post['employer'], $post['salary_year'], $post['end_date']);
         self::getAllJob();
     }
 

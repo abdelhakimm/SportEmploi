@@ -1,12 +1,14 @@
 <?php
-
+echo $_GET["all"];
 require "../Controller/ControllerJob.php";
-
+echo "dans le controller";
 
 if(isset($_GET["action"])){
-    
+    echo "dans le if get action";
     if($_GET["action"] == "all"){
-       ControllerJob::getAllJob();
+        echo "dans le if all";
+        ControllerJob::getAllJob();
+
     }elseif($_GET["action"] == "id"){
         ControllerJob::getJobById($_GET["id"]);
 
