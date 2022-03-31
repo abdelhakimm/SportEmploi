@@ -1,5 +1,5 @@
 <?php
-
+echo "dans la class";
 require "DAO.php";
 class Offer{
     private $Name_Offer;
@@ -76,7 +76,7 @@ class Offer{
     public static function getAllOffer(){
         $dao = new DAO();
         $dbh = $dao->getDbh();
-        $stmt = $dbh->prepare("SELECT * FROM Offer;"); 
+        $stmt = $dbh->prepare("SELECT * FROM Offer;");
         $stmt->execute();
         $allRows = $stmt->fetchAll();
         return $allRows;

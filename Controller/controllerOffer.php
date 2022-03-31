@@ -1,6 +1,6 @@
 <?php
 echo "dans le controller";
-require_once "../Model/Offer.php";
+include($_SERVER['DOCUMENT_ROOT']."/Sjob/SportEmploi/Model/Offer.php");
 Class ControllerOffer{
 
 
