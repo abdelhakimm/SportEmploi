@@ -36,13 +36,66 @@ header{
     margin-right: 100px;
 }
 
+h1{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 50px;
+}
+
+#Alain{
+    width: 1440px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.profile img{
+    width: 304px;
+    height: 350px;
+}
+
+.profile p{
+    font-size: 22px;
+    text-align: center;
+}
+
+.bioAlain{
+    width: 900px;
+    height: 410px;
+    font-size: 22px;
+    margin-left: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#colorSection{
+    background-color: #a6a6a6;
+    align-content: center;
+    width: 1100px;
+    color: #ffffff;
+    font-size: 22px;
+}
+
+#colorSection h4{
+  text-align: center;
+}
 
 
 
+#colorSection p{
+    width: 750px;
+    height: 243px;
 
+}
 
-
-
+#allParagraph{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
 
 footer{
     margin-top: 50px;

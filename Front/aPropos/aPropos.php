@@ -48,21 +48,23 @@
             Depuis 2001, nous développons des outils évolutifs adaptés aux spécificités et évolutions du secteur à travers notre plateforme Sjob.com et notre cabinet de recrutement expert du Sport et de l’Entertainment. 
             Merci de votre fidélité, merci aux nouveaux venus dans notre communauté d’experts. Suivez-nous, ce n’est pas fini…</p>
 
+            <img src="../Image/signature.png" witdh="279px" height="49px">
+
         </div>
 
         <div class="signature">
-            <img src="../Image/signature.png" alt="">
+            
         </div>
 
     </section>
 
-    <section>
+    <section id="colorSection">
         <h4>POURQUOI NOUS CHOISIR ?</h4>
-        <div>
-            <div>
-                <img src="../logoEtIcon/valeurSC1.png" alt="">
+        <div id="allParagraph">
+            <div class="paragraphOne">
+                <img src="../logoEtIcon/valeursSC1.png" witdh="121px" height="120px" alt="">
                 <p>
-                    Nous sommes des créateurs de possibles 
+                   Nous sommes des créateurs de possibles 
                    Nous croyons en la valeur de chaque individu et avons la 
                    conviction que certaines rencontres peuvent changer le cours de notre vie. 
                    C’est pourquoi nous mettons tout en œuvre pour créer 
@@ -71,26 +73,26 @@
                    constitution de leurs équipes. 
                 </p>
             </div>
-            <div>
-                <img src="./logoEtIcon/valeurSC2.png" alt="">
-                <p></p>
+            <div class="paragraphTwo">
+                <img src="../logoEtIcon/valeursSC2.png" witdh="138px" height="120px" alt="">
+                <p>
+                    Nous sommes des passionnés de l’humain 
+                    Chaque mission qui nous est confiée est une occasion de nous dépasser et de revoir nos méthodes et 
+                    de développer de nouveaux outils, comme hier avec la formation ou plus récemment avec la marque employeur. 
+                    Nous pensons que les organisations innovantes sont les organisations qui placent l’humain au centre de tout.
+                </p>
             </div>
-            <div>                
-                <img src="./logoEtIcon/valeurSC3.png" alt="">
-                <p></p>
+            <div class="paragraphThree">                
+                <img src="../logoEtIcon/valeursSC3.png" witdh="138px" height="120px" alt="">
+                <p>
+                    Notre devise est proximité, plaisir et performance 
+                    Nos 19 ans d’expérience nous permettent aujourd’hui de mettre à votre service le plus grand réseau de
+                    talents et d’experts du secteur du sport et de l’Entertainment. Ce réseau nous l’avons tissé grâce à notre capacité à créer de l’empathie tant avec nos clients qu’avec nos candidats. 
+                </p>
             </div>
         </div>
     </section>
 
-
-
-
-
-
-
-
-
-    
     <footer>
         <div id="allFooter">    
             <nav>
