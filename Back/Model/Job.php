@@ -1,6 +1,7 @@
 <?php
+echo "class";
+require($_SERVER['DOCUMENT_ROOT']."/Sjob/SportEmploi/Back/Model/DAO.php");
 
-require_once "DAO.php";
 
 class Job{
     private $id_job;
@@ -289,7 +290,7 @@ class Job{
 
         $stmt->execute();
     }
-    public static function updateJob($id_job,$name_job,$localisation,$star_date,$end_date,$type,$hours_week,$salary_month,$salary_year,$description,$employer,){
+    public static function updateJob($id_job,$name_job,$localisation,$start_date,$end_date,$type,$hours_week,$salary_month,$salary_year,$description,$employer){
         $dao = new DAO();
         $dbh = $dao->getDbh();
 

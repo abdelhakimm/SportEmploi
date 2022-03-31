@@ -1,6 +1,6 @@
 <?php
-
-require "../Controller/ControllerJob.php";
+echo "avant";
+include "../Controller/ControllerJob.php";
 echo "dans le controller";
 
 if(isset($_GET["action"])){

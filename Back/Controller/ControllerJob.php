@@ -1,15 +1,13 @@
 <?php
 
-require_once "../Model/Job.php";
-
-define('front', '../../View');
-
+include($_SERVER['DOCUMENT_ROOT']."/Sjob/SportEmploi/Back/Model/Job.php");
+define(front, "../../view");
 Class ControllerJob{
 
     public static function getAllJob(){
         echo "dans le controller getall";
-        Job::getAllJob();
-        require front."/viewJob/allJob.php";
+        $allRows =Job::getAllJob();
+        include "../../View/viewJob/allJob.php";
     }
 
     public static function getJobById($id_job){
@@ -29,14 +27,10 @@ Class ControllerJob{
 
     public static function updateJob($post){
         
-        $job = new Job($post['name'], $post['localisation'], 
-        $post['start_date'], $post['type'], $post['hours_week'],
-        $post['salary_month'], $post['description'], $post['employer'], $post['salary_year'], $post['end_date']);
+        Job::updateJob($post['id'], $post['name_job'], $post['localisation'], 
+        $post['start_date'], $post['end_date'], $post['type'], $post['hours_week'],
+        $post['salary_month'], $post['salary_year'], $post['description'], $post['employer']);
 
-        $job->setId_Job($post["id"]);
-        $job->updateJob($post['name'], $post['localisation'], 
-        $post['start_date'], $post['type'], $post['hours_week'],
-        $post['salary_month'], $post['description'],$post['employer'], $post['salary_year'], $post['end_date']);
         self::getAllJob();
     }
 
@@ -48,7 +42,7 @@ Class ControllerJob{
 
     public static function formUpdateJob($id_job){
 
-        $job = Job::getJobByid($id_job);
+        $row = Job::getJobByid($id_job);
         require front."/viewJob/formUpdateJob.php";
     }
 
