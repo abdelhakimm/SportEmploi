@@ -61,6 +61,12 @@ h2{
     margin-bottom: 70px;
 }
 
+#allContent{
+    width: 1440px;
+    height: 740px;
+    display: flex;
+}
+
 #partOne{
     width: 345px;
     height: 740px;
@@ -128,11 +134,9 @@ h2{
 
 #allParagraph{
     width: 545px;
-    height: 740px;
+    height: 540px;
     font-size: 22px;
 }
 
-#allcontent{
-    display: flex;
-}
+
 

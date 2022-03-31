@@ -40,7 +40,7 @@
 
     <h2>POURQUOI CHOISIR S’JOB ?</h2>  
 
-    <div id="allContent"></div>
+    <div id="allContent">
 
         <section id="partOne">
             <div id="allIcon">
@@ -86,7 +86,7 @@
                 </div>
             </div>
         </section>    
-   
+    </div>
 
     <footer>
         
