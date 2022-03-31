@@ -46,7 +46,7 @@
     </section>
 
     <section>
-        <form action="../../Back/Router/RouterRecruiter.php" method="post">
+        <form action="../Back/Router/RouterAddress.php?action=getAllRecruiter" method="post">
             <div id="allItem"></div>
 
                 <div class="itemOne">

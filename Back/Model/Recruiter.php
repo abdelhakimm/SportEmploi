@@ -5,7 +5,7 @@ class Recruiter{
     private $idRecruiter;
     private $societyName;
     private $jobName;
-    private $debutDate ;
+    private $debutDate;
     private $endDate = NULL;
     private $contractType;
     private $hours;
@@ -232,11 +232,11 @@ class Recruiter{
         $dao = new DAO();
         $dbh =$dao->getDbh();
 
-        $stmt = $dbh->prepare("INSERT INTO recruiter(societyName,jobName,debutDate,endDate,contractType,hours,salary,city,description) 
-        VALUES(:societyName,:jobName,:debutDate,:endDate,:contractType,:hours,:salary,:city,:description);");
+        $stmt = $dbh->prepare("INSERT INTO recruiter(idRecruiter,societyName,jobName,debutDate,endDate,contractType,hours,salary,city,description) 
+        VALUES(:idRecruiter,:societyName,:jobName,:debutDate,:endDate,:contractType,:hours,:salary,:city,:description);");
 
        
-
+        $stmt->bindParam(':idRecruiter',$this->idRecruiter);
         $stmt->bindParam(':societyName',$this->societyName);
         $stmt->bindParam(':jobName', $this->jobName);
         $stmt->bindParam(':debutDate',$this->debutDate);
@@ -252,12 +252,12 @@ class Recruiter{
 
     }
 
-    public static function getRecuiterByContractType($contractType){
+    public static function getRecruiterById($idRecruiter){
 
         $dao = new DAO();
         $dbh = $dao->getDbh();
-        $stmt = $dbh->prepare("SELECT * FROM recruiter WHERE contractType = :contractType;");
-        $stmt->bindParam("contractType",$contractType);
+        $stmt = $dbh->prepare("SELECT * FROM recruiter WHERE idRecruiter = :idRecruiter;");
+        $stmt->bindParam("idRecruiter",$idRecruiter);
         $stmt->execute();
      
         return $stmt->fetch();
@@ -276,11 +276,11 @@ class Recruiter{
         $dao = new DAO();
         $dbh =$dao->getDbh();
 
-        $stmt = $dbh->prepare("UPDATE recruiter SET societyName=:societyName jobName=:jobName, debutDate=:debutDate, endDate=:endDate,
+        $stmt = $dbh->prepare("UPDATE recruiter SET idRecruiter=:idRecruiter, societyName=:societyName jobName=:jobName, debutDate=:debutDate, endDate=:endDate,
         contractType=:contractType, hours=:hours, salary=:salary, city=:city, description=:description WHERE idRecruiter=:idRecruiter");
 
        
-
+        $stmt->bindParam(':idRecruiter',$this->idRecruiter);
         $stmt->bindParam(':societyName',$this->societyName);
         $stmt->bindParam(':jobName', $this->jobName);
         $stmt->bindParam(':debutDate',$this->debutDate);
@@ -292,7 +292,7 @@ class Recruiter{
         $stmt->bindParam(':description',$this->description);
 
         
-      return $stmt->execute();
+        return $stmt->execute();
     }
     
     public static function deleteRecruiterById($idRecruiter){

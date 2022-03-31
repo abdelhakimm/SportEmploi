@@ -8,7 +8,7 @@
 
 </head>
 <body>
-<a href="../Back/Router/RouterAddress.php?action=all">les addresses</a>
+<a href="../Back/Router/RouterAddress.php?action=getAllRecruiter">les addresses</a>
 
     <form action="../../Back/Router/RouterRecruiter.php" method="post">
         <div id="allItem"></div>
@@ -36,10 +36,6 @@
 
                 <label for="hours">Nombre d'heures :</label>
                 <input type="number" name="hours" id="hours" required value="<?=$recruiter['hours']?>">
-                <select name="hours" id="hours" required value="<?=$recruiter['hours']?>">
-                    <option value="semaine">Semaine</option>
-                    <option value="mois">Mois</option>
-                </select>
 
             </div>
 

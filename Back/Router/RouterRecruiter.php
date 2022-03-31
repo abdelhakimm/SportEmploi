@@ -3,19 +3,16 @@ require "../Controller/ControllerRecruiter.php";
 
 if(isset($_GET["action"])){
 
-    if($_GET["action"] == "all"){
+    if($_GET["action"] == "getAllRecruiter"){
         ControllerRecruiter::getAllRecruiter();
-
-    }elseif($_GET["action"] == "contractType"){
-        ControllerRecruiter::getRecruiterByContractType($_GET["contractType"]);
 
     }elseif($_GET["action"] == "idRecruiter"){
         ControllerRecruiter::getRecruiterById($_GET["idRecruiter"]);
 
-    }elseif($_GET["action"] == "update"){
+    }elseif($_GET["action"] == "updateRecruiter"){
         ControllerRecruiter::updateRecruiter($_GET["idRecruiter"]);//envoi vers le formulaire
 
-    }elseif($_GET["action"] == "delete"){
+    }elseif($_GET["action"] == "deleteRecruiter"){
         ControllerRecruiter::deleteRecruiterByIdRecruiter($_GET["idRecruiter"]);
     }
 

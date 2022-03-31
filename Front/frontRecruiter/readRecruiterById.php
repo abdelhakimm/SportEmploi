@@ -7,23 +7,24 @@
     <title>Recruiter</title>
 </head>
 <body>
-<a href="../Back/Router/RouterRecruiter.php?action=all">les Recruiter</a>
+<a href="../Back/Router/RouterRecruiter.php?action=getAllRecruiter">les Recruiter</a>
 
     
     <ul>
-            <li><?=$recruiter["societyName"]?></li>
-            <li><?=$recruiter["jobName"]?></li>
-            <li><?=$recruiter["contractType"]?></li>
-            <li><?=$recruiter["debutDate"]?></li>
-            <li><?=$recruiter["endDate"]?></li>
-            <li><?=$recruiter["salary"]?></li>
-            <li><?=$recruiter["city"]?></li>
+        <li><?=$recruiter["societyName"]?></li>
+        <li><?=$recruiter["jobName"]?></li>
+        <li><?=$recruiter["contractType"]?></li>
+        <li><?=$recruiter["debutDate"]?></li>
+        <li><?=$recruiter["endDate"]?></li>
+        <li><?=$recruiter["salary"]?></li>
+        <li><?=$recruiter["city"]?></li>
 
-            <li><?=$recruiter["description"]?></li>
+        <li><?=$recruiter["description"]?></li>
 
     </ul>
-    <a href="../Back/Router/RouterRecruiter.php?action=update&id=<?=$recruiter["idRecruiter"]?>">Modifier</a>
-    <a href="../Back/Router/RouterRecruiter.php?action=delete&id=<?=$recruiter["idRecruiter"]?>">Supprimer</a>
+
+    <a href="../../Back/Router/RouterRecruiter.php?action=updateRecruiter&idRecruiter=<?=$recruiter["idRecruiter"]?>">Modifier</a>
+    <a href="../../Back/Router/RouterRecruiter.php?action=deleteRecruiter&idRecruiter=<?=$recruiter["idRecruiter"]?>">Supprimer</a>
 
   
 </body>
