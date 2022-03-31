@@ -37,7 +37,7 @@ class Offer{
         $stmt->bindParam(':sept', $this->Monthly_Pay);
         $stmt->bindParam(':huit', $this->Description);
 
-        $stmt->execute();
+        return $stmt->execute();
 
     }
 }
