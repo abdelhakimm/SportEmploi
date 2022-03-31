@@ -1,12 +1,12 @@
 <?php
-echo "avant";
+
 include "../Controller/ControllerJob.php";
-echo "dans le controller";
+
 
 if(isset($_GET["action"])){
-    echo "dans le if get action";
+    
     if($_GET["action"] == "all"){
-        echo "dans le if all";
+        
         ControllerJob::getAllJob();
 
     }elseif($_GET["action"] == "id"){

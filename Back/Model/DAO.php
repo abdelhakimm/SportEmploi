@@ -1,5 +1,5 @@
 <?php
-echo "dao";
+
 class DAO{
 
     private $host="localhost";

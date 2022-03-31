@@ -1,3 +1,6 @@
+<?php 
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,10 +11,17 @@
 </head>
 <body>
     
-    <a href="../Back/Router/RouterJob.php?action=all">Parcourir les offres</a>
-    <a href="../Back/Router/RouterJob.php?action=create">Publiez une offre</a>
-    <a href="../Back/Router/RouterCandidate.php?action=all">Voir tous les candidats</a>
+    <?php
+    require_once "../Back/Model/Header.php"
+    ?>
 
+        
+    
+<?php
+    require_once "./SportEmploi/View/image/logo.png"
+    ?>
+
+    
 
 </body>
 </html>

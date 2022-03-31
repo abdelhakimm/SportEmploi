@@ -5,9 +5,9 @@ define(front, "../../view");
 Class ControllerJob{
 
     public static function getAllJob(){
-        echo "dans le controller getall";
+
         $allRows =Job::getAllJob();
-        include "../../View/viewJob/allJob.php";
+        include front."/viewJob/allJob.php";
     }
 
     public static function getJobById($id_job){
