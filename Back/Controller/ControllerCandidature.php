@@ -1,37 +1,37 @@
 <?php
-require_once "../Model/Address.php";
-class ControllerAddress{
+require_once "../Model/Candidature.php";
+class ControllerCandidature{
 
     public static function getAll(){
         
 
-      $allAddress = Address::getAllAddress();
-     require "../../View/View_Address/readAllAddress.php";
+      $allCandidature = Candidature::getAllCandidature();
+     require "../../View/V";
     }
 
     public static function getById($id){
         
 
-        $address = Address::getAddressByid($id);
-        require "./View/View_Address/readAddressById.php";
+        $Candidature = Candidature::getCandidatureByid($id);
+        require "./View/View_Candidature/readCandidatureById.php";
     }
 
     public static function create($post){
         
 
-        $address = new Address($post['number'], $post['address'], 
+        $Candidature = new Candidature($post['number'], $post['Candidature'], 
         $post['zip'], $post['city']);
-        $address->createAddress();
+        $Candidature->createCandidature();
         self::getAll();
 
     }
 
     public static function update($post){
         
-         $address = new Address($post['number'], $post['address'], 
+         $Candidature = new Candidature($post['number'], $post['Candidature'], 
          $post['zip'], $post['city']);
-        $address->setId_address($post["id"]);
-        $address->updateAddress();
+        $Candidature->setId_Candidature($post["id"]);
+        $Candidature->updateCandidature();
       
         self::getAll();
     }
@@ -39,14 +39,14 @@ class ControllerAddress{
     public static function deleteById($id){
        
 
-        $address = Address::deleteAddressById($id);
+        $Candidature = Candidature::deleteCandidatureById($id);
     
         self::getAll();
     }
 
     public static function formUpdate($id){
-        $address = Address::getAddressByid($id);
-        require "./View/View_Address/formModif.php";
+        $Candidature = Candidature::getCandidatureByid($id);
+        require "./View/View_Candidature/formModif.php";
     }
     
 }

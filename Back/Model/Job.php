@@ -1,135 +1,109 @@
 <?php
 
-require "DAO.php";
+require_once "DAO.php";
 
-class Address{
-    
-    private $id_address;
-    private $number;
-    private $address;
-    private $zip;
-    private $city;
+class Job
+{
 
-    public function __construct($number,$address,$zip,$city){
-        $this->number = $number;
-        $this->address = $address;
-        $this->zip = $zip;
-        $this->city = $city;
-        
-    }
-    
+    private $id_Job;
+    private $localisation;
+    private $poste;
+    private $begin;
+    private $end;
+    private $contract;
+    private $hours;
+    private $salary;
+    private $description;
 
-
-    /**
-     * Get the value of number
-     */ 
-    public function getNumber()
+    public function __construct($localisation, $poste, $begin, $end, $contract, $hours, $salary, $description)
     {
-        return $this->number;
+        $this->localisation = $localisation;
+        $this->poste = $poste;
+        $this->begin = $begin;
+        $this->end = $end;
+        $this->contract = $contract;
+        $this->hours = $hours;
+        $this->salary = $salary;
+        $this->description = $description;
     }
 
-    /**
-     * Get the value of address
-     */ 
-    public function getAddress()
+    public function afficher()
     {
-        return $this->address;
+        echo '<p>' . $this->localisation . ' ' . $this->poste . ' '
+            . $this->begin . ' ' . $this->contract . '</p>';
     }
 
-    /**
-     * Get the value of zip
-     */ 
-    public function getZip()
+    public static function getAllJob()
     {
-        return $this->zip;
-    }
 
-    /**
-     * Get the value of city
-     */ 
-    public function getCity()
-    {
-        return $this->city;
-    }
+        $request = "SELECT * FROM Job ";
 
-    public function createAddress(){
-        $dao = new DAO();
-        $dbh =$dao->getDbh();
-
-        $stmt = $dbh->prepare("INSERT INTO Address(Number,Address,Zip,City) 
-        VALUES(:numb,:add,:zip,:city);");
-
-       
-
-     $stmt->bindParam(':numb',$this->number);
-        $stmt->bindParam(':add', $this->address);
-        $stmt->bindParam(':zip',$this->zip);
-
-        $stmt->bindParam(':city',$this->city);
-        
-      return $stmt->execute();
-
-           }
-
-    public static function getAddressById($id_address){
-
-            $dao = new DAO();
-            $dbh = $dao->getDbh();
-            $stmt = $dbh->prepare("SELECT * FROM Address WHERE Id_Address = :id_address;");
-             $stmt->bindParam("id_address",$id_address);
-             $stmt->execute();
-
-             return $stmt->fetch();
-    }
-     
-    public static function getAllAddress(){
-             $dao = new DAO();
-             $dbh = $dao->getDbh();
-             $stmt = $dbh->prepare("SELECT * FROM Address;");
-             $stmt->execute();
-             
-             return $stmt->fetchAll();
-         }
-
-    public function updateAddress(){
-        $dao = new DAO();
-        $dbh =$dao->getDbh();
-
-        $stmt = $dbh->prepare("UPDATE Address SET Number=:numb, Address=:add, Zip=:zip, City=:city WHERE Id_Address=:id_address");
-
-       
-
-        $stmt->bindParam(':numb',$this->number);
-        $stmt->bindParam(':add', $this->address);
-        $stmt->bindParam(':zip',$this->zip);
-        $stmt->bindParam(':id_address',$this->id_address);
-        $stmt->bindParam(':city',$this->city);
-        
-      return $stmt->execute();
-    }
-    public static function deleteAddressById($id_address){
         $dao = new DAO();
         $dbh = $dao->getDbh();
-        $stmt = $dbh->prepare("DELETE FROM Address WHERE Id_Address = :id_address;");
-         $stmt->bindParam("id_address",$id_address);
-         $stmt->execute();
- 
-        
-         
+
+        $stmt = $dbh->query($request);
+        $rows = $stmt->fetchAll();
+
+        return $rows;
     }
 
-    /**
-     * Set the value of id_address
-     *
-     * @return  self
-     */ 
-    public function setId_address($id_address)
+    public function createJob()
     {
-        $this->id_address = $id_address;
 
-        return $this;
+        $request = "INSERT INTO Job (localisation, poste, begin, end, Contract, hours, salary, description) 
+            VALUES (:localisation, :poste, :begin, :end, :Contract, :hours, :salary, :description)";
+
+        $dao = new DAO();
+        $dbh = $dao->getDbh();
+
+        $stmt = $dbh->prepare($request);
+
+        $stmt->bindParam(":localisation", $this->localisation);
+        $stmt->bindParam(":poste", $this->poste);
+        $stmt->bindParam(":begin", $this->begin);
+        $stmt->bindParam(":end", $this->end);
+        $stmt->bindParam(":Contract", $this->contract);
+        $stmt->bindParam(":hours", $this->hours);
+        $stmt->bindParam(":salary", $this->salary);
+        $stmt->bindParam(":description", $this->description);
+
+        $stmt->execute();
+    }
+
+    public static function getJobById($id_Job)
+    {
+
+        $request = "SELECT * FROM Job WHERE id_Job = :id_Job";
+
+        $dao = new DAO();
+        $dbh = $dao->getDbh();
+
+        $stmt = $dbh->prepare($request);
+        $stmt->bindParam(":id_Job", $id_Job);
+        $stmt->execute();
+        $row = $stmt->fetch();
+
+        return $row;
+    }
+
+    public static function getJobByContract($post)
+    {
+
+        $dao = new DAO();
+        $dbh = $dao->getDbh();
+        
+
+        // quand type de contrat non sélectionné, on affiche toutes les Jobs
+        if ($post['typeContrat'] == 'all') {
+            return self::getAllJob();
+        } else {
+            $request = "SELECT * FROM Job WHERE Contract = :contract";
+            $stmt = $dbh->prepare($request);
+            $stmt->bindParam(":contract", $post['typeContrat']);
+            $stmt->execute();
+            $rows = $stmt->fetchAll();
+            return $rows;
+        }
+        
     }
 }
-
-
-   
