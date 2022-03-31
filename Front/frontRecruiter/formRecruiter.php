@@ -10,99 +10,166 @@
 </head>
 <body>
 
-    <header>
-            <div class="logo">
+    <header>  
+        <div class="logo">
                 <img src="../logoEtIcon/logo.png" width="100px" height="100px">
-            </div>
+        </div>
 
-            <nav>
-                <ul>
-                    <div id="allNav">
-                        <div class="flexNav">
-                           <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">Accueil</a></li>
-                           <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">A propos</a></li>
-                        </div>
-                        <div class="flexNav">
-                           <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">Parcourir les offres</a></li>
-                           <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">Publier une offre</a></li>
-                        </div>
+        <nav>
+            <ul>
+                <div id="allNav">
+                    <div class="flexNav">
+                        <li><a href="../Home/home.php">Accueil</a></li>
+                        <li><a href="../aPropos/aPropos.php">A propos</a></li>
                     </div>
-                </ul>
-            </nav>
+                    <div class="flexNav">
+                        <li><a href="../frontRecruiter/readAllRecruiter.php">Parcourir les offres</a></li>
+                        <li><a href="../frontRecruiter/formRecruiter.php">Publier une offre</a></li>
+                    </div>
+                </div>
+            </ul>
+        </nav>
     </header>
+    <section id="intro">
 
-  <h1>Recrutons ensemble votre talent idéal</h1>
+        <h1>Recrutons ensemble votre talent idéal</h1>
 
-  <p>
-    Trouver le candidat idéal demande parfois un temps précieux. Avec les outils Indeed, identifiez, présélectionnez et recrutez rapidement vos candidats, en toute simplicité.
-    Vous savez quel profil vous recherchez. <br>
-    <br>
-    Nous vous aidons à le trouver.
-  </p> <br>
+        <p>
+        Trouver le candidat idéal demande parfois un temps précieux. Avec les outils Indeed, identifiez, présélectionnez et recrutez rapidement vos candidats, en toute simplicité.
+        Vous savez quel profil vous recherchez. <br>
+        <br>
+        Nous vous aidons à le trouver.
+        </p> <br>
 
-  <p>Votre annonce :</p>
+      <p>Votre annonce :</p>
 
-  <a href="../../Back/Router/RouterRecruiter.php?action=all">Les Recruiter</a>
+      
+      <a href="../../Back/Router/RouterRecruiter.php?action=all">Les Recruiter</a>
 
+    </section>
 
-    <form action="../../Back/Router/RouterRecruiter.php" method="POST">
-        <div id="allItem"></div>
+    <section>
+        <form action="../../Back/Router/RouterRecruiter.php" method="POST">
+            <div id="allItem"></div>
 
-            <div class="itemOne">
+                <div class="itemOne">
+                    <div>
+                        <label for="societyName">Nom de la Société :</label>
+                        <input type="text" name="societyName" id="societyName" required>
+                    </div>
 
-                <label for="societyName">Nom de la Société :</label>
-                <input type="text" name="societyName" id="societyName" required>
+                    <div>
+                        <label for="jobName">Intitulé du poste :</label>
+                        <input type="text" name="jobName" id="jobName" required>
+                    </div>
 
-                <label for="jobName">Intitulé du poste :</label>
-                <input type="text" name="jobName" id="jobName" required>
+                </div>
+                <div class="itemTwo">
+                
+                    <div>
+                        <label for="contractType">Type de contrat :</label>
+                        <select name="contractType" id="contractType" required>
+                            <option value="CDD">CDD</option>
+                            <option value="Interim">Interim</option>
+                            <option value="CDI">CDI</option>
+                        </select>
+                    </div>
 
+                    <div>
+                        <label for="hours">Nombre d'heures :</label>
+                        <input type="text" name="hou" id="hou" required>
+                        <select name="hour" id="hour" required>
+                            <option value="semaine">Semaine</option>
+                        <option value="mois">Mois</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="itemThree">
+                    <div>
+                         <label for="debutDate">Date de début de contrat :</label>
+                         
+                         <input type="date" name="debutDate" id="debutDate" required>
+                    </div>
+                    <div>
+                         <label for="endDate">Date de fin de contrat :</label>
+                         
+                         <input type="date" name="endDate" id="endDate">
+                    </div>
+
+                </div>
+
+                <div class="itemFour">
+                    <div>
+                        <label for="salary">Salaire :</label>
+                        <input type="text" name="salary" id="salary" required>
+                    </div>
+                    <div>
+                        <label for="city">Ville :</label>
+                        <input type="text" name="city" id="city" required>
+                    </div>
+
+                </div>
+
+                <div class="itemFive">
+                    <div>
+                        <label for="description">Description :</label>
+                        <textarea name="description" id="description" cols="30" rows="10" required></textarea>
+                    </div>    
+
+                    <input type="submit" value="Poster votre annonce" name="submit">
+
+                </div>
+
+            </div>     
+
+        </form>
+    </section>
+
+    <footer>
+        
+        <div id="allFooter">    
+            <nav>
+                
+                <ul>
+                    
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">Accueil</a></li>
+                    
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">A propos</a></li>
+                    
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">Parcourir les offres</a></li>
+                    
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">Publier une offre</a></li>
+                
+                </ul>
+            
+            </nav>
+
+            <div id="network">
+                
+                <img src="../logoEtIcon/facebook.png" width="100px" height="100px" alt="">
+                
+                <img src="../logoEtIcon/logo-twitter.png" width="100px" height="100px" alt="">
+                
+                <img src="../logoEtIcon/linkedin.png" width="100px" height="100px" alt="">
+            
             </div>
-            <div class="itemTwo">
 
-                <label for="contractType">Type de contrat :</label>
-                <select name="contractType" id="contractType" required>
-                    <option value="CDD">CDD</option>
-                    <option value="Interim">Interim</option>
-                    <option value="CDI">CDI</option>
-                </select>
+            
+            <div id="copyright">
+                <img src="../logoEtIcon/logo.png" width="353px" height="253px">
+                <div class="copy">
+                    <img src="../logoEtIcon/1200px-Copyright.svg.png" width="30px" height="30px">
+                
+                    <p>S’Job @2022. Tous droits réservés.</p>
+                </div>
+            </div>  
+        </div>
 
-                <label for="hours">Nombre d'heures :</label>
-                <input type="text" name="hou" id="hou" required>
-                <select name="hour" id="hour" required>
-                    <option value="semaine">Semaine</option>
-                    <option value="mois">Mois</option>
-                </select>
 
-            </div>
+    </footer>
 
-            <div class="itemThree">
-
-                <label for="debutDate">Date de début de contrat :</label>
-                <input type="date" name="debutDate" id="debutDate" required>
-
-                <label for="endDate">Date de fin de contrat :</label>
-                <input type="date" name="endDate" id="endDate">
-
-            </div>
-
-            <div class="itemFour">
-
-                <label for="salary">Salaire :</label>
-                <input type="text" name="salary" id="salary" required>
-
-                <label for="city">Ville :</label>
-                <input type="text" name="city" id="city" required>
-
-            </div>
-
-            <label for="description">Description :</label>
-            <textarea name="description" id="description" cols="30" rows="10" required></textarea>
-
-            <input type="submit" value="Poster votre annonce" name="submit">
-
-        </div>     
-
-    </form>
 
 </body>
 </html>

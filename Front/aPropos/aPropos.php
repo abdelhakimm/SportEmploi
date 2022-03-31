@@ -18,12 +18,12 @@
             <ul>
                 <div id="allNav">
                     <div class="flexNav">
-                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">Accueil</a></li>
-                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">A propos</a></li>
+                        <li><a href="../Home/home.php">Accueil</a></li>
+                        <li><a href="../aPropos/aPropos.php">A propos</a></li>
                     </div>
                     <div class="flexNav">
-                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">Parcourir les offres</a></li>
-                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">Publier une offre</a></li>
+                        <li><a href="../frontRecruiter/readAllRecruiter.php">Parcourir les offres</a></li>
+                        <li><a href="../frontRecruiter/formRecruiter.php">Publier une offre</a></li>
                     </div>
                 </div>
             </ul>
