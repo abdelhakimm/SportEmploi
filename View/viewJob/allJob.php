@@ -7,6 +7,19 @@
     <title>Toutes les offres</title>
 </head>
 <body>
+<?php
+    require_once "../Back/Model/Header.php"
+    ?>
+    <section>
+    <div class="title">
+        <p>Parcourez les offres</p>
+    </div>
+    
+    <div>
+        <div>
+
+        </div>
+    </div>
 
     <?php foreach($allRows as $row): ?>
         
@@ -27,7 +40,7 @@
         <p><a href="RouterJob.php?action=id&id=<?=$row["Id_Job"]?>">Voir cette offre</a></p>
 
     <?php endforeach?>
-
+    </section>
    
 </body>
 </html>

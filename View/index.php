@@ -15,11 +15,6 @@
     <?php
     require_once "../Back/Model/Header.php"
     ?>
-    <section>
-    <div class="title">
-        <p>Parcourez les offres</p>
-    </div>
 
-    </section>
 </body>
 </html>
