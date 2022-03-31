@@ -43,20 +43,21 @@
 
     <section id="criteres">
       <div class="positionementCriteres">
-        <h3>Critères de recherche</h3>
+        <h3>Critères de recherche : </h3>
         <form action="<?= router ?>router.php" method="post">
-
-          <div>
-            <label for="typeContrat">Type de contrat : </label>
-            <select id="typeContrat" name="typeContrat">
-              <option value="all">TOUS</option>
-              <option value="CDI">CDI</option>
-              <option value="CDD">CDD</option>
-            </select>
-          </div>
-          <div>
+          <div class="formRecherche">
             <div>
-              <input type="submit" id="inputSubmit" value="RECHERCHER" name="submit"></input>
+              <label for="typeContrat">Type de contrat : </label>
+              <select id="typeContrat" name="typeContrat">
+                <option value="all">TOUS</option>
+                <option value="CDI">CDI</option>
+                <option value="CDD">CDD</option>
+              </select>
+            </div>
+            <div>
+              <div class="bouttonRechercher">
+                <input type="submit" id="inputSubmit" value="RECHERCHER" name="submit"></input>
+              </div>
             </div>
           </div>
         </form>
@@ -75,16 +76,16 @@
         <ul>
           <li>
             <?php
-              if (!$ligneFonce) {
+            if (!$ligneFonce) {
             ?>
               <div class="ligneClair">
-            <?php
+              <?php
               $ligneFonce = true;
-              } else {
-            ?>
-              <div class="ligneFonce">
-            <?php
-              $ligneFonce = false;
+            } else {
+              ?>
+                <div class="ligneFonce">
+                <?php
+                $ligneFonce = false;
               }
                 ?>
                 <div class="lignesOffre">
@@ -136,7 +137,11 @@
             <li>PUBLIER UNE OFFRE</li>
           </a>
         </ul>
-        <p class="reseauxSociaux">Nous suivre sur les réseaux sociaux</p>
+        <div class="reseauxSociauxDiv">
+          <p class="reseauxSociaux">Nous suivre sur les réseaux sociaux</p>
+          <img src="../../View/images/facebookLogo.svg" alt="logo facebook">
+          <img src="../../View/images/twitterIcon.svg" alt="logo twitter">
+        </div>
         <p class="copyright">Copyright Sylvain Foucault 2022</p>
       </div>
     </div>

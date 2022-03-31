@@ -146,7 +146,11 @@
             <li>PUBLIER UNE OFFRE</li>
           </a>
         </ul>
-        <p class="reseauxSociaux">Nous suivre sur les réseaux sociaux</p>
+        <div class="reseauxSociauxDiv">
+          <p class="reseauxSociaux">Nous suivre sur les réseaux sociaux</p>
+          <img src="./images/facebookLogo.svg" alt="logo facebook">
+          <img src="./images/twitterIcon.svg" alt="logo twitter">
+        </div>
         <p class="copyright">Copyright Sylvain Foucault 2022</p>
       </div>
     </div>

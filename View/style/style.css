@@ -173,6 +173,10 @@ footer {
 .pictosTexte img {
   width: 100px;
 }
+.reseauxSociauxDiv{
+    display: flex;
+    gap: 20px;
+}
 /*-----------------------------------A PROPOS----------------------------------------------*/
 
 .presentationEntreprise {
@@ -265,7 +269,14 @@ h2 {
   margin: 0 auto 50px;
   display: flex;
 }
-
+.bouttonRechercher{
+    background-color: #c4c4c4;
+  width: 150px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #liste {
   height: 500px;
   background-color: #efefef;
@@ -282,7 +293,15 @@ h2 {
 }
 .positionementCriteres {
   width: 250px;
-  margin: 30px 0 0 100px;
+  margin: 15px 0 0 100px;
+  display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.formRecherche{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 .ligneClair{
     background-color: #efefef;
