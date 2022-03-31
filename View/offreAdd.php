@@ -40,7 +40,11 @@
             </div>
             <div>
                  <label for=" " class="labelForm">TYPE DE CONTRAT</label> <br>
-                 <input type="text" name="" class="inputForm">
+                 <select type="" name="" class="inputForm">
+                     <option value="CDI">CDI</option>
+                     <option value="CDD">CDD</option>
+                     <option value="Interim">Intérim</option>
+                </select>
             </div>
             <div>
                 <label for="" class="labelForm">SALAIRE ANNUELLE</label> <br>

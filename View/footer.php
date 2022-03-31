@@ -7,10 +7,10 @@
 <footer>
         <ul>
             <li class="menu" id="menuSolo"><a href="">Menu :</a></li>
-            <li><a href="">Accueil</a></li>
-            <li><a href="">À propos</a></li>
-            <li><a href="">Parcourir les offres</a></li>
-            <li><a href="">Publier une offre</a></li>
+            <li><a href="index.php">Accueil</a></li>
+            <li><a href="apropos.php">À propos</a></li>
+            <li><a href="offrePost.php">Parcourir les offres</a></li>
+            <li><a href="offreAdd.php">Publier une offre</a></li>
         </ul>
         <ul>
             <li class="menu">Réseaux sociaux :</li>
