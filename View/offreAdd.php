@@ -64,7 +64,7 @@
             <label for="">J'accepte les conditions d'utilisateur</label>
         </div>
         <div class="cadrePost" id="envoyerOffre">
-                    <input type="submit" value="Envoyer l'offre" class="cadrePostText">
+                    <input type="submit" value="Envoyer l'offre" class="cadrePostText" name="submit">
                 </div>
     </div>
     </form>

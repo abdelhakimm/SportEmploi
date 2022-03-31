@@ -1,9 +1,11 @@
 <?php
+echo "avant le ifget   ,";
 require "./ControllerOffer.php";
 
 if(isset($_GET["action"])){
-
-    if($_GET["action"] == "all"){
+    echo "dans le ifget    ,";
+    /*if($_GET["action"] == "all"){
+        echo "dans le all";
         ControllerOffer::getAll();
 
     }elseif($_GET["action"] == "id"){
@@ -14,14 +16,14 @@ if(isset($_GET["action"])){
 
     }elseif($_GET["action"] == "delete"){
         ControllerOffer::deleteById($_GET["id"]);
-    }
+    }*/
 
 }elseif(isset($_POST["submit"])){
    
 
     if(isset($_POST["id"])){
 
-        ControllerOffer::update($_POST);//enregistre le formulaire
+        //ControllerOffer::update($_POST);//enregistre le formulaire
      
 
     }else{

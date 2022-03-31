@@ -2,14 +2,14 @@
 
 class DAO{
 
-    public $host = "localhost";
-    public $port = "8889";
-    public $dbname = "Sjob";
-    public $charset = "UTF8";
-    public $user = "root";
-    public $password = "root";
-    public $dsn;
-    public $dbh;
+    private $host = "localhost";
+    private $port = "8889";
+    private $dbname = "Sjob";
+    private $charset = "UTF8";
+    private $user = "root";
+    private $password = "root";
+    private $dsn;
+    private $dbh;
 
     public function __construct()
     {
@@ -17,7 +17,7 @@ class DAO{
 
             try{
                 $this->dbh =  new PDO($this->dsn,$this->user,$this->password);
-               
+               echo "co";
             }catch(PDOException $e){
                 $e->getMessage();
             }
@@ -31,3 +31,4 @@ class DAO{
         return $this->dbh;
     }
 }
+?>
