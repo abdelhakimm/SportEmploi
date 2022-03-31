@@ -111,6 +111,7 @@
           <p class="reseauxSociaux">Nous suivre sur les réseaux sociaux</p>
           <img src="./images/facebookLogo.svg" alt="logo facebook">
           <img src="./images/twitterIcon.svg" alt="logo twitter">
+          <img id="logoLinkedin" src="./images/linkedin-logo-icon.svg" alt="logo linkedin">
         </div>
         <p class="copyright">Copyright Sylvain Foucault 2022</p>
       </div>

@@ -175,7 +175,13 @@ footer {
 }
 .reseauxSociauxDiv {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
+}
+#logoLinkedin {
+  width: 80px;
+  height: 80px;
+  align-self: center;
 }
 /*-----------------------------------A PROPOS----------------------------------------------*/
 
@@ -254,6 +260,27 @@ h2 {
   text-align: center;
 }
 /*-----------------------------------PARCOURIR OFFRE------------------------------------------*/
+@media screen and (max-width: 800px) {
+  .logo {
+    margin: 20px;
+  }
+  .nav {
+    margin: 20px;
+  }
+  .logoMenu {
+    flex-wrap: wrap;
+  }
+  #pictos {
+    flex-wrap: wrap;
+  }
+} /*
+@media screen and (min-width: 620px) and (max-width: 900px) {
+}*/
+@media screen and (max-width: 1400px) {
+  #liste .position {
+    flex-wrap: wrap;
+  }
+}
 
 .parcourirOffres {
   height: 200px;
@@ -320,10 +347,10 @@ input#inputSubmit.rechercherInput:hover {
   justify-content: center;
   align-items: center;
 }
-.formOffre{
-    border: solid 1px #545454;
-    padding: 50px;
-    box-shadow: 0 0 10px 10px #c4c4c4;
+.formOffre {
+  border: solid 1px #545454;
+  padding: 50px;
+  box-shadow: 0 0 10px 10px #c4c4c4;
 }
 #offre {
   display: flex;
@@ -381,9 +408,9 @@ input {
 .buttonLigne button:hover::before {
   width: 100%;
 }
-.buttonLigne input{
-    border: none;
-    background: #c4c4c4;
+.buttonLigne input {
+  border: none;
+  background: #c4c4c4;
 }
 /* ------------------------------------------------------------------------*/
 
