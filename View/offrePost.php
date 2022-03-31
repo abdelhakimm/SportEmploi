@@ -17,25 +17,18 @@
         <div class="textHaut">
             <p class="paragrapheHaut">TOUTE LES OFFRES QUE NOUS PROPOSONS SONT ICI : </p>
         </div>
+        <?php foreach($offers as $offer):?>
         <div id="sectionPost">
             <div class="postAdd">
-                <p class="postAddUn">Nom du poste </p>
-                <p class="postAddDeux">Type de contrat - Nom de l’entreprise - Ville</p>
-                <p class="postAddTrois">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.</p>
+                <p class="postAddUn"><?=$offer["Id_Offer"]?></p>
+                <p class="postAddDeux"><?=$offer["Contrat_Type"]?>-<?=$offer["Name_Business"]?>-<?=$offer["City"]?></p>
+                <p class="postAddTrois"><?=$offer["Description"]?></p>
                 <div class="cadrePost">
                 <input type="submit" value="Postuler" class="cadrePostText">
                 </div>
             </div>
-            <div id="sectionPost">
-            <div class="postAdd">
-                <p class="postAddUn">Nom du poste </p>
-                <p class="postAddDeux">Type de contrat - Nom de l’entreprise - Ville</p>
-                <p class="postAddTrois">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.</p>
-                <div class="cadrePost">
-                <p><a class="cadrePostText">Postuler</a></p>
-                </div>
-            </div>
         </div>
+        <?php endforeach ?>
     </section>
     <?php require_once "footer.php" ?>
 </body>

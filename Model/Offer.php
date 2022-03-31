@@ -47,32 +47,50 @@ class Offer{
 
     }
 
-    public static function updateOffer($Id_Offer,$Name_Offer,$City,$Begin,$Ending,$Contrat_Type,$Week_Hours,$Monthly_Pay,$Annual_Salary,$Description,$Name_Business,){
+    public static function updateOffer($Id_Offer,$Name_Offer,$City,$Contrat_Type,$Week_Hours,$Monthly_Pay,$Annual_Salary,$Description,$Name_Business,$Begin,$Ending,){
         $dao = new DAO();
         $dbh = $dao->getDbh();
 
-        $stmt = $dbh->prepare("UPDATE Offer SET Name_Offer = :name_Offer, City = :City, Start_Date = :start_date, End_Date = :end_date, Type = :type, Hours_Week = :hours_week, Salary_Month = :salary_month, Salary_Year = :salary_year, Description = :description, Employer = :employer WHERE Id_Offer = :idOffer");
-        $stmt->bindParam(':idOffer', $Id_Offer);
+        $stmt = $dbh->prepare("UPDATE Offer SET Name_Offer = :name_Offer, City = :City, Begin = :begin, Ending = :ending, Contrat_Type = :contrat_type, Week_Hours = :week_hours, Monthly_Pay = :monthly_pay, Annual_Salary = :annual_salary, Description = :description, Name_Business = :name_business WHERE Id_Offer = :idoffer");
+        $stmt->bindParam(':idoffer', $Id_Offer);
         $stmt->bindParam(':name_Offer', $Name_Offer);
         $stmt->bindParam(':City', $City);
-        $stmt->bindParam(':start_date', $start_date);
-        $stmt->bindParam(':end_date', $end_date);
-        $stmt->bindParam(':type', $type);
-        $stmt->bindParam(':hours_week', $Week_Hours);
-        $stmt->bindParam(':salary_month', $Monthly_Pay);
-        $stmt->bindParam(':salary_year', $Annual_Salary);
+        $stmt->bindParam(':contrat_type', $Contrat_Type);
+        $stmt->bindParam(':week_hours', $Week_Hours);
         $stmt->bindParam(':description', $Description);
-        $stmt->bindParam(':employer', $employer);
+        $stmt->bindParam(':name_business', $Name_Business);
+        $stmt->bindParam(':annual_salary', $Annual_Salary);
+        $stmt->bindParam(':monthly_pay', $Monthly_Pay);
+        $stmt->bindParam(':begin', $begin);
+        $stmt->bindParam(':ending', $ending);
         $stmt->execute();
     }
     public static function deleteOfferById($Id_Offer){
         $dao = new DAO();
         $dbh = $dao->getDbh();
-
-        $stmt = $dbh->prepare("DELETE FROM Offer WHERE Id_Offer = :idOffer");
-        $stmt->bindParam(':idOffer', $Id_Offer);
-
+        $stmt = $dbh->prepare("DELETE FROM Offer WHERE Id_Offer = :idoffer");
+        $stmt->bindParam(':idoffer', $Id_Offer);
         $stmt->execute();
+    }
+
+    public static function getAllOffer(){
+        $dao = new DAO();
+        $dbh = $dao->getDbh();
+        $stmt = $dbh->prepare("SELECT * FROM Offer;"); 
+        $stmt->execute();
+        $allRows = $stmt->fetchAll();
+        return $allRows;
+    }
+    public static function getOfferById($Id_Offer){
+        $dao = new DAO();
+        $dbh = $dao->getDbh();
+        
+        $stmt = $dbh->prepare("SELECT * FROM Offer WHERE Id_Offer=:idoffer;");
+        $stmt->bindParam(":idoffer", $Id_Offer);
+        
+        $stmt->execute();
+
+        return $stmt->fetch();
     }
 
     /**
@@ -231,6 +249,46 @@ class Offer{
     public function setDescription($Description)
     {
         $this->Description = $Description;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of Begin
+     */ 
+    public function getBegin()
+    {
+        return $this->Begin;
+    }
+
+    /**
+     * Set the value of Begin
+     *
+     * @return  self
+     */ 
+    public function setBegin($Begin)
+    {
+        $this->Begin = $Begin;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of Ending
+     */ 
+    public function getEnding()
+    {
+        return $this->Ending;
+    }
+
+    /**
+     * Set the value of Ending
+     *
+     * @return  self
+     */ 
+    public function setEnding($Ending)
+    {
+        $this->Ending = $Ending;
 
         return $this;
     }
