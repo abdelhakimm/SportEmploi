@@ -3,7 +3,7 @@
 class DAO{
 
     public $host = "localhost";
-    public $port = "3306";
+    public $port = "8889";
     public $dbname = "Sjob";
     public $charset = "UTF8";
     public $user = "root";

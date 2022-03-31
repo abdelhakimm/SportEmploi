@@ -17,55 +17,57 @@
         <div class="textHaut">
             <p class="paragrapheHaut">PUBLIER UNE OFFRE POUR TROUVER L’EMPLOYER QUI VOUS FAUT : </p>
         </div>
+    <form action="../Controller/Router.php" method="post">
     <div class="formulaireForm">
         <div class="formulaireWidth">
         <div class="formulaireAdd">
             <div>
-                <label for="" class="labelForm">INTITULÉ DU POSTE</label> <br>
-                <input type="text" name="" class="inputForm">
+                <label for="name_post" class="labelForm">INTITULÉ DU POSTE</label> <br>
+                <input type="text" name="name_post" class="inputForm">
             </div>
             <div>
-                <label for="" class="labelForm">NOM DE L’ENTREPRISE</label> <br>
-                <input type="text" name="" class="inputForm">
+                <label for="name_business" class="labelForm">NOM DE L’ENTREPRISE</label> <br>
+                <input type="text" name="name_business" class="inputForm">
             </div>
             <div>
-                <label for="" class="labelForm">VILLE</label> <br>
-                <input type="text" name="" class="inputForm">
+                <label for="city" class="labelForm">VILLE</label> <br>
+                <input type="text" name="city" class="inputForm">
             </div>
         </div>
         <div class="formulaireAdd">
             <div>
-                <label for="" class="labelForm">NOMBRE D’HEURE PAR SEMAINE</label> <br>
-                <input type="text" name="" class="inputForm">
+                <label for="week_hours" class="labelForm">NOMBRE D’HEURE PAR SEMAINE</label> <br>
+                <input type="number" name="week_hours" class="inputForm">
             </div>
             <div>
-                 <label for=" " class="labelForm">TYPE DE CONTRAT</label> <br>
-                 <select type="" name="" class="inputForm">
+                 <label for="contrat_type" class="labelForm">TYPE DE CONTRAT</label> <br>
+                 <select type="text" name="contrat_type" class="inputForm">
                      <option value="CDI">CDI</option>
                      <option value="CDD">CDD</option>
                      <option value="Interim">Intérim</option>
                 </select>
             </div>
             <div>
-                <label for="" class="labelForm">SALAIRE ANNUELLE</label> <br>
-                <input type="text" name="" class="inputForm">
+                <label for="annual_salary" class="labelForm">SALAIRE ANNUELLE</label> <br>
+                <input type="number" name="annual_salary" class="inputForm">
             </div>
         </div>
         </div>
     </div>
     <div class="descriptionForm">
         <div>
-            <label for="" class="labelForm">DESCRIPTION DU POSTE</label> <br>
-            <input type="text" name="" class="inputFormDescription">
+            <label for="description" class="labelForm">DESCRIPTION DU POSTE</label> <br>
+            <input type="text" name="description" class="inputFormDescription">
         </div>
         <div class="conditionSite">
             <input type="checkbox" name="" id="">
             <label for="">J'accepte les conditions d'utilisateur</label>
         </div>
         <div class="cadrePost" id="envoyerOffre">
-                    <p > <a href="" class="cadrePostText">Envoyer l'offre</a></p>
+                    <input type="submit" value="Envoyer l'offre" class="cadrePostText">
                 </div>
     </div>
+    </form>
     </section>
     <?php require_once "footer.php" ?>
 </body>
