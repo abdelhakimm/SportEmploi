@@ -87,12 +87,21 @@
                         <span><?= $offer["Enterprise"] ?></span>
                     </div>
                     <div class="ligneOffre">
-
-                        <span><?= $offer["Begin"] ?></span>
+                        <span>
+                            <?php
+                            $datedebut = date_create($offer["Begin"]);
+                            echo date_format($datedebut, 'd-m-Y');
+                            ?>
+                        </span>
                     </div>
                     <div class="ligneOffre">
 
-                        <span><?= $offer["End"] ?></span>
+                        <span>
+                            <?php
+                            $datefin = date_create($offer["End"]);
+                            echo date_format($datefin, 'd-m-Y');
+                            ?>
+                        </span>
                     </div>
                     <div class="ligneOffre">
 
@@ -111,6 +120,9 @@
                         <span><?= $offer["Description"] ?></span>
                     </div>
                 </div>
+            </div>
+            <div class="bouttonCandidater">
+                <a href="<?= router ?>router.php?action=candidater&id=<?= $offer['Id_Offer'] ?>">CANDIDATER</a>
             </div>
             <div class="candidatures">
                 <?php if (count($allApplication) > 0) { ?>
@@ -132,9 +144,7 @@
                                 <li>
                                     <p><?= $application["Phone"] ?></p>
                                 </li>
-                                <li>
-                                    <p><?= $application["Motivation"] ?></p>
-                                </li>
+
                             </ul>
 
                         </li>
@@ -143,9 +153,7 @@
 
                 <?php endforeach ?>
             </div>
-            <div class="bouttonCandidater">
-                <a href="<?= router ?>router.php?action=candidater&id=<?= $offer['Id_Offer'] ?>">CANDIDATER</a>
-            </div>
+
         </section>
 
     </main>

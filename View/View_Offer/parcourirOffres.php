@@ -47,12 +47,12 @@
         <form action="<?= router ?>router.php" method="post">
           <div class="formRecherche">
             <div>
-              <label for="typeContrat">Type de contrat : </label>
+              <label for="typeContrat" class="semibold">Type de contrat : </label>
               <select id="typeContrat" name="typeContrat">
                 <option value=""></option>
-                <option value="all">TOUS</option>
                 <option value="CDI">CDI</option>
                 <option value="CDD">CDD</option>
+                <option value="all">TOUS</option>
               </select>
             </div>
             <div>
@@ -66,6 +66,11 @@
       <?php
       if (isset($offersByContract)) {
         $offres = $offersByContract;
+        if (count($offres) == 0) {
+      ?>
+          <p>Veuillez sélectionner un type de contrat</p>
+        <?php
+        }
       } else {
         $offres = $allOffer;
       }
@@ -101,7 +106,13 @@
                       <p><?= $offer["Enterprise"] ?></p>
                     </li>
                     <li>
-                      <p><?= $offer["Begin"] ?></p>
+                      <p>
+                        <?php
+                        $datedebut = date_create($offer["Begin"]);
+                        echo date_format($datedebut, 'd-m-Y');
+                        ?>
+
+                      </p>
                     </li>
                     <li>
                       <p><?= $offer["Contract"] ?></p>

@@ -34,7 +34,7 @@ p {
 }
 
 .chrono {
-  height: 768px;
+  min-height: 768px;
   background: url("../../View/images/sliderHome.png");
   background-size: cover;
 }
@@ -260,27 +260,6 @@ h2 {
   text-align: center;
 }
 /*-----------------------------------PARCOURIR OFFRE------------------------------------------*/
-@media screen and (max-width: 800px) {
-  .logo {
-    margin: 20px;
-  }
-  .nav {
-    margin: 20px;
-  }
-  .logoMenu {
-    flex-wrap: wrap;
-  }
-  #pictos {
-    flex-wrap: wrap;
-  }
-} /*
-@media screen and (min-width: 620px) and (max-width: 900px) {
-}*/
-@media screen and (max-width: 1400px) {
-  #liste .position {
-    flex-wrap: wrap;
-  }
-}
 
 .parcourirOffres {
   height: 200px;
@@ -454,6 +433,7 @@ input {
   justify-content: center;
   flex-direction: column;
   width: 400px;
+  font-family: 'Open sans light';
 }
 
 .lignesOffre {
@@ -484,4 +464,33 @@ input {
 .application {
   display: flex;
   gap: 10px;
+  max-width: 600px;
+}
+
+@media screen and (max-width: 800px) {
+  .logo {
+    margin: 20px;
+  }
+  .nav {
+    margin: 20px;
+  }
+  .logoMenu {
+    flex-wrap: wrap;
+  }
+  #pictos {
+    flex-wrap: wrap;
+  }
+  #detailsOffre .partieGauche {
+    display: none;
+  }
+  .application {
+    flex-wrap: wrap;
+  }
+} /*
+@media screen and (min-width: 620px) and (max-width: 900px) {
+}*/
+@media screen and (max-width: 1400px) {
+  #liste .position {
+    flex-wrap: wrap;
+  }
 }
