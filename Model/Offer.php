@@ -10,8 +10,10 @@ class Offer{
     private $Annual_Salary = NULL;
     private $Monthly_Pay = NULL;
     private $Description;
+    private $Begin = NULL;
+    private $Ending = NULL;
 
-    public function __construct($Name_Offer,$Name_Business,$City,$Week_Hours,$Contrat_Type,$Description,$Annual_Salary = NULL,$Monthly_Pay = NULL){
+    public function __construct($Name_Offer,$Name_Business,$City,$Week_Hours,$Contrat_Type,$Description,$Annual_Salary = NULL,$Monthly_Pay = NULL,$Begin = NULL,$Ending = NULL){
         $this->Name_Offer = $Name_Offer;
         $this->Name_Business = $Name_Business;
         $this->City = $City;
@@ -20,14 +22,16 @@ class Offer{
         $this->Description = $Description;
         $this->Annual_Salary = $Annual_Salary;
         $this->Monthly_Pay = $Monthly_Pay;
+        $this->Begin = $Begin;
+        $this->Ending = $Ending;
     }
     
     public function createOffer(){
         $dao = new DAO();
         $dbh = $dao->getDbh();
 
-        $stmt = $dbh->prepare("INSERT INTO Offer (Name_Offer, Name_Business, City, Week_Hours, Contrat_Type, Annual_Salary, Monthly_Pay, Description)
-        VALUES (:un, :deux, :trois, :quatre, :cinq, :six, :sept, :huit);");
+        $stmt = $dbh->prepare("INSERT INTO Offer (Name_Offer, Name_Business, City, Week_Hours, Contrat_Type, Description, Annual_Salary, Monthly_Pay, Begin, Ending)
+        VALUES (:un, :deux, :trois, :quatre, :cinq, :six, :sept, :huit, :neuf, :dix);");
 
         $stmt->bindParam(':un', $this->Name_Offer);
         $stmt->bindParam(':deux', $this->Name_Business);
@@ -37,9 +41,38 @@ class Offer{
         $stmt->bindParam(':six', $this->Annual_Salary);
         $stmt->bindParam(':sept', $this->Monthly_Pay);
         $stmt->bindParam(':huit', $this->Description);
-
+        $stmt->bindParam(':neuf', $this->Begin);
+        $stmt->bindParam(':dix', $this->Ending);
         $stmt->execute();
 
+    }
+
+    public static function updateOffer($Id_Offer,$Name_Offer,$City,$Begin,$Ending,$Contrat_Type,$Week_Hours,$Monthly_Pay,$Annual_Salary,$Description,$Name_Business,){
+        $dao = new DAO();
+        $dbh = $dao->getDbh();
+
+        $stmt = $dbh->prepare("UPDATE Offer SET Name_Offer = :name_Offer, City = :City, Start_Date = :start_date, End_Date = :end_date, Type = :type, Hours_Week = :hours_week, Salary_Month = :salary_month, Salary_Year = :salary_year, Description = :description, Employer = :employer WHERE Id_Offer = :idOffer");
+        $stmt->bindParam(':idOffer', $Id_Offer);
+        $stmt->bindParam(':name_Offer', $Name_Offer);
+        $stmt->bindParam(':City', $City);
+        $stmt->bindParam(':start_date', $start_date);
+        $stmt->bindParam(':end_date', $end_date);
+        $stmt->bindParam(':type', $type);
+        $stmt->bindParam(':hours_week', $Week_Hours);
+        $stmt->bindParam(':salary_month', $Monthly_Pay);
+        $stmt->bindParam(':salary_year', $Annual_Salary);
+        $stmt->bindParam(':description', $Description);
+        $stmt->bindParam(':employer', $employer);
+        $stmt->execute();
+    }
+    public static function deleteOfferById($Id_Offer){
+        $dao = new DAO();
+        $dbh = $dao->getDbh();
+
+        $stmt = $dbh->prepare("DELETE FROM Offer WHERE Id_Offer = :idOffer");
+        $stmt->bindParam(':idOffer', $Id_Offer);
+
+        $stmt->execute();
     }
 
     /**
