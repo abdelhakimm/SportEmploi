@@ -36,10 +36,103 @@ header{
 }
 
 #fond{
-    background-image: url("./Image/SliderHomev2.jpg"); 
+    background-image: url("../Image/SliderHomev2.jpg"); 
     background-size: cover;
     background-repeat: no-repeat;
     width: 1440px;
     height: 770px;
     margin: 0 auto;
 }
+
+h1{
+    position: relative;
+    top: 210px;
+    left: 40px;
+    color: #ffffff;
+    font-size: 25px;
+
+}
+
+h2{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+
+#partOne{
+    width: 345px;
+    height: 740px;
+    background-color: #a6a6a6;
+}
+
+#allIcon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.iconOne{
+    width: 220px;
+    height: 142px;
+    padding: 10px;
+    margin: 10px;
+}
+
+
+.iconOne img{
+    position: relative;
+    left: 59px;
+}
+
+.iconTwo{
+    width: 100px;
+    height: 142px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.iconTwo p{
+    position: relative;
+    left: 10px;
+}
+
+.iconThree{
+    width: 100px;
+    height: 142px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.iconThree p{
+    position: relative;
+    left: 15px;
+}
+
+.iconFour{
+    width: 251px;
+    height: 120px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.iconFour img{
+    position: relative;
+    left: 72px;
+}
+
+.iconFour p{
+    width: 251px;
+}
+
+#allParagraph{
+    width: 545px;
+    height: 740px;
+    font-size: 22px;
+}
+
+#allcontent{
+    display: flex;
+}
+

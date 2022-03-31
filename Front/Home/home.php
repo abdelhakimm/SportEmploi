@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="./Style/home.css">
-    <link rel="stylesheet" href="./font/fontawesome-free-6.0.0-web/css/all.css">
+    <link rel="stylesheet" href="../Style/home.css">
+    <link rel="stylesheet" href="../font/fontawesome-free-6.0.0-web/css/all.css">
 </head>
 <body>
 
@@ -14,7 +14,7 @@
     <div id="fond">
         <header>  
                 <div class="logo">
-                    <img src="./logoEtIcon/logo.png" width="100px" height="100px">
+                    <img src="../logoEtIcon/logo.png" width="100px" height="100px">
                 </div>
 
                 <nav>
@@ -40,47 +40,53 @@
 
     <h2>POURQUOI CHOISIR S’JOB ?</h2>  
 
-    <div>
-        <section>
-            <div>
-                <img src="./logoEtIcon/crosshair-100x100.png">  
-                <p>CABINET DE RECRUTEMENT</p>
-            </div>
-            <div>
-                <img src= "./logoEtIcon/computer-100x100.png">
-                <p>JOBOARD</p>
-            </div>
-            <div>
-                <img src= "./logoEtIcon/network-100x100.png">
-                <p>MEDIA</p>
-            </div>
-            <div>
-                <img src="./logoEtIcon/project-management-100x100.png" >
-                <p>ACCOMPAGNEMENT ET CONSEIL</p>
+    <div id="allContent"></div>
+
+        <section id="partOne">
+            <div id="allIcon">
+                <div class="iconOne">
+                    <img src="../logoEtIcon/crosshair-100x100.png">  
+                    <p>CABINET DE RECRUTEMENT</p>
+                </div>
+                <div class="iconTwo">
+                    <img src= "../logoEtIcon/computer-100x100.png">
+                    <p>JOBOARD</p>
+                </div>
+                <div class="iconThree">
+                    <img src= "../logoEtIcon/network-100x100.png">
+                    <p>MEDIA</p>
+                </div>
+                <div class="iconFour">
+                    <img src="../logoEtIcon/project-management-100x100.png" >
+                    <p>ACCOMPAGNEMENT ET CONSEIL</p>
+                </div>
             </div>
         </section>
 
 
-        <section>
-            <div>
-                <h4>NOUS CONSEILLONS</h4>
-                <p>Dans la définition du profil idéal, la mise en place d’une stratégie de
-                communication RH adéquate, la constitution d’un organigramme ou encore sur
-                les pratiques économiques du marché</p>
-             </div>
-            <div>
-                <h4>NOUS ACCOMPAGNONS</h4>
-                <p>Dans la recherche des meilleurs candidats par notre connaissance des acteurs, le
-                bouche à oreille, des interventions auprès de colloques et formations de
-                renoms…</p>
-            </div>
-            <div>
-                <h4>NOUS VALORISONS</h4>
-                <p>Sjob.com regroupant sous la forme d’un job-board les offres d’emploi de nos
-                clients, et proposant des outils pour favoriser leur attractivité.</p>
+        
+        <section id="partTwo">
+            <div id="allParagraph">
+                <div class="paragraphOne">
+                    <h4>NOUS CONSEILLONS</h4>
+                    <p>Dans la définition du profil idéal, la mise en place d’une stratégie de
+                    communication RH adéquate, la constitution d’un organigramme ou encore sur
+                    les pratiques économiques du marché</p>
+                 </div>
+                <div class="paragraphTwo">
+                    <h4>NOUS ACCOMPAGNONS</h4>
+                    <p>Dans la recherche des meilleurs candidats par notre connaissance des acteurs, le
+                    bouche à oreille, des interventions auprès de colloques et formations de
+                    renoms…</p>
+                </div>
+                <div class="paragraphThree">
+                    <h4>NOUS VALORISONS</h4>
+                    <p>Sjob.com regroupant sous la forme d’un job-board les offres d’emploi de nos
+                    clients, et proposant des outils pour favoriser leur attractivité.</p>
+                </div>
             </div>
         </section>    
-    </div>
+   
 
     <footer>
         
