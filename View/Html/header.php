@@ -4,10 +4,10 @@
         </div>
         <nav>
             <ul>
-                <li>accueil</li>
-                <li>à propos</li>
-                <li>parcourir les offres</li>
-                <li>publier une offre</li>
+                <li><a href="#">accueil</a></li>
+                <li><a href="#">à propos</a></li>
+                <li><a href="#">parcourir les offres</a></li>
+                <li><a href="#">publier une offre</a></li>
             </ul>
         </nav>
         <div class="login">
