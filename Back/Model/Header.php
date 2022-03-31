@@ -10,8 +10,9 @@
     <title>Document</title>
 </head>
 <body>
+<header>
 <ul>
-        <li><img src="../../View/image/logo.png" alt=""></li>
+        <li><img src="../../../../Sjob/SportEmploi/View/image/logo.png" alt=""></li>
         <li><a href="/Sjob/SportEmploi/View/index.html">Accueil</a></li>
         <li><a href="../../View/about.php">A Propos</a></li>
         <li><a href="../Back/Router/RouterJob.php?action=all">Parcourir les offres</a></li>
@@ -21,5 +22,5 @@
 </header> 
 </body>
 </html>
-<header>
+
 
