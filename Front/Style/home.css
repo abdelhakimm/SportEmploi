@@ -1,5 +1,6 @@
 body{
     width: 1440px;
+    margin: 0 auto;
 }
 
 header{
@@ -144,7 +145,7 @@ h2{
 footer{
     margin-top: 50px;
     width: 1440px;
-    height: 500px;
+    height: 450px;
     background-color: #545454;
 }
 
@@ -153,7 +154,7 @@ footer{
     align-items: center;
     justify-content: space-around;
     width: 1440px;
-    height: 500px;
+    height: 450px;
 
 }
 
@@ -168,8 +169,8 @@ footer a{
 
 footer nav ul li{
     list-style-type: none;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 15px;
     font-size: 25px;
 }
 
@@ -205,6 +206,3 @@ footer nav ul{
     height: 30px;
     display: flex;
 }
-
-
-
