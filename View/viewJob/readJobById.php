@@ -22,8 +22,8 @@
             <li><?=$row["Description"]?></li>
             <li><?=$row["Employer"]?></li>
 
-        <a href="../../Back/Router/RouterCandidate?action=create&id=<?=$row["Id_Job"]?>">Postuler maintenant</a>
-        <a href="../../Back/Router/RouterCandidate?action=create&id=<?=$row["Id_Job"]?>">Voir les candidats</a>
+        <a href="../../Back/Router/RouterCandidate.php?action=create&id=<?=$row["Id_Job"]?>">Postuler maintenant</a>
+        <a href="../../Back/Router/RouterCandidate.php?action=id&id=<?=$row["Id_Job"]?>">Voir les candidats</a>
         <a href="../../Back/Router/Routerjob.php?action=update&id=<?=$row["Id_Job"]?>">Modifier l'offre</a>
         <a href="../../Back/Router/Routerjob.php?action=delete&id=<?=$row["Id_Job"]?>">Supprimer</a>
 

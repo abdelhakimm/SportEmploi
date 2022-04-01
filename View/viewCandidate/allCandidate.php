@@ -7,20 +7,19 @@
     <title>Tous les candidats</title>
 </head>
 <body>
-<a href="../../Back/Router/routerCandidate.php?action=create">Voir les offres</a>
+<a href="../../Back/Router/routerrow.php?action=create">Voir les offres</a>
 
-    <?php foreach($allcandidate as $candidate): ?>
+    <?php foreach($allRows as $row): ?>
         
         <ul>
-            <li><?=$candidate["firstname"]?></li>
-            <li><?=$candidate["lastname"]?></li>
-            <li><?=$candidate["mail"]?></li>
-            <li><?=$candidate["phone"]?></li>
-            <li><?=$candidate["motivation"]?></li>
-            <li><?=$candidate["name_job"]?></li>
+            <li><?=$row["Firstname"]?></li>
+            <li><?=$row["Lastname"]?></li>
+            <li><?=$row["Mail"]?></li>
+            <li><?=$row["Phone"]?></li>
+            <li><?=$row["Motivation"]?></li>
         </ul>
         
-        <p><a href="Routercandidate.php?action=id&id=<?=$candidate["Id_candidate"]?>">Voir ce candidat</a></p>
+        <p><a href="Routerrow.php?action=id&id=<?=$row["Id_row"]?>">Voir ce candidat</a></p>
 
     <?php endforeach?>
 

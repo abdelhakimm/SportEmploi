@@ -1,14 +1,15 @@
 <?php
-require_once "../Model/Candidate.php";
+echo "entrer dans controller candidate";
+include($_SERVER['DOCUMENT_ROOT']."/Sjob/SportEmploi/Back/Model/Candidate.php");
 
 define('front', '../../View');
 
 Class ControllerCandidate{
 
-    public static function getAllCandidate(){
-        
-      $allrows = Candidate::getAllCandidate();
-     require front."/viewCandidate/allCandidate.php";
+    public static function getAllCandidate($id){
+        //bien entree
+        $allrows = Candidate::getAllCandidate($id);
+        require front."/viewCandidate/allCandidate.php";
     }
 
     public static function getCandidateById($id){
@@ -17,7 +18,7 @@ Class ControllerCandidate{
         require front."/viewCandidate/readCandidateById.php";
     }
 
-    public static function createCandidate($post){
+    /*public static function createCandidate($post){
         
         $row = new Candidate($post['firstname'], $post['lastname'], 
         $post['mail'], $post['phone'], $post['motivation'], $post['id_job']);
@@ -52,7 +53,7 @@ Class ControllerCandidate{
     public static function formCandidate(){
 
         require front."/viewCandidate/formCandidate.php";
-    }
+    }*/
 }
 
 ?>

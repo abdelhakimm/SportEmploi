@@ -158,22 +158,24 @@ class Candidate{
 
         return $this;
     }
-    public static function getAllCandidate(){
+    public static function getAllCandidate($id_job){
         $dao = new DAO();
         $dbh = $dao->getDbh();
-        $stmt = $dbh->prepare("SELECT * FROM Candidate;");
-    
+        //good
+        $stmt = $dbh->prepare("SELECT * FROM Candidate WHERE Id_Job = :'idjob'");
+        $stmt->bindParam(":idjob", $id_job);
+
         $stmt->execute();
         $allRows = $stmt->fetchAll();
     
         return $allRows;
     }
-    public static function getCandidateById($id_lastname){
+    public static function getCandidateById($id_job){
         $dao = new DAO();
         $dbh = $dao->getDbh();
     
-        $stmt = $dbh->prepare("SELECT * FROM Candidate WHERE Id_Candidate=:idcandidate;");
-        $stmt->bindParam(":idcandidate", $id_candidate);
+        $stmt = $dbh->prepare("SELECT * FROM Candidate WHERE Id_Job = :'idjob'");
+        $stmt->bindParam(":idjob", $id_job);
     
         $stmt->execute();
     

@@ -1,15 +1,17 @@
 <?php
+
 require "../Controller/ControllerCandidate.php";
+
 
 if(isset($_GET["action"])){
 
-    if($_GET["action"] == "all"){
+    /*if($_GET["action"] == "all"){
         ControllerCandidate::getAllCandidate();
 
-    }elseif($_GET["action"] == "id"){
-        ControllerCandidate::getCandidateById($_GET["id"]);
+    }else*/if($_GET["action"] == "id"){
+        ControllerCandidate::getAllCandidate($_GET["id"]);
 
-    }elseif($_GET["action"] == "update"){
+    }/*elseif($_GET["action"] == "update"){
         ControllerCandidate::formUpdateCandidate($_GET["id"]);//send to form
 
     }elseif($_GET["action"] == "delete"){
@@ -30,7 +32,7 @@ if(isset($_GET["action"])){
     }else{
 
         ControllerCandidate::createCandidate($_POST);
-    }
+    }*/
 }
 
 ?>
