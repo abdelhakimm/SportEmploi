@@ -63,7 +63,11 @@
                 </div>
                 <div class="ligneForm">
                     <label for="contract">Type de contrat : </label>
-                    <input type="text" id="contract" name="contract" required>
+                    <select id="contract" name="contract" value="all" required>
+                        <option value=""></option>
+                        <option value="CDI">CDI</option>
+                        <option value="CDD">CDD</option>
+                    </select>
                 </div>
                 <div class="ligneForm">
                     <label for="hours">Nombre d'heures : </label>

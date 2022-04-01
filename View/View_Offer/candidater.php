@@ -74,7 +74,7 @@
                     <label for="rgpd">j'accèpte les conditions</label>
                 </div>
                 <div class="buttonLigne">
-                    <button class="publierInput" id="inputSubmit" type="submit" value="CANDIDATER" name="submit">CANDIDATER</button>
+                    <button class="publierInput" id="inputSubmit" type="submit" value="ENVOYER" name="submit">ENVOYER</button>
                 </div>
 
             </form>

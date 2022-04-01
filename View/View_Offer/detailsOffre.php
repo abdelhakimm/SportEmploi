@@ -42,7 +42,7 @@
         </div>
 
         <section id="detailsOffre">
-            <div class="lignesOffre">
+            <div class="offreBox">
                 <div class="partieGauche">
                     <div class="ligneOffre">
                         <span>Nom du poste : </span>

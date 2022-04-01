@@ -274,6 +274,7 @@ h2 {
   width: 80%;
   margin: 0 auto 50px;
   display: flex;
+  border: solid 1px #ff5c16;
 }
 .rechercherInput {
   background-color: #c4c4c4;
@@ -282,15 +283,29 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 5;
 }
-input#inputSubmit.rechercherInput:hover {
-  border: solid 1px #545454;
+.rechercherInput::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0px;
+  background: #ff5c16;
+  transition: all 0.4s;
+  z-index: -1;
+}
+.rechercherInput:hover::before {
+  width: 100%;
 }
 #liste {
   min-height: 500px;
   background-color: #efefef;
   width: 80%;
   margin: 50px auto;
+  border: solid 1px #ff5c16;
 }
 
 #liste .position {
@@ -319,6 +334,7 @@ input#inputSubmit.rechercherInput:hover {
 .ligneFonce {
   background-color: #c4c4c4;
 }
+
 /* -------------------------------------PUBLIER OFFRE------------------------------*/
 
 .publierOffre {
@@ -330,7 +346,7 @@ input#inputSubmit.rechercherInput:hover {
 .formOffre {
   border: solid 1px #545454;
   padding: 50px;
-  box-shadow: 0 0 10px 10px #c4c4c4;
+  box-shadow: 0 0 30px #ff5c16;
 }
 #offre {
   display: flex;
@@ -364,6 +380,7 @@ input {
 }
 .buttonLigne button {
   background-color: #c4c4c4;
+  border: solid 1px #ff5c16;
   position: relative;
   width: 150px;
   height: 40px;
@@ -402,7 +419,7 @@ input {
 }
 
 #inputSubmit {
-  border: none;
+  border: solid 1px #ff5c16;
   background-color: #c4c4c4;
   color: #545454;
   cursor: pointer;
@@ -440,7 +457,9 @@ input {
 .lignesOffre {
   display: flex;
 }
-
+.lignesOffre:hover{
+  background: #ff5c16;
+}
 .ligneOffre {
   display: flex;
   justify-content: space-between;
@@ -448,19 +467,37 @@ input {
   gap: 40px;
   height: 20px;
 }
+.offreBox{
+  border: solid 1px #ff5c16;
+  display: flex;
+}
 /*-----------------------------------------------------------------------*/
 .bouttonCandidater a {
   background-color: #c4c4c4;
+  border: solid 1px #ff5c16;
   width: 150px;
   height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: all 0.4s;
+  position: relative;
+  z-index: 5;
+  font-family: 'Open sans light';
 }
-
-.bouttonCandidater a:hover {
-  transform: scale(1.2);
+.bouttonCandidater a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background-color: #ff5c16;
+  z-index: -1;
+  transition: all 0.4s;
+}
+.bouttonCandidater a:hover::before {
+  width: 100%;
 }
 .application {
   display: flex;
@@ -476,13 +513,7 @@ input {
 .formCandidature{
   border: solid 1px #545454;
   padding: 50px;
-  box-shadow: 0 0 10px 10px #c4c4c4;
-}
-#candidaterInputSubmit{
-  
-}
-.candidaterInput{
-
+  box-shadow: 0 0 30px #ff5c16;
 }
 @media screen and (max-width: 800px) {
   .logo {

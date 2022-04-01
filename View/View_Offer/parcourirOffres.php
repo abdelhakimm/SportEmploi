@@ -48,15 +48,29 @@
           <div class="formRecherche">
             <div>
               <label for="typeContrat" class="semibold">Type de contrat : </label>
-              <select id="typeContrat" name="typeContrat">
-                <option value=""></option>
-                <option value="CDI">CDI</option>
-                <option value="CDD">CDD</option>
-                <option value="all">TOUS</option>
+              <?php
+              $contract = "all";
+              
+              if (isset($offersByContract) && count($offersByContract) > 0) {
+                $contract = $offersByContract[0]['Contract'];
+              }
+
+              ?>
+              <select id="typeContrat" name="typeContrat" value="all">
+                
+                <option value="CDI" <?php if ($contract == "CDI") {
+                                      echo ("selected");
+                                    } ?>>CDI</option>
+                <option value="CDD" <?php if ($contract == "CDD") {
+                                      echo ("selected");
+                                    } ?>>CDD</option>
+                <option value="all" <?php if ($contract == "all") {
+                                      echo ("selected");
+                                    } ?>>TOUS</option>
               </select>
             </div>
             <div>
-              <input type="submit" class="rechercherInput" id="inputSubmit" value="RECHERCHER" name="submit"></input>
+              <button type="submit" class="rechercherInput" id="inputSubmit" value="RECHERCHER" name="submit">RECHERCHER</button>
             </div>
           </div>
         </form>
@@ -92,33 +106,35 @@
                 $ligneFonce = false;
               }
                 ?>
-                <div class="lignesOffre">
-                  <ul class="position">
-                    <li>
-                      <p><?= $offer["Id_Offer"] ?></p>
-                    </li>
-                    <li>
-                      <a href="<?= router ?>router.php?action=id&id=<?= $offer["Id_Offer"] ?>">
-                        <?= $offer["Position"] ?>
-                      </a>
-                    </li>
-                    <li>
-                      <p><?= $offer["Enterprise"] ?></p>
-                    </li>
-                    <li>
-                      <p>
-                        <?php
-                        $datedebut = date_create($offer["Begin"]);
-                        echo date_format($datedebut, 'd-m-Y');
-                        ?>
+                <a href="<?= router ?>router.php?action=id&id=<?= $offer["Id_Offer"] ?>">
+                  <div class="lignesOffre">
+                    <ul class="position">
+                      <li>
+                        <p><?= $offer["Id_Offer"] ?></p>
+                      </li>
+                      <li>
 
-                      </p>
-                    </li>
-                    <li>
-                      <p><?= $offer["Contract"] ?></p>
-                    </li>
-                  </ul>
-                </div>
+                        <?= $offer["Position"] ?>
+
+                      </li>
+                      <li>
+                        <p><?= $offer["Enterprise"] ?></p>
+                      </li>
+                      <li>
+                        <p>
+                          <?php
+                          $datedebut = date_create($offer["Begin"]);
+                          echo date_format($datedebut, 'd-m-Y');
+                          ?>
+
+                        </p>
+                      </li>
+                      <li>
+                        <p><?= $offer["Contract"] ?></p>
+                      </li>
+                    </ul>
+                  </div>
+                </a>
           </li>
 
         </ul>
