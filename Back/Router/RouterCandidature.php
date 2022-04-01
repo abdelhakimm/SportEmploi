@@ -1,20 +1,20 @@
 <?php
-require "../Controller/ControllerAddress.php";
+require "../Controller/ControllerCandidature.php";
 
 if(isset($_GET["action"])){
 
     if($_GET["action"] == "all"){
         echo "eh oui";
-        ControllerAddress::getAll();
+        ControllerCandidature::getAll();
 
     }elseif($_GET["action"] == "id"){
-        ControllerAddress::getById($_GET["id"]);
+        ControllerCandidature::getById($_GET["id"]);
 
     }elseif($_GET["action"] == "update"){
-        ControllerAddress::formUpdate($_GET["id"]);//envoi vers le formulaire
+        ControllerCandidature::formUpdate($_GET["id"]);//envoi vers le formulaire
 
     }elseif($_GET["action"] == "delete"){
-        ControllerAddress::deleteById($_GET["id"]);
+        ControllerCandidature::deleteById($_GET["id"]);
     }
 
 }elseif(isset($_POST["submit"])){
@@ -22,12 +22,12 @@ if(isset($_GET["action"])){
 
     if(isset($_POST["id"])){
 
-        ControllerAddress::update($_POST);//enregistre le formulaire
+        ControllerCandidature::update($_POST);//enregistre le formulaire
      
 
     }else{
 
-        ControllerAddress::create($_POST);
+        ControllerCandidature::create($_POST);
     }
 }
 

@@ -9,51 +9,66 @@
     <title>Document</title>
 </head>
 <body>
-        <?php
-        require "../Html/header.php";
-        ?>
-        <div class="title"><h1><span>Parcourir</span> Les Offres</h1></div>
-<div class="offre one scroll">
+
+          
+            <div class="title"><h1><span>Parcourir</span> Les Offres</h1></div>
+    <div class="offre one scroll">
+        
+        <div>
+            <p></p>
+        </div>
+        <input type="submit" value="">
+    </div>
+
+    <div class="offre too scroll">
+        <h1></h1>
+        <div>
+            <p></p>
+        </div>
+        <<input type="submit" value="">
+    </div>
+
+    <div class="offre three scrool">
+        <h1></h1>
+        <div>
+            <p></p>
+        </div>
+        <input type="submit" value="">
+    </div>
+
+    <div class="offre for scroll">
+        <h1></h1>
+        <div>
+            <p></p>
+        </div>
+        <input type="submit" value="">
+    </div>
     
-    <div>
-        <p></p>
-    </div>
-    <!--<input type="submit" value="">-->
-</div>
-
-<div class="offre too scroll">
-    <h1></h1>
-    <div>
-        <p></p>
-    </div>
-    <!--<input type="submit" value="">-->
-</div>
-
-<div class="offre three scrool">
-    <h1></h1>
-    <div>
-        <p></p>
-    </div>
-    <input type="submit" value="">
-</div>
-
-<div class="offre for scroll">
-    <h1></h1>
-    <div>
-        <p></p>
-    </div>
-    <input type="submit" value="">
-</div>
 
 
 
 
 
 
+       
 
-        <?php 
-            require "../Html/footer.php";
-        ?>
+<a href="../../View/View_Address/formAddress.php?action=all">creer une adresse</a>
+
+    <?php foreach($allJob as $Job): ?>
+        <p><a href="../../Back/Router/RouterJob.php?action=id&id=<?= $Job["Id_Job"] ?>">Afficher les Job</a></p>
+        <ul>
+            <li><?= $Job["localisation"]?></li>
+            <li><?= $Job["poste"]?></li>
+            <li><?= $Job["begin"]?></li>
+            <li><?= $Job["end"]?></li>
+            <li><?= $Job["contract"]?></li>
+            <li><?= $Job["hours"]?></li>
+            <li><?= $Job["salary"]?></li>
+            <li><?= $Job["description"]?></li>
+
+        </ul>
+
+    <?php endforeach ?>
         <script src="../Js/javascritp.js"></script>
 </body>
 </html>

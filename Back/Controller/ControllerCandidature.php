@@ -6,21 +6,21 @@ class ControllerCandidature{
         
 
       $allCandidature = Candidature::getAllCandidature();
-     require "../../View/V";
+     require "../../View/View_candidature/readAllCandidature.php";
     }
 
     public static function getById($id){
         
 
         $Candidature = Candidature::getCandidatureByid($id);
-        require "./View/View_Candidature/readCandidatureById.php";
+        require "../../View/View_candidature/readByIdCandidature.php";
     }
 
     public static function create($post){
         
 
-        $Candidature = new Candidature($post['number'], $post['Candidature'], 
-        $post['zip'], $post['city']);
+        $Candidature = new Candidature($post['name'], $post['firstname'], 
+        $post['email'], $post['phone'], $post['motivation'], $post['id_Job'] );
         $Candidature->createCandidature();
         self::getAll();
 
@@ -28,8 +28,8 @@ class ControllerCandidature{
 
     public static function update($post){
         
-         $Candidature = new Candidature($post['number'], $post['Candidature'], 
-         $post['zip'], $post['city']);
+        $Candidature = new Candidature($post['name'], $post['firstname'], 
+        $post['email'], $post['phone'], $post['motivation'], $post['id_Job'] );
         $Candidature->setId_Candidature($post["id"]);
         $Candidature->updateCandidature();
       

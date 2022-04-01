@@ -1,37 +1,37 @@
 <?php
-require_once "../Model/Address.php";
-class ControllerAddress{
+require_once "../../Back/Model/Job.php";
+class ControllerJob{
 
     public static function getAll(){
         
 
-      $allAddress = Address::getAllAddress();
-     require "../../View/View_Address/readAllAddress.php";
+      $allJob = Job::getAllJob();
+     require "../../View/View_Offre/readAllOffre.php";
     }
 
     public static function getById($id){
         
 
-        $address = Address::getAddressByid($id);
-        require "./View/View_Address/readAddressById.php";
+        $Job = Job::getJobByid($id);
+        require "../../View/View_Offre/readIdOffre.php";
     }
 
     public static function create($post){
         
 
-        $address = new Address($post['number'], $post['address'], 
-        $post['zip'], $post['city']);
-        $address->createAddress();
+        $Job = new Job($post['localisation'], $post['poste'], 
+        $post['begin'], $post['end'], $post['contract'], $post['hours'], $post['salary'], $post['description']);
+        $Job->createJob();
         self::getAll();
 
     }
 
     public static function update($post){
         
-         $address = new Address($post['number'], $post['address'], 
-         $post['zip'], $post['city']);
-        $address->setId_address($post["id"]);
-        $address->updateAddress();
+        $Job = new Job($post['localisation'], $post['poste'], 
+        $post['begin'], $post['end'], $post['contract'], $post['hours'], $post['salary'], $post['description']);
+        $Job->setId_Job($post["id"]);
+        $Job->updateJob();
       
         self::getAll();
     }
@@ -39,14 +39,14 @@ class ControllerAddress{
     public static function deleteById($id){
        
 
-        $address = Address::deleteAddressById($id);
+        $Job = Job::deleteJobById($id);
     
         self::getAll();
     }
 
     public static function formUpdate($id){
-        $address = Address::getAddressByid($id);
-        require "./View/View_Address/formModif.php";
+        $Job = Job::getJobByid($id);
+        require "../../View/View_Offre/formUpdate.php";
     }
     
 }
