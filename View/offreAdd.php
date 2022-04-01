@@ -41,11 +41,12 @@
             </div>
             <div>
                  <label for="contrat_type" class="labelForm">TYPE DE CONTRAT</label> <br>
-                 <select type="text" name="contrat_type" class="inputForm">
+                 <input type="text" name="contrat_type">
+<!--              <select type="text" name="contrat_type" class="inputForm">
                      <option value="CDI">CDI</option>
                      <option value="CDD">CDD</option>
                      <option value="Interim">Intérim</option>
-                </select>
+                </select> -->
             </div>
             <div>
                 <label for="annual_salary" class="labelForm">SALAIRE ANNUELLE</label> <br>
@@ -59,10 +60,8 @@
             <label for="description" class="labelForm">DESCRIPTION DU POSTE</label> <br>
             <input type="text" name="description" class="inputFormDescription">
         </div>
-        <div class="conditionSite">
-            <input type="checkbox" name="" id="">
-            <label for="">J'accepte les conditions d'utilisateur</label>
-        </div>
+
+   
         <div class="cadrePost" id="envoyerOffre">
                     <input type="submit" value="Envoyer l'offre" class="cadrePostText" name="submit">
                 </div>

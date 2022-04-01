@@ -1,25 +1,23 @@
 <?php
-
 class DAO{
 
-    private $host = "localhost";
+    private $host="localhost";
     private $port = "8889";
-    private $dbname = "Sjob";
+    private $dbname ="Sjob";
     private $charset = "UTF8";
     private $user = "root";
-    private $password = "root";
+    private $password= "root";
     private $dsn;
     private $dbh;
 
     public function __construct()
     {
-        $this->dsn="mysql:host=$this->host:$this->port;dbname=$this->dbname;charset=$this->charset";
-
+        $this->dsn="mysql:host=$this->host;dbname=$this->dbname;port=$this->port;charset=$this->charset";
             try{
-                $this->dbh =  new PDO($this->dsn,$this->user,$this->password);
-               echo "co";
+                $this->dbh =new PDO($this->dsn,$this->user,$this->password);
             }catch(PDOException $e){
                 $e->getMessage();
+
             }
     }
 

@@ -1,12 +1,10 @@
 <?php
-echo "dans le controller";
+
 include($_SERVER['DOCUMENT_ROOT']."/Sjob/SportEmploi/Model/Offer.php");
 Class ControllerOffer{
 
 
     public static function getAllOffer(){
-        echo "dans le getalloffer";
-
         $offers = Offer::getAllOffer();
         require "../View/offrePost.php";
     }
@@ -17,22 +15,15 @@ Class ControllerOffer{
     }*/
 
     public static function createOffer($post){
-
-        $Offer = new Offer($post['name_post'], $post['city'], 
-        $post['contrat_type'], $post['week_hours'],
-        $post['description'],$post['name_business'], $post['annual_salary'],
-        $post['monthly_pay'],$post['begin'], $post['ending']);
+        $Offer = new Offer($post['name_post'], $post['name_business'], $post['city'], $post['week_hours'], $post['contrat_type'], $post['description'], $post['annual_salary'], $post['monthly_pay'], $post['begin'], $post['ending']);
 
         $Offer->createOffer();
         self::getAllOffer();
     }
 
-    public static function updateOffer($post){
+   /* public static function updateOffer($post){
         
-        Offer::updateOffer($post['id_offer'],$post['name_post'], $post['city'], 
-        $post['contrat_type'], $post['week_hours'],
-        $post['description'],$post['name_business'], $post['annual_salary'],
-        $post['monthly_pay'],$post['begin'], $post['ending']);
+        Offer::updateOffer($post['id_offer'], $post['name_post'], $post['city'], $post['contrat_type'], $post['week_hours'], $post['description'],$post['name_business'], $post['annual_salary'], $post['monthly_pay'], $post['begin'], $post['ending']);
 
         self::getAllOffer();
     }

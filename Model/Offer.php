@@ -1,5 +1,4 @@
 <?php
-echo "dans la class";
 require "DAO.php";
 class Offer{
     private $Name_Offer;
@@ -13,14 +12,14 @@ class Offer{
     private $Begin = NULL;
     private $Ending = NULL;
 
-    public function __construct($Name_Offer,$Name_Business,$City,$Week_Hours,$Contrat_Type,$Description,$Annual_Salary = NULL,$Monthly_Pay = NULL,$Begin = NULL,$Ending = NULL){
+    public function __construct($Name_Offer, $Name_Business, $City, $Week_Hours, $Contrat_Type, $Description, $Annual_Salary = NULL, $Monthly_Pay = NULL, $Begin = NULL, $Ending = NULL){
         $this->Name_Offer = $Name_Offer;
         $this->Name_Business = $Name_Business;
         $this->City = $City;
-        $this->Week_Hours = $Week_Hours;
+        $this->Week_Hours = (int)$Week_Hours;
         $this->Contrat_Type = $Contrat_Type;
         $this->Description = $Description;
-        $this->Annual_Salary = $Annual_Salary;
+        $this->Annual_Salary = (int)$Annual_Salary;
         $this->Monthly_Pay = $Monthly_Pay;
         $this->Begin = $Begin;
         $this->Ending = $Ending;
@@ -29,25 +28,24 @@ class Offer{
     public function createOffer(){
         $dao = new DAO();
         $dbh = $dao->getDbh();
-
-        $stmt = $dbh->prepare("INSERT INTO Offer (Name_Offer, Name_Business, City, Week_Hours, Contrat_Type, Description, Annual_Salary, Monthly_Pay, Begin, Ending)
-        VALUES (:un, :deux, :trois, :quatre, :cinq, :six, :sept, :huit, :neuf, :dix);");
-
-        $stmt->bindParam(':un', $this->Name_Offer);
+       
+       $stmt = $dbh->prepare("INSERT INTO Offer (Name_Offer, Name_Business, City, Week_Hours, Contrat_Type, Description, Annual_Salary, Monthly_Pay, Begin, Ending) VALUES (:un, :deux, :trois, :quatre, :cinq, :six, :sept, :huit, :neuf, :dix);");
+       
+       $stmt->bindParam(':un', $this->Name_Offer);
         $stmt->bindParam(':deux', $this->Name_Business);
         $stmt->bindParam(':trois', $this->City);
         $stmt->bindParam(':quatre', $this->Week_Hours);
         $stmt->bindParam(':cinq', $this->Contrat_Type);
-        $stmt->bindParam(':six', $this->Annual_Salary);
-        $stmt->bindParam(':sept', $this->Monthly_Pay);
-        $stmt->bindParam(':huit', $this->Description);
+        $stmt->bindParam(':six', $this->Description);
+        $stmt->bindParam(':sept', $this->Annual_Salary);
+        $stmt->bindParam(':huit', $this->Monthly_Pay);
         $stmt->bindParam(':neuf', $this->Begin);
         $stmt->bindParam(':dix', $this->Ending);
+        
         $stmt->execute();
-
     }
 
-    public static function updateOffer($Id_Offer,$Name_Offer,$City,$Contrat_Type,$Week_Hours,$Monthly_Pay,$Annual_Salary,$Description,$Name_Business,$Begin,$Ending){
+   /* public static function updateOffer($Id_Offer,$Name_Offer,$City,$Contrat_Type,$Week_Hours,$Monthly_Pay,$Annual_Salary,$Description,$Name_Business,$Begin,$Ending){
         $dao = new DAO();
         $dbh = $dao->getDbh();
 
@@ -73,15 +71,18 @@ class Offer{
         $stmt->execute();
     }
 
-    public static function getAllOffer(){
+    */public static function getAllOffer(){
+
         $dao = new DAO();
+
         $dbh = $dao->getDbh();
+
         $stmt = $dbh->prepare("SELECT * FROM Offer;");
         $stmt->execute();
         $allRows = $stmt->fetchAll();
         return $allRows;
     }
-    public static function getOfferById($Id_Offer){
+    /*public static function getOfferById($Id_Offer){
         $dao = new DAO();
         $dbh = $dao->getDbh();
         
@@ -91,7 +92,7 @@ class Offer{
         $stmt->execute();
 
         return $stmt->fetch();
-    }
+    }*/
 
     /**
      * Get the value of Name_Offer

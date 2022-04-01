@@ -19,7 +19,7 @@
             <li class="iconeSociaux"><i class="fa-brands fa-twitter"></i></li>
         </ul>
         <div>
-            <img src="./pictures/logo.png" alt="">
+            <img src="../View/pictures/logo.png" alt="">
             <div id="copyright">
             <i class="fa-regular fa-copyright"></i>
             <p>S’JOB, 2022</p>
